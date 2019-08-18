@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/8 | 刘晓儒个人博客</title>
+  <title>JS继承的继承方式 | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="刘晓儒个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+  <meta name="description" content="原型链继承 利用prototype将子构造函数的prototype指向Person达到继承的目的； 12345678910111213function Person(name)&amp;#123;    this.name = name;    this.country=&amp;apos;china&amp;apos;;&amp;#125;Person.prototype.play = function()&amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS继承的继承方式">
+<meta property="og:url" content="http://yoursite.com/2019/08/19/JS继承的继承方式/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
+<meta property="og:description" content="原型链继承 利用prototype将子构造函数的prototype指向Person达到继承的目的； 12345678910111213function Person(name)&amp;#123;    this.name = name;    this.country=&amp;apos;china&amp;apos;;&amp;#125;Person.prototype.play = function()&amp;#123;">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-18T18:20:19.441Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘晓儒个人博客">
+<meta name="twitter:title" content="JS继承的继承方式">
+<meta name="twitter:description" content="原型链继承 利用prototype将子构造函数的prototype指向Person达到继承的目的； 12345678910111213function Person(name)&amp;#123;    this.name = name;    this.country=&amp;apos;china&amp;apos;;&amp;#125;Person.prototype.play = function()&amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -165,42 +169,153 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-JS继承的继承方式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      JS继承的继承方式
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2019/08/19/JS继承的继承方式/" class="archive-article-date">
         <time datetime="2019-08-18T18:08:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-19</time>
 </a>
 
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><strong>原型链继承</strong></p>
+<p><code>利用prototype将子构造函数的prototype指向Person达到继承的目的</code>；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Person(name)&#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.country=&apos;china&apos;;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.play = function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Child(age)&#123;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Child.prototype = new Person();</span><br></pre></td></tr></table></figure>
+
+<p>缺点：</p>
+<ul>
+<li><code>创建子类实例时，但是无法给父构造函数传参</code></li>
+<li><code>来自原型对象的引用属性是所有实例共享的</code></li>
+</ul>
+<p><strong>构造函数继承</strong></p>
+<p><code>在子类构造函数中借用call调用父类构造函数</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Person(name)&#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.country=&apos;china&apos;;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.play = function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Child(name,age)&#123;</span><br><span class="line">    this.age = age;</span><br><span class="line">    Person.call(this,name)</span><br><span class="line">&#125;</span><br><span class="line">var obj = new Child(&apos;小明&apos;，16);</span><br></pre></td></tr></table></figure>
+
+<p>优点：</p>
+<ul>
+<li><code>解决了子类构造函数向父类构造函数传参数和实例共享原型属性的问题</code></li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li><code>相当于每个实例都拷贝了一份父类的方法，占用内存大</code></li>
+<li><code>不能继承原型属性/方法，只能继承父类的实例属性和方法</code></li>
+</ul>
+<p><strong>组合继承</strong></p>
+<p><code>使用原型链实现对原型属性和方法的继承，通过借用构造函数实现对实例属性的继承</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function Person(name)&#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.country=&apos;china&apos;;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.play = function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">function Child(name,age)&#123;</span><br><span class="line">    Person.call(this,name);</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line">Child.prototype = new Person();</span><br></pre></td></tr></table></figure>
+
+<p>缺点：</p>
+<ul>
+<li><code>会调用两次父类构造函数</code></li>
+<li></li>
+</ul>
+<p><strong>原型式继承</strong></p>
+<p><code>基于已有对象，创建新对象</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 在object函数内部，先创建了一个临时的构造函数，然后将传入的对象作为这个构造函数的原型，最后返回这个临时类型的一个新实例。</span><br><span class="line">// 从本质上讲，object()对传入其中的对象执行了一次浅复制。</span><br><span class="line"></span><br><span class="line">function object (o) &#123;</span><br><span class="line">  function F() &#123;&#125;</span><br><span class="line">  F.prototype = o;</span><br><span class="line">  return new F();</span><br><span class="line">&#125;</span><br><span class="line">缺点：</span><br><span class="line">-  和原型链继承一样，所有子类实例共享父类的引用类型</span><br></pre></td></tr></table></figure>
+
+<p><strong>寄生式继承</strong></p>
+<p><code>寄生式继承是与原型式继承紧密相关的一种思路，创建一个仅用于封装继承过程的函数，该函数内部以某种形式来做增强对象，最后返回对象</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function object (o) &#123;</span><br><span class="line">  function F() &#123;&#125;</span><br><span class="line">  F.prototype = o;</span><br><span class="line">  return new F();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function createAnother (o) &#123;</span><br><span class="line">  var clone = object(o);</span><br><span class="line">  clone.sayHi = function () &#123;</span><br><span class="line">    console.log(&apos;Hi&apos;);</span><br><span class="line">  &#125;</span><br><span class="line">  return clone;</span><br><span class="line">&#125;</span><br><span class="line">缺点：</span><br><span class="line">1,和原型链式继承一样，所有子类实例共享父类引用类型。</span><br><span class="line">2,和借用构造函数继承一样，每次创建对象都会创建一次方法</span><br></pre></td></tr></table></figure>
+
+<p><strong>寄生组合式继承</strong></p>
+<p><code>结合组合式继承和寄生式继承，解决组合式继承调用两次父类构造函数的问题</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">function object(o) &#123;</span><br><span class="line">  function F() &#123; &#125;</span><br><span class="line">  F.prototype = o;</span><br><span class="line">  return new F();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function inheritPrototype(SubType, SuperType) &#123;</span><br><span class="line">  var prototype = object(SuperType.prototype);        // 创建对象</span><br><span class="line">  prototype.constructor = SubType;    // 增强对象</span><br><span class="line">  SubType.prototype = prototype;      // 指定对象 </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 父类</span><br><span class="line">function SuperType(name) &#123;</span><br><span class="line">  this.name = name;</span><br><span class="line">  this.colors = [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SuperType.prototype.sayName = function () &#123;</span><br><span class="line">  console.log(this.name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 子类</span><br><span class="line">function SubType(name, age) &#123;</span><br><span class="line">  // 继承父类实例属性</span><br><span class="line">  SuperType.call(this, name);</span><br><span class="line"></span><br><span class="line">  // 子类实例属性</span><br><span class="line">  this.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 继承父类方法</span><br><span class="line">inheritPrototype(SubType, SuperType);</span><br></pre></td></tr></table></figure>
+
+<p><strong>Es6继承</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">function object(o) &#123;</span><br><span class="line">  function F() &#123; &#125;</span><br><span class="line">  F.prototype = o;</span><br><span class="line">  return new F();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function inheritPrototype(SubType, SuperType) &#123;</span><br><span class="line">  var prototype = object(SuperType.prototype);        // 创建对象</span><br><span class="line">  prototype.constructor = SubType;    // 增强对象</span><br><span class="line">  SubType.prototype = prototype;      // 指定对象 </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 父类</span><br><span class="line">function SuperType(name) &#123;</span><br><span class="line">  this.name = name;</span><br><span class="line">  this.colors = [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SuperType.prototype.sayName = function () &#123;</span><br><span class="line">  console.log(this.name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 子类</span><br><span class="line">function SubType(name, age) &#123;</span><br><span class="line">  // 继承父类实例属性</span><br><span class="line">  SuperType.call(this, name);</span><br><span class="line"></span><br><span class="line">  // 子类实例属性</span><br><span class="line">  this.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 继承父类方法</span><br><span class="line">inheritPrototype(SubType, SuperType);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>底层也是用寄生组合式继承实现的</p>
+</blockquote>
+<p><strong>拷贝继承</strong><br><code>把一个对象中的属性和方法复制到另一个</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">浅拷贝</span><br><span class="line"> function shallowCopy(source, target = &#123;&#125;) &#123;</span><br><span class="line">        var key;</span><br><span class="line">        for (key in source) &#123;</span><br><span class="line">            if (source.hasOwnProperty(key)) &#123;        // 意思就是__proto__上面的属性,我不拷贝</span><br><span class="line">                target[key] = source[key];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return target;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">深拷贝 </span><br><span class="line">（对象里面嵌套对象才涉及深拷贝）</span><br><span class="line">function deepCopy(source, target = &#123;&#125;) &#123;</span><br><span class="line">        var key;</span><br><span class="line">        for (key in source) &#123;</span><br><span class="line">            if (source.hasOwnProperty(key)) &#123;                         // 意思就是__proto__上面的属性,我不拷贝</span><br><span class="line">                if (typeof(source[key]) === &quot;object&quot;) &#123;               // 如果这一项是object类型,就递归调用deepCopy</span><br><span class="line">                    target[key] = Array.isArray(source[key]) ? [] : &#123;&#125;;</span><br><span class="line">                    deepCopy(source[key], target[key]);</span><br><span class="line">                &#125; else &#123;                                            // 如果不是object类型,就直接赋值拷贝</span><br><span class="line">                    target[key] = source[key];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>深拷贝黑科技</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var targetObj = JSON.parse(JSON.stringify(copyObj))</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">1、如果你的对象里有函数,函数无法被拷贝下来</span><br><span class="line">2、无法拷贝copyObj对象原型链上的属性和方法</span><br></pre></td></tr></table></figure>
+
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/19/JS继承的继承方式/">JS继承的继承方式</a>
-	
-    </h1>
-  
+      </a>
+    </div>
+    
 
+    
+      <div> 
+        <ul class="post-copyright">
+          <li>
+            <strong>本文作者：</strong>
+            刘晓儒
+          </li>
+          <li>
+            <strong>本文链接：</strong>
+            <a href="http://yoursite.com/2019/08/19/JS继承的继承方式/" title="JS继承的继承方式" target="_blank">http://yoursite.com/2019/08/19/JS继承的继承方式/</a>
+          </li>
+          <li>
+            <strong>版权声明： </strong>
+            本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+          </li>
+        </ul>
+      </div>
+    
 
-        <div class="article-info info-on-right">
-          
-          
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -213,60 +328,105 @@
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/19/JS继承的继承方式/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/18/Event Loop/" class="archive-article-date">
-        <time datetime="2019-08-18T14:47:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-18</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/18/Event Loop/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Event Loop</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/18/Event Loop/">Event Loop</a>
-	
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+
+
+
 
 
           </div>
@@ -307,8 +467,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
