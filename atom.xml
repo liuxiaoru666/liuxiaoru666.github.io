@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-19T12:32:46.585Z</updated>
+  <updated>2019-08-19T12:36:32.366Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,14 @@
     <link href="http://yoursite.com/2019/08/19/http%E5%8D%8F%E8%AE%AE/"/>
     <id>http://yoursite.com/2019/08/19/http协议/</id>
     <published>2019-08-19T12:32:11.000Z</published>
-    <updated>2019-08-19T12:32:46.585Z</updated>
+    <updated>2019-08-19T12:36:32.366Z</updated>
     
     <summary type="html">
     
     </summary>
     
     
-      <category term="http" scheme="http://yoursite.com/tags/http/"/>
-    
-      <category term="https" scheme="http://yoursite.com/tags/https/"/>
+      <category term="http协议" scheme="http://yoursite.com/tags/http%E5%8D%8F%E8%AE%AE/"/>
     
   </entry>
   
@@ -57,7 +55,7 @@
     <link href="http://yoursite.com/2019/08/19/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E9%98%B2%E5%BE%A1/"/>
     <id>http://yoursite.com/2019/08/19/前端安全防御/</id>
     <published>2019-08-19T12:27:35.000Z</published>
-    <updated>2019-08-19T12:29:01.645Z</updated>
+    <updated>2019-08-19T12:37:17.716Z</updated>
     
     <summary type="html">
     
@@ -84,9 +82,9 @@
     </summary>
     
     
-      <category term="继承" scheme="http://yoursite.com/tags/%E7%BB%A7%E6%89%BF/"/>
-    
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="继承" scheme="http://yoursite.com/tags/%E7%BB%A7%E6%89%BF/"/>
     
   </entry>
   
@@ -106,9 +104,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
       <category term="事件循环" scheme="http://yoursite.com/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/"/>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
     
   </entry>
   
