@@ -9,15 +9,18 @@
   <title>前端安全防御 | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="前端安全防御">
+  <meta name="description" content="CSRF（Cross Site Request Forgy）跨站请求伪造  原理：在第三方网站向本网站发请求（1）用户在a站前端页面发起登录（身份认证）请求（2）a站后端确认身份，登录成功，cookie中存在用户的身份认证信息（3）b站前端页面向a站后端发起请求，带着a站的cookie信息（身份认证信息），请求成功">
+<meta name="keywords" content="前端安全防御">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端安全防御">
 <meta property="og:url" content="http://yoursite.com/2019/08/19/前端安全防御/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
+<meta property="og:description" content="CSRF（Cross Site Request Forgy）跨站请求伪造  原理：在第三方网站向本网站发请求（1）用户在a站前端页面发起登录（身份认证）请求（2）a站后端确认身份，登录成功，cookie中存在用户的身份认证信息（3）b站前端页面向a站后端发起请求，带着a站的cookie信息（身份认证信息），请求成功">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-19T12:40:09.181Z">
+<meta property="og:updated_time" content="2019-08-19T14:45:36.056Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端安全防御">
+<meta name="twitter:description" content="CSRF（Cross Site Request Forgy）跨站请求伪造  原理：在第三方网站向本网站发请求（1）用户在a站前端页面发起登录（身份认证）请求（2）a站后端确认身份，登录成功，cookie中存在用户的身份认证信息（3）b站前端页面向a站后端发起请求，带着a站的cookie信息（身份认证信息），请求成功">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -46,6 +49,9 @@
 
 
   
+    <script src="/lib/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+  
 
 </head>
 
@@ -62,7 +68,7 @@
       
 
 
-<div class="overlay" style="background: #4d4d4d;background: url('/img/biubiubiu.gif') no-repeat ;"></div>
+<div class="overlay" style="background: #4d4d4d;"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -77,10 +83,6 @@
 			<ul>
 			
 				<li><a href="/" >主页</a></li>
-	        
-				<li><a href="https://zhousiwei.gitee.io/ibooks/" >技术笔记</a></li>
-	        
-				<li><a href="https://zhousiwei.gitee.io/ibooks/" >个人简历</a></li>
 	        
 			</ul>
 		</nav>
@@ -102,7 +104,25 @@
 		<nav class="header-nav">
 			<div class="social">
 				
+					<a class="github" target="_blank" href="#" title="GitHub"><i class="icon-github"></i></a>
+		        
+					<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/a31275e89b58" title="jianshu"><i class="icon-jianshu"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:liuxiaoru666@163.com" title="mail"><i class="icon-mail"></i></a>
+		        
 			</div>
+		
+			
+			
+			
+			
+			<div>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=1334445174&auto=0&height=66"></iframe>
+			</div>
+			
+				
+				<p style="font-size: 12px;">这似乎是首纯音乐，请尽情的欣赏它吧1！<p>
+			
 		
 		</nav>
 	</header>		
@@ -131,27 +151,25 @@
 			
 				
 			
-				
-			
-				
-			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
+						<a class="github" target="_blank" href="#" title="GitHub"><i class="icon-github"></i></a>
+			        
+						<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/a31275e89b58" title="jianshu"><i class="icon-jianshu"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:liuxiaoru666@163.com" title="mail"><i class="icon-mail"></i></a>
+			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="https://zhousiwei.gitee.io/ibooks/">技术笔记</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="https://zhousiwei.gitee.io/ibooks/">个人简历</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -196,41 +214,37 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    
-    
+    <p><strong>CSRF（Cross Site Request Forgy）跨站请求伪造</strong></p>
+<blockquote>
+<p>原理：在第三方网站向本网站发请求<br>（1）用户在a站前端页面发起登录（身份认证）请求<br>（2）a站后端确认身份，登录成功，cookie中存在用户的身份认证信息<br>（3）b站前端页面向a站后端发起请求，带着a站的cookie信息（身份认证信息），请求成功</p>
+</blockquote>
+<a id="more"></a>
+<blockquote>
+<p>特点：<br>b站发送的请求带着a站的cookie信息；<br>b站发送请求不经过a站的前端；<br>http请求头中的referer为b站</p>
+</blockquote>
+<blockquote>
+<p>防御：<br>（1）禁止第三方网站携带本网站的cookie信息：设置same-site属性，same-site属性有两个值，Strict（所有的第三方请求都不能携带本网站的cookie）和Lax（链接可以，但是form表单提交和ajax请求不行）<br>（2）本网站前端页面添加验证信息：使用验证码或者添加token验证<br>（3）referer验证：禁止来自第三方的请求</p>
+</blockquote>
+<p><strong>XSS（Cross Site Scripting）跨站脚本攻击</strong></p>
+<blockquote>
+<p>(1）原理：页面渲染的数据中包含可运行的脚本<br>(2）攻击的基本类型：反射型（url参数直接注入）和存储型（存储到DB后读取时注入）<br>(3）注入点：HTML节点内的内容（text）；HTML中DOM元素的属性；Javascript代码；富文本</p>
+</blockquote>
+<blockquote>
+<p>如何防御<br>（1）浏览器自带防御机制，主要应对反射型攻击（HTML内容或属性）：http响应头中自动添加x-xss-protection，值为0（关闭），1（打开），默认打开<br>（2）对特定字符做转义：内容注入替换尖括号（ &lt; =&gt; &lt;   &gt; =&gt; &gt; ） 属性注入替换单引号或双引号（ “ =&gt; &quot;  ‘ =&gt; &#39; ）<br>（3）CSP（Content Security Policy）内容安全策略：用于指定哪些内容可执行</p>
+</blockquote>
+<p><strong>点击劫持</strong></p>
+<blockquote>
+<p>原理：<br>第三方网站通过iframe内嵌某一个网站，并且将iframe设置为透明不可见，将其覆盖在其他经过伪装的DOM上，伪装的可点击DOM（按钮等）与实际内嵌网站的可点击DOM位置相同，当用户点击伪装的DOM时，实际上点击的是iframe中内嵌的网页的DOM从而触发请求操作</p>
+</blockquote>
+<blockquote>
+<p>特点：<br>用户自己做了点击操作；用户毫不知情；</p>
+</blockquote>
+<blockquote>
+<p>防御<br>Javascript禁止内嵌：当网页没有被使用iframe内嵌时，top和window是相等的；当网页被内嵌时，top和window是不相等的；可以在本网站的页面中添加如下判断</p>
+</blockquote>
 
     
-    <div class="page-reward">
-      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
-        <div class="tooltip tooltip-east">
-          <span class="tooltip-item">
-            赏
-          </span>
-          <span class="tooltip-content">
-            <span class="tooltip-text">
-              <span class="tooltip-inner">
-                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
-                    class="icon icon-quo-right"></i></p>
-                <div class="reward-box">
-                  
-                  <div class="reward-box-item">
-                    <img class="reward-img" src="/img/alipay.jpg">
-                    <span class="reward-type">支付宝</span>
-                  </div>
-                  
-                  
-                  <div class="reward-box-item">
-                    <img class="reward-img" src="/img/weixin.png">
-                    <span class="reward-type">微信</span>
-                  </div>
-                  
-                </div>
-              </span>
-            </span>
-          </span>
-        </div>
-      </a>
-    </div>
+
     
 
     
@@ -362,6 +376,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -538,10 +565,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">avaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">http协议</a>
               </li>
              
@@ -604,15 +627,6 @@ MathJax.Hub.Queue(function() {
     	<section class="tools-section tools-section-friends" q-show="friends">
   		
         <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" class="search-title" title="记录工作和学习过程中的笔记：Java、前端开发、Hexo博客、聚合支付、Linux笔记、ElasticSearch、ELK日志分析">
-                
-                  <img src="https://zhousiwei.gitee.io/ibooks/favicon.ico">
-                
-                技术笔记
-              </a>
-            </li>
           
             <li class="search-li">
               <a href="https://github.com/liuxiaoru666" target="_blank" class="search-title" >
