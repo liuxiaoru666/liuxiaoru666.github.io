@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>http协议基础 | 刘晓儒个人博客</title>
+  <title>http协议基础（上） | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="1.什么是Http协议  超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。">
+  <meta name="description" content="什么是Http协议  超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。">
 <meta name="keywords" content="http协议">
 <meta property="og:type" content="article">
-<meta property="og:title" content="http协议基础">
+<meta property="og:title" content="http协议基础（上）">
 <meta property="og:url" content="http://yoursite.com/2019/08/20/http协议基础/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
-<meta property="og:description" content="1.什么是Http协议  超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。">
+<meta property="og:description" content="什么是Http协议  超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-20T14:54:46.021Z">
+<meta property="og:updated_time" content="2019-08-21T14:30:43.902Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="http协议基础">
-<meta name="twitter:description" content="1.什么是Http协议  超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。">
+<meta name="twitter:title" content="http协议基础（上）">
+<meta name="twitter:description" content="什么是Http协议  超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -186,7 +186,7 @@
   
   
     <h1 class="article-title" itemprop="name">
-      http协议基础
+      http协议基础（上）
     </h1>
   
 
@@ -208,71 +208,21 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>1.什么是Http协议</p>
+    <p><strong>什么是Http协议</strong></p>
 <blockquote>
 <p>超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。</p>
 </blockquote>
 <a id="more"></a>
-<p>2.什么是Http协议无状态协议?怎么解决Http协议无状态协议?</p>
+
+<p><strong>http协议结构组成</strong></p>
 <blockquote>
-<p>无状态指对事务处理没有记忆能力，意味着如果有后续处理需要前面的信息；处理无状态的办法：通过cookie或者session会话保存`</p>
+<p>请求行（包括url，请求方式，状态码，http协议版本）<br>请求头<br>请求体</p>
 </blockquote>
-<p>3.http协议有什么组成？</p>
-<blockquote>
-<p>请求行（包括url，请求方式，http协议版本）<br>请求头<br>请求体</p>
-</blockquote>
-<p>4.http协议中有哪些请求方式</p>
+<p><strong>http协议中有哪些请求方式</strong></p>
 <blockquote>
 <p>GET:用于请求访问已经被URI(统一资源标识符)识别的资源,可以通过URL传参给服务器<br>POST:用于传输信息给服务器,主要功能与GET方法类似,但一般推荐使用POST方式<br>PUT:传输文件,报文主体中包含文件内容,保存到对应URI位置<br>HEAD:获得报文首部,与GET方法类似,只是不返回报文主体,一般用于验证URI是否有效<br>DELETE:删除文件,与PUT方法相反,删除对应URI位置的文件<br>OPTIONS:查询响应URI支持的HTTP方法</p>
 </blockquote>
-<p>6.HTTP 首部字段</p>
-<blockquote>
-<p>通用首部字段</p>
-<ul>
-<li>Cache-Control |控制缓存的行为</li>
-<li>Connection |连接的管理</li>
-<li>Date |创建报文的日期时间<br>请求首部字段</li>
-<li>Accept：客户机用于告诉服务器它支持的数据类型；</li>
-<li>Accept-Charset：客户机采用的编码；</li>
-<li>Accept-Encoding：客户机支持的压缩格式；</li>
-<li>Accept-Language：客户机的语言环境；</li>
-<li>Host：告诉服务器想访问的主机名；</li>
-<li>If-Modified-Sinec：资源的缓存时间；</li>
-<li>Referer：告诉服务器，它是从哪个资源来访问服务器的(防盗链)</li>
-<li>User-Agent：客户机通过这个头告诉服务器，客户机的软件环境。</li>
-<li>Cookie：向服务器带数据；</li>
-<li>Connection：close/Keep-Alive；保持连接或者关闭连接</li>
-<li>Date：发送请求时间<br>响应首部字段</li>
-<li>Location：配合302状态码使用，用于告诉客户找谁；</li>
-<li>Server：告诉浏览器服务器的类型；</li>
-<li>Content-Encoding：告诉浏览器数据的压缩格式；</li>
-<li>Content-Length：告诉浏览器回送数据的长度；</li>
-<li>Content-Language：告诉浏览器回送数据的语言环境；</li>
-<li>Content-Type：告诉浏览器回送数据的类型；</li>
-<li>Last-Modified：告诉浏览器当前资源的缓存时间；</li>
-<li>Refresh：告诉浏览器隔多长时间刷新一次；</li>
-<li>Content-Disposition：告诉浏览器以下载方式打开数据；</li>
-<li>Transfer-Encoding：告诉浏览器数据的传送格式</li>
-<li>Set-Cookie：缓存相关；</li>
-<li>Transfer-Encoding：</li>
-<li>Set-Cookie：</li>
-<li>ETag：缓存相关；</li>
-<li>Expires：服务器通过这个头，告诉浏览器把回送的资源缓存多长时间，-1或0，则是不缓存</li>
-<li>Cache-Control：no-cache，控制浏览器不要缓存数据；</li>
-<li>Pragma：no-cache，控制浏览器不要缓存数据；<br>实体首部字段</li>
-<li>Allow |资源可支持的HTTP方法</li>
-<li>Content-Encoding| 实体主体适用的编码方式</li>
-<li>Content-Language| 实体主体的自然语言</li>
-<li>Content-Length |实体主体的大小（单位：字节）</li>
-<li>Content-Location| 替代对应资源的URI</li>
-<li>Content-MD5 |实体主体的报文摘要</li>
-<li>Content-Range |实体主体的位置范围</li>
-<li>Content-Type |实体主体的媒体类型</li>
-<li>Expires |实体主体过期的日期时间</li>
-<li>Last-Modified |资源的最后修改日期时间</li>
-</ul>
-</blockquote>
-<p>7.GET和POST的区别</p>
+<p><strong>GET和POST的区别</strong></p>
 <blockquote>
 <ul>
 <li>get重点在从服务器上获取资源,post重点在想服务器发送数据;</li>
@@ -281,21 +231,37 @@
 <li>get是不安全的,因为URL是可见的,可能会泄露私密信息,如密码等</li>
 </ul>
 </blockquote>
-<p>8.HTTP和https区别</p>
+<p><strong>HTTP和https区别</strong></p>
 <blockquote>
 <ul>
 <li>https协议需要到ca申请证书，一般免费证书很少，需要交费。</li>
-<li>http是超文本传输协议，信息是明文传输，https 则是具有安全性的ssl加密传输协议。</li>
+<li>http是超文本传输协议，信息是明文传输，https 则是具有安全性的<code>ssl</code>加密传输协议。</li>
 <li>http和https使用的是完全不同的连接方式用的端口也不一样，前者是80，后者是443。</li>
-<li>http的连接很简单，是无状态的。HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。</li>
+<li>http的连接很简单，是无状态的。HTTPS协议是由<code>SSL+HTTP</code>协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。</li>
 </ul>
 </blockquote>
-<p>9.http1.0和http1.1区别</p>
+<p><strong>http1.0和http1.1区别</strong></p>
 <blockquote>
 <ul>
 <li>建立连接方面: HTTP/1.0 每次请求都需要建立新的TCP连接，连接不能复用。HTTP/1.1 新的请求可以在上次请求建立的TCP连接之上发送，连接可以复用。优点是减少重复进行TCP三次握手的开销，提高效率。</li>
-<li>HTTP1.1增加了OPTIONS, PUT, DELETE, TRACE, CONNECT这些Request方法</li>
+<li>HTTP1.1增加了<code>OPTIONS</code>, <code>PUT</code>, <code>DELETE,</code> <code>TRACE</code>, <code>CONNECT</code>这些Request方法</li>
 </ul>
+</blockquote>
+<p> <strong>无状态</strong></p>
+<blockquote>
+<p>由于http是一种无状态的协议，因此无论是客户端还是服务器都不记录http的相关信息。这样设计一方面减轻了服务器端的负载，另一方面减小了http请求的开销。<br><code>cookie</code>和<code>session</code>用于解决http无状态的问题</p>
+</blockquote>
+<p><strong>持久化</strong></p>
+<blockquote>
+<p>正常在发送http时，都需要建立<code>TCP</code>的连接，再发送报文,　如果每次想要发送http报文都需要经过这个过程，那么时间大部分都会消耗在建立和断开连接的过程中。因此http中使用了<code>connection</code>属性，用于指定连接的方式。当设置成<code>keep-alive</code>，就会建立一条持久化的连接。不需要每次都建立连接，再中断。</p>
+</blockquote>
+<p><strong>管道化</strong></p>
+<blockquote>
+<p>http可以一次发送多个http请求，然后等待响应连接。不需要排队等候，这样就加快了http的响应时间。</p>
+</blockquote>
+<p><strong>内容编码</strong></p>
+<blockquote>
+<p>由于某些报文的内容过大，因此在传输时，为了减少传输的时间，会采取一些压缩的措施。例如<code>accept-Encoding</code>定义了内容编码的格式：<code>gzip</code></p>
 </blockquote>
 
     
@@ -311,7 +277,7 @@
           </li>
           <li>
             <strong>本文链接：</strong>
-            <a href="http://yoursite.com/2019/08/20/http协议基础/" title="http协议基础" target="_blank">http://yoursite.com/2019/08/20/http协议基础/</a>
+            <a href="http://yoursite.com/2019/08/20/http协议基础/" title="http协议基础（上）" target="_blank">http://yoursite.com/2019/08/20/http协议基础/</a>
           </li>
           <li>
             <strong>版权声明： </strong>

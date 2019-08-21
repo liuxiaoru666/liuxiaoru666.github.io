@@ -180,6 +180,178 @@
             
 
   
+    <article id="post-http协议基础下" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/08/21/http协议基础下/">http协议基础（下)</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/08/21/http协议基础下/" class="archive-article-date">
+        <time datetime="2019-08-21T14:20:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><strong>http状态码</strong></p>
+<blockquote>
+<ul>
+<li>1XX:接收信息正在处理</li>
+<li>2XX:正常处理完毕（200请求成功）</li>
+<li>3XX:重定向<ul>
+<li>301 永久重定向</li>
+<li>302 临时重定向</li>
+</ul>
+</li>
+<li>4XX:客户端错误<ul>
+<li>400:语法错误（参数不对）</li>
+<li>401:未认证</li>
+<li>403:禁止访问</li>
+<li>404:资源未找到</li>
+</ul>
+</li>
+<li>5XX:服务器错误<ul>
+<li>500:服务器出错</li>
+<li>503:服务器繁忙</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><strong>HTTP首部字段</strong></p>
+<blockquote>
+<p><em>通用首部字段</em></p>
+<ul>
+<li>Cach-Control 控制缓存的行为</li>
+<li>Date 创建报文的事件</li>
+<li>Connection 连接管理</li>
+<li>Pragma：报文指令</li>
+<li>Trailer：报文末端的首部一览</li>
+<li>Transfer-Encoding：指定报文主体的传输编码方式</li>
+<li>Upgrade：升级为其他协议</li>
+<li>Via：代理服务器的相关信息</li>
+<li>Warning：错误通知</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><em>请求首部字段（Request Header Fields）</em></p>
+<ul>
+<li>从客户端向服务器发送求报文时使用的首部。补充了请求的附加内容、客户端信息、响应内容相关优先级等信息。</li>
+<li>Accept：用户代理可处理的媒体类型</li>
+<li>Accept-Charset：优先的字符集</li>
+<li>Accept-Encoding：优先的内容编码</li>
+<li>Accept-Language：优先的语言（自然语言）</li>
+<li>Authorization：Web认证信息</li>
+<li>Expect：期待服务器的特定行为</li>
+<li>From：用户的电子邮箱地址</li>
+<li>Host：请求资源所在服务器</li>
+<li>If-Match：比较实体标记（ETag）</li>
+<li>If-Modified-Since：比较资源的更新时间</li>
+<li>If-None-Match：比较实体标记（与If-Match相反）</li>
+<li>If-Range：资源未更新时发送实体Byte的范围请求</li>
+<li>If-Unmodified-Since：比较资源的更新时间（与If-Modified-Since相反）</li>
+<li>Max-Forwards：最大传输逐跳数</li>
+<li>Proxy-Authorization：代理服务器要求客户端的认真信息</li>
+<li>Range：实体的直接范围请求</li>
+<li>Referer：对请求中URI的原始获取方</li>
+<li>TE：传输编码的优先级</li>
+<li>User-Agent：HTTP客户端程序的信息</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><em>响应首部字段（Response Header Fields）</em></p>
+<ul>
+<li>从服务器端向客户端返回响应报文时使用的首部。补充了响应的附加内容，也会请求客户端附加额外的内容信息。</li>
+<li>Accept-Ranges：是否接受字节范围请求</li>
+<li>Age：推算资源创建经过时间</li>
+<li>ETag：资源的匹配信息</li>
+<li>Location：令客户端重定向至指定URI</li>
+<li>Proxy-Authenticate：代理服务器对客户端的认真信息</li>
+<li>Retry-After：对再次发起请求的时机请求</li>
+<li>Server：HTTP服务器的安装信息</li>
+<li>Vary：代理服务器缓存的管理信息</li>
+<li>WWW-Authenticate：服务器对客户端的认真信息</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><em>实体首部字段（Entity Header Fields）</em><br>针对请求报文和响应报文的实体部分使用的首部。补充了资源内容更新时间等与实体相关的信息。</p>
+</blockquote>
+<ul>
+<li>Allow：资源可支持的HTTP方法</li>
+<li>Content-Encoding：实体主体适用的编码方法</li>
+<li>Content-Language：实体主体的自然语言</li>
+<li>Content-Length：实体主体的大小（单位：字节）</li>
+<li>Content-Location：替代对应资源的URI</li>
+<li>Content-MD5：实体主体的报文摘要</li>
+<li>Content-Range：实体主体的位置范围</li>
+<li>Content-Type：实体主体的媒体类型</li>
+<li>Expires：实体主体过期的日期时间</li>
+<li>Last-Modified：资源的最后修改日期时间</li>
+</ul>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-options" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -356,7 +528,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2019/08/20/http协议基础/">http协议基础</a>
+	  <a class="article-title" href="/2019/08/20/http协议基础/">http协议基础（上）</a>
 	
     </h1>
   
@@ -374,7 +546,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>1.什么是Http协议</p>
+    <p><strong>什么是Http协议</strong></p>
 <blockquote>
 <p>超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。</p>
 </blockquote>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-20T15:12:51.978Z</updated>
+  <updated>2019-08-21T14:44:26.508Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>http协议基础（下)</title>
+    <link href="http://yoursite.com/2019/08/21/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80%E4%B8%8B/"/>
+    <id>http://yoursite.com/2019/08/21/http协议基础下/</id>
+    <published>2019-08-21T14:20:47.000Z</published>
+    <updated>2019-08-21T14:44:26.508Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>http状态码</strong></p><blockquote><ul><li>1XX:接收信息正在处理</li><li>2XX:正常处理完毕（200请求成功）</li><li>3XX:重定向<ul><li>301 永久重定向</li><li>302 临时重定向</li></ul></li><li>4XX:客户端错误<ul><li>400:语法错误（参数不对）</li><li>401:未认证</li><li>403:禁止访问</li><li>404:资源未找到</li></ul></li><li>5XX:服务器错误<ul><li>500:服务器出错</li><li>503:服务器繁忙</li></ul></li></ul></blockquote><p><strong>HTTP首部字段</strong></p><blockquote><p><em>通用首部字段</em></p><ul><li>Cach-Control 控制缓存的行为</li><li>Date 创建报文的事件</li><li>Connection 连接管理</li><li>Pragma：报文指令</li><li>Trailer：报文末端的首部一览</li><li>Transfer-Encoding：指定报文主体的传输编码方式</li><li>Upgrade：升级为其他协议</li><li>Via：代理服务器的相关信息</li><li>Warning：错误通知</li></ul></blockquote><blockquote><p><em>请求首部字段（Request Header Fields）</em></p><ul><li>从客户端向服务器发送求报文时使用的首部。补充了请求的附加内容、客户端信息、响应内容相关优先级等信息。</li><li>Accept：用户代理可处理的媒体类型</li><li>Accept-Charset：优先的字符集</li><li>Accept-Encoding：优先的内容编码</li><li>Accept-Language：优先的语言（自然语言）</li><li>Authorization：Web认证信息</li><li>Expect：期待服务器的特定行为</li><li>From：用户的电子邮箱地址</li><li>Host：请求资源所在服务器</li><li>If-Match：比较实体标记（ETag）</li><li>If-Modified-Since：比较资源的更新时间</li><li>If-None-Match：比较实体标记（与If-Match相反）</li><li>If-Range：资源未更新时发送实体Byte的范围请求</li><li>If-Unmodified-Since：比较资源的更新时间（与If-Modified-Since相反）</li><li>Max-Forwards：最大传输逐跳数</li><li>Proxy-Authorization：代理服务器要求客户端的认真信息</li><li>Range：实体的直接范围请求</li><li>Referer：对请求中URI的原始获取方</li><li>TE：传输编码的优先级</li><li>User-Agent：HTTP客户端程序的信息</li></ul></blockquote><blockquote><p><em>响应首部字段（Response Header Fields）</em></p><ul><li>从服务器端向客户端返回响应报文时使用的首部。补充了响应的附加内容，也会请求客户端附加额外的内容信息。</li><li>Accept-Ranges：是否接受字节范围请求</li><li>Age：推算资源创建经过时间</li><li>ETag：资源的匹配信息</li><li>Location：令客户端重定向至指定URI</li><li>Proxy-Authenticate：代理服务器对客户端的认真信息</li><li>Retry-After：对再次发起请求的时机请求</li><li>Server：HTTP服务器的安装信息</li><li>Vary：代理服务器缓存的管理信息</li><li>WWW-Authenticate：服务器对客户端的认真信息</li></ul></blockquote><blockquote><p><em>实体首部字段（Entity Header Fields）</em><br>针对请求报文和响应报文的实体部分使用的首部。补充了资源内容更新时间等与实体相关的信息。</p></blockquote><ul><li>Allow：资源可支持的HTTP方法</li><li>Content-Encoding：实体主体适用的编码方法</li><li>Content-Language：实体主体的自然语言</li><li>Content-Length：实体主体的大小（单位：字节）</li><li>Content-Location：替代对应资源的URI</li><li>Content-MD5：实体主体的报文摘要</li><li>Content-Range：实体主体的位置范围</li><li>Content-Type：实体主体的媒体类型</li><li>Expires：实体主体过期的日期时间</li><li>Last-Modified：资源的最后修改日期时间</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;http状态码&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;1XX:接收信息正在处理&lt;/li&gt;
+&lt;li&gt;2XX:正常处理完毕（200请求成功）&lt;/li&gt;
+&lt;li&gt;3XX:重定向&lt;ul&gt;
+&lt;li&gt;301 永久重定向&lt;/li&gt;
+&lt;li&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+  </entry>
   
   <entry>
     <title>options请求是什么鬼</title>
@@ -63,17 +93,17 @@
   </entry>
   
   <entry>
-    <title>http协议基础</title>
+    <title>http协议基础（上）</title>
     <link href="http://yoursite.com/2019/08/20/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/"/>
     <id>http://yoursite.com/2019/08/20/http协议基础/</id>
     <published>2019-08-20T13:50:49.000Z</published>
-    <updated>2019-08-20T14:54:46.021Z</updated>
+    <updated>2019-08-21T14:30:43.902Z</updated>
     
-    <content type="html"><![CDATA[<p>1.什么是Http协议</p><blockquote><p>超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。</p></blockquote><a id="more"></a><p>2.什么是Http协议无状态协议?怎么解决Http协议无状态协议?</p><blockquote><p>无状态指对事务处理没有记忆能力，意味着如果有后续处理需要前面的信息；处理无状态的办法：通过cookie或者session会话保存`</p></blockquote><p>3.http协议有什么组成？</p><blockquote><p>请求行（包括url，请求方式，http协议版本）<br>请求头<br>请求体</p></blockquote><p>4.http协议中有哪些请求方式</p><blockquote><p>GET:用于请求访问已经被URI(统一资源标识符)识别的资源,可以通过URL传参给服务器<br>POST:用于传输信息给服务器,主要功能与GET方法类似,但一般推荐使用POST方式<br>PUT:传输文件,报文主体中包含文件内容,保存到对应URI位置<br>HEAD:获得报文首部,与GET方法类似,只是不返回报文主体,一般用于验证URI是否有效<br>DELETE:删除文件,与PUT方法相反,删除对应URI位置的文件<br>OPTIONS:查询响应URI支持的HTTP方法</p></blockquote><p>6.HTTP 首部字段</p><blockquote><p>通用首部字段</p><ul><li>Cache-Control |控制缓存的行为</li><li>Connection |连接的管理</li><li>Date |创建报文的日期时间<br>请求首部字段</li><li>Accept：客户机用于告诉服务器它支持的数据类型；</li><li>Accept-Charset：客户机采用的编码；</li><li>Accept-Encoding：客户机支持的压缩格式；</li><li>Accept-Language：客户机的语言环境；</li><li>Host：告诉服务器想访问的主机名；</li><li>If-Modified-Sinec：资源的缓存时间；</li><li>Referer：告诉服务器，它是从哪个资源来访问服务器的(防盗链)</li><li>User-Agent：客户机通过这个头告诉服务器，客户机的软件环境。</li><li>Cookie：向服务器带数据；</li><li>Connection：close/Keep-Alive；保持连接或者关闭连接</li><li>Date：发送请求时间<br>响应首部字段</li><li>Location：配合302状态码使用，用于告诉客户找谁；</li><li>Server：告诉浏览器服务器的类型；</li><li>Content-Encoding：告诉浏览器数据的压缩格式；</li><li>Content-Length：告诉浏览器回送数据的长度；</li><li>Content-Language：告诉浏览器回送数据的语言环境；</li><li>Content-Type：告诉浏览器回送数据的类型；</li><li>Last-Modified：告诉浏览器当前资源的缓存时间；</li><li>Refresh：告诉浏览器隔多长时间刷新一次；</li><li>Content-Disposition：告诉浏览器以下载方式打开数据；</li><li>Transfer-Encoding：告诉浏览器数据的传送格式</li><li>Set-Cookie：缓存相关；</li><li>Transfer-Encoding：</li><li>Set-Cookie：</li><li>ETag：缓存相关；</li><li>Expires：服务器通过这个头，告诉浏览器把回送的资源缓存多长时间，-1或0，则是不缓存</li><li>Cache-Control：no-cache，控制浏览器不要缓存数据；</li><li>Pragma：no-cache，控制浏览器不要缓存数据；<br>实体首部字段</li><li>Allow |资源可支持的HTTP方法</li><li>Content-Encoding| 实体主体适用的编码方式</li><li>Content-Language| 实体主体的自然语言</li><li>Content-Length |实体主体的大小（单位：字节）</li><li>Content-Location| 替代对应资源的URI</li><li>Content-MD5 |实体主体的报文摘要</li><li>Content-Range |实体主体的位置范围</li><li>Content-Type |实体主体的媒体类型</li><li>Expires |实体主体过期的日期时间</li><li>Last-Modified |资源的最后修改日期时间</li></ul></blockquote><p>7.GET和POST的区别</p><blockquote><ul><li>get重点在从服务器上获取资源,post重点在想服务器发送数据;</li><li>get传输数据是通过URL请求,以filed(字段)=value的形式,置于URL后,并用”?”连接,多个请求数据之间用<br>“&amp;”连接,这个过程用户是可见的,post是放在请求体内</li><li>get传输量小,因为受URL长度限制,但效率较低/post可以传输大量数据,所以上传文件时只能用post方式</li><li>get是不安全的,因为URL是可见的,可能会泄露私密信息,如密码等</li></ul></blockquote><p>8.HTTP和https区别</p><blockquote><ul><li>https协议需要到ca申请证书，一般免费证书很少，需要交费。</li><li>http是超文本传输协议，信息是明文传输，https 则是具有安全性的ssl加密传输协议。</li><li>http和https使用的是完全不同的连接方式用的端口也不一样，前者是80，后者是443。</li><li>http的连接很简单，是无状态的。HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。</li></ul></blockquote><p>9.http1.0和http1.1区别</p><blockquote><ul><li>建立连接方面: HTTP/1.0 每次请求都需要建立新的TCP连接，连接不能复用。HTTP/1.1 新的请求可以在上次请求建立的TCP连接之上发送，连接可以复用。优点是减少重复进行TCP三次握手的开销，提高效率。</li><li>HTTP1.1增加了OPTIONS, PUT, DELETE, TRACE, CONNECT这些Request方法</li></ul></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><strong>什么是Http协议</strong></p><blockquote><p>超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。</p></blockquote><a id="more"></a><p><strong>http协议结构组成</strong></p><blockquote><p>请求行（包括url，请求方式，状态码，http协议版本）<br>请求头<br>请求体</p></blockquote><p><strong>http协议中有哪些请求方式</strong></p><blockquote><p>GET:用于请求访问已经被URI(统一资源标识符)识别的资源,可以通过URL传参给服务器<br>POST:用于传输信息给服务器,主要功能与GET方法类似,但一般推荐使用POST方式<br>PUT:传输文件,报文主体中包含文件内容,保存到对应URI位置<br>HEAD:获得报文首部,与GET方法类似,只是不返回报文主体,一般用于验证URI是否有效<br>DELETE:删除文件,与PUT方法相反,删除对应URI位置的文件<br>OPTIONS:查询响应URI支持的HTTP方法</p></blockquote><p><strong>GET和POST的区别</strong></p><blockquote><ul><li>get重点在从服务器上获取资源,post重点在想服务器发送数据;</li><li>get传输数据是通过URL请求,以filed(字段)=value的形式,置于URL后,并用”?”连接,多个请求数据之间用<br>“&amp;”连接,这个过程用户是可见的,post是放在请求体内</li><li>get传输量小,因为受URL长度限制,但效率较低/post可以传输大量数据,所以上传文件时只能用post方式</li><li>get是不安全的,因为URL是可见的,可能会泄露私密信息,如密码等</li></ul></blockquote><p><strong>HTTP和https区别</strong></p><blockquote><ul><li>https协议需要到ca申请证书，一般免费证书很少，需要交费。</li><li>http是超文本传输协议，信息是明文传输，https 则是具有安全性的<code>ssl</code>加密传输协议。</li><li>http和https使用的是完全不同的连接方式用的端口也不一样，前者是80，后者是443。</li><li>http的连接很简单，是无状态的。HTTPS协议是由<code>SSL+HTTP</code>协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。</li></ul></blockquote><p><strong>http1.0和http1.1区别</strong></p><blockquote><ul><li>建立连接方面: HTTP/1.0 每次请求都需要建立新的TCP连接，连接不能复用。HTTP/1.1 新的请求可以在上次请求建立的TCP连接之上发送，连接可以复用。优点是减少重复进行TCP三次握手的开销，提高效率。</li><li>HTTP1.1增加了<code>OPTIONS</code>, <code>PUT</code>, <code>DELETE,</code> <code>TRACE</code>, <code>CONNECT</code>这些Request方法</li></ul></blockquote><p> <strong>无状态</strong></p><blockquote><p>由于http是一种无状态的协议，因此无论是客户端还是服务器都不记录http的相关信息。这样设计一方面减轻了服务器端的负载，另一方面减小了http请求的开销。<br><code>cookie</code>和<code>session</code>用于解决http无状态的问题</p></blockquote><p><strong>持久化</strong></p><blockquote><p>正常在发送http时，都需要建立<code>TCP</code>的连接，再发送报文,　如果每次想要发送http报文都需要经过这个过程，那么时间大部分都会消耗在建立和断开连接的过程中。因此http中使用了<code>connection</code>属性，用于指定连接的方式。当设置成<code>keep-alive</code>，就会建立一条持久化的连接。不需要每次都建立连接，再中断。</p></blockquote><p><strong>管道化</strong></p><blockquote><p>http可以一次发送多个http请求，然后等待响应连接。不需要排队等候，这样就加快了http的响应时间。</p></blockquote><p><strong>内容编码</strong></p><blockquote><p>由于某些报文的内容过大，因此在传输时，为了减少传输的时间，会采取一些压缩的措施。例如<code>accept-Encoding</code>定义了内容编码的格式：<code>gzip</code></p></blockquote>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;1.什么是Http协议&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;什么是Http协议&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。&lt;/p&gt;
 &lt;/blockquote&gt;
