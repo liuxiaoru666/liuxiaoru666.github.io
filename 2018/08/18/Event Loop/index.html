@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 前端安全防御 | 刘晓儒个人博客</title>
+  <title>Event Loop | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="刘晓儒个人博客">
-<meta property="og:url" content="http://yoursite.com/tags/前端安全防御/index.html">
+  <meta name="description" content="附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Event Loop">
+<meta property="og:url" content="http://yoursite.com/2018/08/18/Event Loop/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
+<meta property="og:description" content="附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-22T13:02:25.944Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘晓儒个人博客">
+<meta name="twitter:title" content="Event Loop">
+<meta name="twitter:description" content="附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -174,65 +179,218 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Event Loop" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/08/19/前端安全防御/" class="archive-article-date">
-        <time datetime="2018-08-19T12:27:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-19</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/08/19/前端安全防御/">前端安全防御</a>
-	
+    <h1 class="article-title" itemprop="name">
+      Event Loop
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2018/08/18/Event Loop/" class="archive-article-date">
+        <time datetime="2018-08-18T14:47:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-18</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="JavaScript的事件分两种，宏任务-macro-task-和微任务-micro-task"><a href="#JavaScript的事件分两种，宏任务-macro-task-和微任务-micro-task" class="headerlink" title="JavaScript的事件分两种，宏任务(macro-task)和微任务(micro-task)"></a>JavaScript的事件分两种，宏任务(macro-task)和微任务(micro-task)</h3><ul>
+<li>宏任务：包括整体代码script，setTimeout，setInterval</li>
+<li>微任务：Promise.then(非new Promise)，process.nextTick(node中)</li>
+</ul>
+<blockquote>
+<p>事件的执行顺序，是先执行宏任务，然后执行微任务，这个是基础，任务可以有同步任务和异步任务，同步的进入主线程，异步的进入Event Table并注册函数，异步事件完成后，会将回调函数放入Event Queue中(宏任务和微任务是不同的Event Queue)，同步任务执行完成后，会从Event Queue中读取事件放入主线程执行，回调函数中可能还会包含不同的任务，因此会循环执行上述操作。<br>``</p>
+</blockquote>
+<a id="more"></a>
+
+<p>setTimeout(() =&gt; {<br>    console.log(‘延时1秒’);<br>},1000)<br>console.log(“开始”)<br>输出：<br>开始<br>延时1秒</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">`上述代码，setTimeout函数是宏任务，且是异步任务，因此会将函数放入Event Table并注册函数，经过指定时间后，把要执行的任务加入到Event Queue中，等待同步任务console.log(&quot;开始&quot;)执行结束后，读取Event Queue中setTimeout的回调函数执行。`</span><br><span class="line"></span><br><span class="line">上述代码不包含微任务，接下来看包含微任务的代码：</span><br></pre></td></tr></table></figure>
+
+<p>setTimeout(function() {<br>    console.log(‘setTimeout’);<br>},1000)</p>
+<p>new Promise(function(resolve) {<br>    console.log(‘promise’);<br>}).then(function() {<br>    console.log(‘then’);<br>})</p>
+<p>console.log(‘console’);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">`首先setTimeout，放入Event Table中，1秒后将回调函数放入宏任务的Event Queue中</span><br><span class="line">new Promise 同步代码，立即执行console.log(&apos;promise&apos;),然后看到微任务then，因此将其放入微任务的Event Queue中</span><br><span class="line">接下来执行同步代码console.log(&apos;console&apos;)</span><br><span class="line">主线程的宏任务，已经执行完毕，接下来要执行微任务，因此会执行Promise.then，到此，第一轮事件循环执行完毕</span><br><span class="line">第二轮事件循环开始，先执行宏任务，即setTimeout的回调函数，然后查找是否有微任务，没有，时间循环结束`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 到此做个总结，事件循环，先执行宏任务，其中同步任务立即执行，异步任务，加载到对应的的Event Queue中(setTimeout等加入宏任务的Event Queue，Promise.then加入微任务的Event Queue)，所有同步宏任务执行完毕后，如果发现微任务的Event Queue中有未执行的任务，会先执行其中的任务，这样算是完成了一次事件循环。接下来查看宏任务的Event Queue中是否有未执行的任务，有的话，就开始第二轮事件循环，依此类推。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">上述例子只是简单的一层嵌套，接下来看一个稍微复杂了一点点的例子：</span><br></pre></td></tr></table></figure>
+
+<p>console.log(‘1’);<br>setTimeout(function() {<br>    console.log(‘2’);<br>    process.nextTick(function() {<br>        console.log(‘3’);<br>    })<br>    new Promise(function(resolve) {<br>        console.log(‘4’);<br>        resolve();<br>    }).then(function() {<br>        console.log(‘5’)<br>    })<br>})<br>输出：<br>1<br>2<br>4<br>3<br>5</p>
+<pre><code>`宏任务同步代码console.log(&apos;1&apos;),不多说
+setTimeout，加入宏任务Event Queue，没有发现微任务，第一轮事件循环走完
+第二轮事件循环开始，先执行宏任务，从宏任务Event Queue中独取出setTimeout的回调函数
+同步代码console.log(&apos;2&apos;),发现process.nextTick，加入微任务Event Queue
+new Promise，同步执行console.log(&apos;4&apos;),发现then，加入微任务Event Queue
+宏任务执行完毕，接下来执行微任务，先执行process.nextTick，然后执行Promise.then
+微任务执行完毕，第二轮事件循环走完，没有发现宏任务，事件循环结束`
+
+</code></pre>
+    
+
+    
+
+    
+      <div> 
+        <ul class="post-copyright">
+          <li>
+            <strong>本文作者：</strong>
+            刘晓儒
+          </li>
+          <li>
+            <strong>本文链接：</strong>
+            <a href="http://yoursite.com/2018/08/18/Event Loop/" title="Event Loop" target="_blank">http://yoursite.com/2018/08/18/Event Loop/</a>
+          </li>
+          <li>
+            <strong>版权声明： </strong>
+            本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+          </li>
+        </ul>
+      </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">前端安全防御</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/18/Event Loop/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/08/19/JS继承的继承方式/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JS继承的继承方式
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript的事件分两种，宏任务-macro-task-和微任务-micro-task"><span class="toc-number">1.</span> <span class="toc-text">JavaScript的事件分两种，宏任务(macro-task)和微任务(micro-task)</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -273,9 +431,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

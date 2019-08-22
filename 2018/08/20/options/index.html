@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 前端安全防御 | 刘晓儒个人博客</title>
+  <title>options请求是什么鬼 | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="刘晓儒个人博客">
-<meta property="og:url" content="http://yoursite.com/tags/前端安全防御/index.html">
+  <meta name="description" content="options出现的情况只有两种：   1、获取目的资源所支持的通信方式黑客有可能经常用到这个；在响应报文中包含一个Allow首部字段，该字段的值表明了服务器支持的所有HTTP方法，如下： 2、跨域请求中，options请求是浏览器自发起的preflight request(预检请求)，以检测实际请求是否可以被浏览器接受.">
+<meta name="keywords" content="http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="options请求是什么鬼">
+<meta property="og:url" content="http://yoursite.com/2018/08/20/options/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
+<meta property="og:description" content="options出现的情况只有两种：   1、获取目的资源所支持的通信方式黑客有可能经常用到这个；在响应报文中包含一个Allow首部字段，该字段的值表明了服务器支持的所有HTTP方法，如下： 2、跨域请求中，options请求是浏览器自发起的preflight request(预检请求)，以检测实际请求是否可以被浏览器接受.">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-22T13:02:41.849Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘晓儒个人博客">
+<meta name="twitter:title" content="options请求是什么鬼">
+<meta name="twitter:description" content="options出现的情况只有两种：   1、获取目的资源所支持的通信方式黑客有可能经常用到这个；在响应报文中包含一个Allow首部字段，该字段的值表明了服务器支持的所有HTTP方法，如下： 2、跨域请求中，options请求是浏览器自发起的preflight request(预检请求)，以检测实际请求是否可以被浏览器接受.">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -174,65 +179,214 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-options" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/08/19/前端安全防御/" class="archive-article-date">
-        <time datetime="2018-08-19T12:27:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-19</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/08/19/前端安全防御/">前端安全防御</a>
-	
+    <h1 class="article-title" itemprop="name">
+      options请求是什么鬼
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2018/08/20/options/" class="archive-article-date">
+        <time datetime="2018-08-20T15:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>options出现的情况只有两种：</p>
+<blockquote>
+<ul>
+<li>1、获取目的资源所支持的通信方式<br>黑客有可能经常用到这个；在响应报文中包含一个Allow首部字段，该字段的值表明了服务器支持的所有HTTP方法，如下：</li>
+<li>2、跨域请求中，options请求是浏览器自发起的preflight request(预检请求)，以检测实际请求是否可以被浏览器接受.</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<p>在我们开发过程中出现的浏览器自发起的options请求就是上面的第二种情况。实际上，跨域请求中的”复杂请求”发出前会进行一次方法是options的preflight request。</p>
+<p>符合以下任一情况的就是复杂请求：</p>
+<blockquote>
+<p>1.使用方法put或者delete;<br>2.发送json格式的数据（content-type: application/json）<br>3.请求中带有自定义头部；</p>
+</blockquote>
+<p>为什么跨域的复杂请求需要preflight request？</p>
+<blockquote>
+<p>复杂请求可能对服务器数据产生副作用。例如delete或者put,都会对服务器数据进行修改,所以在请求之前都要先询问服务器，当前网页所在域名是否在服务器的许可名单中，服务器允许后，浏览器才会发出正式的请求，否则不发送正式请求。</p>
+</blockquote>
+
+    
+
+    
+
+    
+      <div> 
+        <ul class="post-copyright">
+          <li>
+            <strong>本文作者：</strong>
+            刘晓儒
+          </li>
+          <li>
+            <strong>本文链接：</strong>
+            <a href="http://yoursite.com/2018/08/20/options/" title="options请求是什么鬼" target="_blank">http://yoursite.com/2018/08/20/options/</a>
+          </li>
+          <li>
+            <strong>版权声明： </strong>
+            本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+          </li>
+        </ul>
+      </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">前端安全防御</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/20/options/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/08/21/浏览器缓存机制/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          浏览器缓存机制
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/20/reffer/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Referer</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -273,9 +427,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

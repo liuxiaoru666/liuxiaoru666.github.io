@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 前端安全防御 | 刘晓儒个人博客</title>
+  <title>http协议基础（下) | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="刘晓儒个人博客">
-<meta property="og:url" content="http://yoursite.com/tags/前端安全防御/index.html">
+  <meta name="description" content="http状态码   1XX:接收信息正在处理 2XX:正常处理完毕（200请求成功） 3XX:重定向 301 永久重定向 302 临时重定向   4XX:客户端错误 400:语法错误（参数不对） 401:未认证 403:禁止访问 404:资源未找到   5XX:服务器错误 500:服务器出错 503:服务器繁忙">
+<meta name="keywords" content="http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="http协议基础（下)">
+<meta property="og:url" content="http://yoursite.com/2018/08/21/http协议基础下/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
+<meta property="og:description" content="http状态码   1XX:接收信息正在处理 2XX:正常处理完毕（200请求成功） 3XX:重定向 301 永久重定向 302 临时重定向   4XX:客户端错误 400:语法错误（参数不对） 401:未认证 403:禁止访问 404:资源未找到   5XX:服务器错误 500:服务器出错 503:服务器繁忙">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-22T13:02:32.368Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘晓儒个人博客">
+<meta name="twitter:title" content="http协议基础（下)">
+<meta name="twitter:description" content="http状态码   1XX:接收信息正在处理 2XX:正常处理完毕（200请求成功） 3XX:重定向 301 永久重定向 302 临时重定向   4XX:客户端错误 400:语法错误（参数不对） 401:未认证 403:禁止访问 404:资源未找到   5XX:服务器错误 500:服务器出错 503:服务器繁忙">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -174,65 +179,283 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-http协议基础下" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/08/19/前端安全防御/" class="archive-article-date">
-        <time datetime="2018-08-19T12:27:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-19</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/08/19/前端安全防御/">前端安全防御</a>
-	
+    <h1 class="article-title" itemprop="name">
+      http协议基础（下)
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2018/08/21/http协议基础下/" class="archive-article-date">
+        <time datetime="2018-08-21T14:20:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-21</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><strong>http状态码</strong></p>
+<blockquote>
+<ul>
+<li>1XX:接收信息正在处理</li>
+<li>2XX:正常处理完毕（200请求成功）</li>
+<li>3XX:重定向<ul>
+<li>301 永久重定向</li>
+<li>302 临时重定向</li>
+</ul>
+</li>
+<li>4XX:客户端错误<ul>
+<li>400:语法错误（参数不对）</li>
+<li>401:未认证</li>
+<li>403:禁止访问</li>
+<li>404:资源未找到</li>
+</ul>
+</li>
+<li>5XX:服务器错误<ul>
+<li>500:服务器出错</li>
+<li>503:服务器繁忙</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<p><strong>HTTP首部字段</strong></p>
+<blockquote>
+<p><em>通用首部字段</em></p>
+<ul>
+<li>Cach-Control 控制缓存的行为</li>
+<li>Date 创建报文的事件</li>
+<li>Connection 连接管理</li>
+<li>Pragma：报文指令</li>
+<li>Trailer：报文末端的首部一览</li>
+<li>Transfer-Encoding：指定报文主体的传输编码方式</li>
+<li>Upgrade：升级为其他协议</li>
+<li>Via：代理服务器的相关信息</li>
+<li>Warning：错误通知</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><em>请求首部字段（Request Header Fields）</em></p>
+<ul>
+<li>从客户端向服务器发送求报文时使用的首部。补充了请求的附加内容、客户端信息、响应内容相关优先级等信息。</li>
+<li>Accept：用户代理可处理的媒体类型</li>
+<li>Accept-Charset：优先的字符集</li>
+<li>Accept-Encoding：优先的内容编码</li>
+<li>Accept-Language：优先的语言（自然语言）</li>
+<li>Authorization：Web认证信息</li>
+<li>Expect：期待服务器的特定行为</li>
+<li>From：用户的电子邮箱地址</li>
+<li>Host：请求资源所在服务器</li>
+<li>If-Match：比较实体标记（ETag）</li>
+<li>If-Modified-Since：比较资源的更新时间</li>
+<li>If-None-Match：比较实体标记（与If-Match相反）</li>
+<li>If-Range：资源未更新时发送实体Byte的范围请求</li>
+<li>If-Unmodified-Since：比较资源的更新时间（与If-Modified-Since相反）</li>
+<li>Max-Forwards：最大传输逐跳数</li>
+<li>Proxy-Authorization：代理服务器要求客户端的认真信息</li>
+<li>Range：实体的直接范围请求</li>
+<li>Referer：对请求中URI的原始获取方</li>
+<li>TE：传输编码的优先级</li>
+<li>User-Agent：HTTP客户端程序的信息</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><em>响应首部字段（Response Header Fields）</em></p>
+<ul>
+<li>从服务器端向客户端返回响应报文时使用的首部。补充了响应的附加内容，也会请求客户端附加额外的内容信息。</li>
+<li>Accept-Ranges：是否接受字节范围请求</li>
+<li>Age：推算资源创建经过时间</li>
+<li>ETag：资源的匹配信息</li>
+<li>Location：令客户端重定向至指定URI</li>
+<li>Proxy-Authenticate：代理服务器对客户端的认真信息</li>
+<li>Retry-After：对再次发起请求的时机请求</li>
+<li>Server：HTTP服务器的安装信息</li>
+<li>Vary：代理服务器缓存的管理信息</li>
+<li>WWW-Authenticate：服务器对客户端的认真信息</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><em>实体首部字段（Entity Header Fields）</em><br>针对请求报文和响应报文的实体部分使用的首部。补充了资源内容更新时间等与实体相关的信息。</p>
+</blockquote>
+<ul>
+<li>Allow：资源可支持的HTTP方法</li>
+<li>Content-Encoding：实体主体适用的编码方法</li>
+<li>Content-Language：实体主体的自然语言</li>
+<li>Content-Length：实体主体的大小（单位：字节）</li>
+<li>Content-Location：替代对应资源的URI</li>
+<li>Content-MD5：实体主体的报文摘要</li>
+<li>Content-Range：实体主体的位置范围</li>
+<li>Content-Type：实体主体的媒体类型</li>
+<li>Expires：实体主体过期的日期时间</li>
+<li>Last-Modified：资源的最后修改日期时间</li>
+</ul>
+
+    
+
+    
+
+    
+      <div> 
+        <ul class="post-copyright">
+          <li>
+            <strong>本文作者：</strong>
+            刘晓儒
+          </li>
+          <li>
+            <strong>本文链接：</strong>
+            <a href="http://yoursite.com/2018/08/21/http协议基础下/" title="http协议基础（下)" target="_blank">http://yoursite.com/2018/08/21/http协议基础下/</a>
+          </li>
+          <li>
+            <strong>版权声明： </strong>
+            本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+          </li>
+        </ul>
+      </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">前端安全防御</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/21/http协议基础下/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/21/浏览器缓存机制/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">浏览器缓存机制</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -273,9 +496,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
