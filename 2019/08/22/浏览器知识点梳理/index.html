@@ -6,21 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JS继承的继承方式 | 刘晓儒个人博客</title>
+  <title>浏览器知识点梳理 | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
-<meta name="keywords" content="JavaScript">
+  <meta name="description" content="Web 前端工程师写的页面要跑在浏览器里面，所以面试中也会出现很多跟浏览器相关的面试题目。 知识点梳理 浏览器加载页面和渲染过程 性能优化 Web 安全  本小节会从浏览器的加载过程开始讲解，然后介绍如何进行性能优化，最后介绍下 Web 开发中常见的安全问题和预防。  加载页面和渲染过程可将加载过程和渲染过程分开说。回答问题的时候，关键要抓住核心的要点，把要点说全面，稍加解析即可，简明扼要不拖沓。">
+<meta name="keywords" content="知识点梳理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS继承的继承方式">
-<meta property="og:url" content="http://yoursite.com/2018/08/19/JS继承的继承方式/index.html">
+<meta property="og:title" content="浏览器知识点梳理">
+<meta property="og:url" content="http://yoursite.com/2019/08/22/浏览器知识点梳理/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
-<meta property="og:description" content="附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
+<meta property="og:description" content="Web 前端工程师写的页面要跑在浏览器里面，所以面试中也会出现很多跟浏览器相关的面试题目。 知识点梳理 浏览器加载页面和渲染过程 性能优化 Web 安全  本小节会从浏览器的加载过程开始讲解，然后介绍如何进行性能优化，最后介绍下 Web 开发中常见的安全问题和预防。  加载页面和渲染过程可将加载过程和渲染过程分开说。回答问题的时候，关键要抓住核心的要点，把要点说全面，稍加解析即可，简明扼要不拖沓。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-22T13:02:36.643Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/2/23/161c107496accac7?w=1176&h=294&f=png&s=77020">
+<meta property="og:updated_time" content="2019-08-22T15:00:44.399Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS继承的继承方式">
-<meta name="twitter:description" content="附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
+<meta name="twitter:title" content="浏览器知识点梳理">
+<meta name="twitter:description" content="Web 前端工程师写的页面要跑在浏览器里面，所以面试中也会出现很多跟浏览器相关的面试题目。 知识点梳理 浏览器加载页面和渲染过程 性能优化 Web 安全  本小节会从浏览器的加载过程开始讲解，然后介绍如何进行性能优化，最后介绍下 Web 开发中常见的安全问题和预防。  加载页面和渲染过程可将加载过程和渲染过程分开说。回答问题的时候，关键要抓住核心的要点，把要点说全面，稍加解析即可，简明扼要不拖沓。">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/2/23/161c107496accac7?w=1176&h=294&f=png&s=77020">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -179,14 +181,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JS继承的继承方式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-浏览器知识点梳理" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class=" article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      JS继承的继承方式
+      浏览器知识点梳理
     </h1>
   
 
@@ -198,8 +200,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2018/08/19/JS继承的继承方式/" class="archive-article-date">
-        <time datetime="2018-08-18T18:08:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-19</time>
+<a href="/2019/08/22/浏览器知识点梳理/" class="archive-article-date">
+        <time datetime="2019-08-22T15:00:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
 </a>
 
   
@@ -208,66 +210,139 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><strong>原型链继承</strong></p>
-<p><code>利用prototype将子构造函数的prototype指向Person达到继承的目的</code>；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Person(name)&#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.country=&apos;china&apos;;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.play = function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Child(age)&#123;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Child.prototype = new Person();</span><br></pre></td></tr></table></figure>
-
-<p>缺点：</p>
-<ul>
-<li><code>创建子类实例时，但是无法给父构造函数传参</code></li>
-<li><code>来自原型对象的引用属性是所有实例共享的</code></li>
+    <p>Web 前端工程师写的页面要跑在浏览器里面，所以面试中也会出现很多跟浏览器相关的面试题目。</p>
+<h2 id="知识点梳理"><a href="#知识点梳理" class="headerlink" title="知识点梳理"></a>知识点梳理</h2><ul>
+<li>浏览器加载页面和渲染过程</li>
+<li>性能优化</li>
+<li>Web 安全</li>
 </ul>
-<a id="more"></a>
-
-
-<p><strong>构造函数继承</strong></p>
-<p><code>在子类构造函数中借用call调用父类构造函数</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Person(name)&#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.country=&apos;china&apos;;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.play = function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Child(name,age)&#123;</span><br><span class="line">    this.age = age;</span><br><span class="line">    Person.call(this,name)</span><br><span class="line">&#125;</span><br><span class="line">var obj = new Child(&apos;小明&apos;，16);</span><br></pre></td></tr></table></figure>
-
-<p>优点：</p>
-<ul>
-<li><code>解决了子类构造函数向父类构造函数传参数和实例共享原型属性的问题</code></li>
-</ul>
-<p>缺点：</p>
-<ul>
-<li><code>相当于每个实例都拷贝了一份父类的方法，占用内存大</code></li>
-<li><code>不能继承原型属性/方法，只能继承父类的实例属性和方法</code></li>
-</ul>
-<p><strong>组合继承</strong></p>
-<p><code>使用原型链实现对原型属性和方法的继承，通过借用构造函数实现对实例属性的继承</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function Person(name)&#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.country=&apos;china&apos;;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.play = function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">function Child(name,age)&#123;</span><br><span class="line">    Person.call(this,name);</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line">Child.prototype = new Person();</span><br></pre></td></tr></table></figure>
-
-<p>缺点：</p>
-<ul>
-<li><code>会调用两次父类构造函数</code></li>
-<li></li>
-</ul>
-<p><strong>原型式继承</strong></p>
-<p><code>基于已有对象，创建新对象</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 在object函数内部，先创建了一个临时的构造函数，然后将传入的对象作为这个构造函数的原型，最后返回这个临时类型的一个新实例。</span><br><span class="line">// 从本质上讲，object()对传入其中的对象执行了一次浅复制。</span><br><span class="line"></span><br><span class="line">function object (o) &#123;</span><br><span class="line">  function F() &#123;&#125;</span><br><span class="line">  F.prototype = o;</span><br><span class="line">  return new F();</span><br><span class="line">&#125;</span><br><span class="line">缺点：</span><br><span class="line">-  和原型链继承一样，所有子类实例共享父类的引用类型</span><br></pre></td></tr></table></figure>
-
-<p><strong>寄生式继承</strong></p>
-<p><code>寄生式继承是与原型式继承紧密相关的一种思路，创建一个仅用于封装继承过程的函数，该函数内部以某种形式来做增强对象，最后返回对象</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function object (o) &#123;</span><br><span class="line">  function F() &#123;&#125;</span><br><span class="line">  F.prototype = o;</span><br><span class="line">  return new F();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function createAnother (o) &#123;</span><br><span class="line">  var clone = object(o);</span><br><span class="line">  clone.sayHi = function () &#123;</span><br><span class="line">    console.log(&apos;Hi&apos;);</span><br><span class="line">  &#125;</span><br><span class="line">  return clone;</span><br><span class="line">&#125;</span><br><span class="line">缺点：</span><br><span class="line">1,和原型链式继承一样，所有子类实例共享父类引用类型。</span><br><span class="line">2,和借用构造函数继承一样，每次创建对象都会创建一次方法</span><br></pre></td></tr></table></figure>
-
-<p><strong>寄生组合式继承</strong></p>
-<p><code>结合组合式继承和寄生式继承，解决组合式继承调用两次父类构造函数的问题</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">function object(o) &#123;</span><br><span class="line">  function F() &#123; &#125;</span><br><span class="line">  F.prototype = o;</span><br><span class="line">  return new F();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function inheritPrototype(SubType, SuperType) &#123;</span><br><span class="line">  var prototype = object(SuperType.prototype);        // 创建对象</span><br><span class="line">  prototype.constructor = SubType;    // 增强对象</span><br><span class="line">  SubType.prototype = prototype;      // 指定对象 </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 父类</span><br><span class="line">function SuperType(name) &#123;</span><br><span class="line">  this.name = name;</span><br><span class="line">  this.colors = [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SuperType.prototype.sayName = function () &#123;</span><br><span class="line">  console.log(this.name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 子类</span><br><span class="line">function SubType(name, age) &#123;</span><br><span class="line">  // 继承父类实例属性</span><br><span class="line">  SuperType.call(this, name);</span><br><span class="line"></span><br><span class="line">  // 子类实例属性</span><br><span class="line">  this.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 继承父类方法</span><br><span class="line">inheritPrototype(SubType, SuperType);</span><br></pre></td></tr></table></figure>
-
-<p><strong>Es6继承</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">function object(o) &#123;</span><br><span class="line">  function F() &#123; &#125;</span><br><span class="line">  F.prototype = o;</span><br><span class="line">  return new F();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function inheritPrototype(SubType, SuperType) &#123;</span><br><span class="line">  var prototype = object(SuperType.prototype);        // 创建对象</span><br><span class="line">  prototype.constructor = SubType;    // 增强对象</span><br><span class="line">  SubType.prototype = prototype;      // 指定对象 </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 父类</span><br><span class="line">function SuperType(name) &#123;</span><br><span class="line">  this.name = name;</span><br><span class="line">  this.colors = [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SuperType.prototype.sayName = function () &#123;</span><br><span class="line">  console.log(this.name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 子类</span><br><span class="line">function SubType(name, age) &#123;</span><br><span class="line">  // 继承父类实例属性</span><br><span class="line">  SuperType.call(this, name);</span><br><span class="line"></span><br><span class="line">  // 子类实例属性</span><br><span class="line">  this.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 继承父类方法</span><br><span class="line">inheritPrototype(SubType, SuperType);</span><br></pre></td></tr></table></figure>
-
+<p>本小节会从浏览器的加载过程开始讲解，然后介绍如何进行性能优化，最后介绍下 Web 开发中常见的安全问题和预防。</p>
+<hr>
+<h2 id="加载页面和渲染过程"><a href="#加载页面和渲染过程" class="headerlink" title="加载页面和渲染过程"></a>加载页面和渲染过程</h2><p>可将加载过程和渲染过程分开说。回答问题的时候，关键要抓住核心的要点，把要点说全面，稍加解析即可，简明扼要不拖沓。</p>
 <blockquote>
-<p>底层也是用寄生组合式继承实现的</p>
+<p>题目：浏览器从加载页面到渲染页面的过程</p>
 </blockquote>
-<p><strong>拷贝继承</strong><br><code>把一个对象中的属性和方法复制到另一个</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">浅拷贝</span><br><span class="line"> function shallowCopy(source, target = &#123;&#125;) &#123;</span><br><span class="line">        var key;</span><br><span class="line">        for (key in source) &#123;</span><br><span class="line">            if (source.hasOwnProperty(key)) &#123;        // 意思就是__proto__上面的属性,我不拷贝</span><br><span class="line">                target[key] = source[key];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return target;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="加载过程"><a href="#加载过程" class="headerlink" title="加载过程"></a>加载过程</h3><p>要点如下：</p>
+<ul>
+<li>浏览器根据 DNS 服务器得到域名的 IP 地址</li>
+<li>向这个 IP 的机器发送 HTTP 请求</li>
+<li>服务器收到、处理并返回 HTTP 请求</li>
+<li>浏览器得到返回内容</li>
+</ul>
+<p>例如在浏览器输入<code>https://juejin.im/timeline</code>，然后经过 DNS 解析，<code>juejin.im</code>对应的 IP 是<code>36.248.217.149</code>（不同时间、地点对应的 IP 可能会不同）。然后浏览器向该 IP 发送 HTTP 请求。</p>
+<p>server 端接收到 HTTP 请求，然后经过计算（向不同的用户推送不同的内容），返回 HTTP 请求，返回的内容如下：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c107496accac7?w=1176&h=294&f=png&s=77020" alt></p>
+<p>其实就是一堆 HMTL 格式的字符串，因为只有 HTML 格式浏览器才能正确解析，这是 W3C 标准的要求。接下来就是浏览器的渲染过程。</p>
+<h3 id="渲染过程"><a href="#渲染过程" class="headerlink" title="渲染过程"></a>渲染过程</h3><p>要点如下：</p>
+<ul>
+<li>根据 HTML 结构生成 DOM 树</li>
+<li>根据 CSS 生成 CSSOM</li>
+<li>将 DOM 和 CSSOM 整合形成 RenderTree</li>
+<li>根据 RenderTree 开始渲染和展示</li>
+<li>遇到<code>&lt;script&gt;</code>时，会执行并阻塞渲染</li>
+</ul>
+<p>上文中，浏览器已经拿到了 server 端返回的 HTML 内容，开始解析并渲染。最初拿到的内容就是一堆字符串，必须先结构化成计算机擅长处理的基本数据结构，因此要把 HTML 字符串转化成 DOM 树 —— 树是最基本的数据结构之一。</p>
+<p>解析过程中，如果遇到<code>&lt;link href=&quot;...&quot;&gt;</code>和<code>&lt;script src=&quot;...&quot;&gt;</code>这种外链加载 CSS 和 JS 的标签，浏览器会异步下载，下载过程和上文中下载 HTML 的流程一样。只不过，这里下载下来的字符串是 CSS 或者 JS 格式的。</p>
+<p>浏览器将 CSS 生成 CSSOM，再将 DOM 和 CSSOM 整合成 RenderTree ，然后针对 RenderTree 即可进行渲染了。大家可以想一下，有 DOM 结构、有样式，此时就能满足渲染的条件了。另外，这里也可以解释一个问题 —— <strong>为何要将 CSS 放在 HTML 头部？</strong>—— 这样会让浏览器尽早拿到 CSS 尽早生成 CSSOM，然后在解析 HTML 之后可一次性生成最终的 RenderTree，渲染一次即可。如果 CSS 放在 HTML 底部，会出现渲染卡顿的情况，影响性能和体验。</p>
+<p>最后，渲染过程中，如果遇到<code>&lt;script&gt;</code>就停止渲染，执行 JS 代码。因为浏览器渲染和 JS 执行共用一个线程，而且这里必须是单线程操作，多线程会产生渲染 DOM 冲突。待<code>&lt;script&gt;</code>内容执行完之后，浏览器继续渲染。最后再思考一个问题 —— <strong>为何要将 JS 放在 HTML 底部？</strong>—— JS 放在底部可以保证让浏览器优先渲染完现有的 HTML 内容，让用户先看到内容，体验好。另外，JS 执行如果涉及 DOM 操作，得等待 DOM 解析完成才行，JS 放在底部执行时，HTML 肯定都解析成了 DOM 结构。JS 如果放在 HTML 顶部，JS 执行的时候 HTML 还没来得及转换为 DOM 结构，可能会报错。</p>
+<p>关于浏览器整个流程，百度的多益大神有更加详细的文章，推荐阅读下：《<a href="http://fex.baidu.com/blog/2014/05/what-happen/" target="_blank" rel="noopener">从输入 URL 到页面加载完成的过程中都发生了什么事情？</a> 》。</p>
+<hr>
+<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><p>性能优化的题目也是面试常考的，这类题目有很大的扩展性，能够扩展出来很多小细节，而且对个人的技术视野和业务能力有很大的挑战。这部分笔者会重点讲下常用的性能优化方案。</p>
+<blockquote>
+<p>题目：总结前端性能优化的解决方案</p>
+</blockquote>
+<h3 id="优化原则和方向"><a href="#优化原则和方向" class="headerlink" title="优化原则和方向"></a>优化原则和方向</h3><p>性能优化的原则是<strong>以更好的用户体验为标准</strong>，具体就是实现下面的目标：</p>
+<ol>
+<li>多使用内存、缓存或者其他方法</li>
+<li>减少 CPU 和GPU 计算，更快展现</li>
+</ol>
+<p>优化的方向有两个：</p>
+<ul>
+<li><strong>减少页面体积，提升网络加载</strong></li>
+<li><strong>优化页面渲染</strong></li>
+</ul>
+<h3 id="减少页面体积，提升网络加载"><a href="#减少页面体积，提升网络加载" class="headerlink" title="减少页面体积，提升网络加载"></a>减少页面体积，提升网络加载</h3><ul>
+<li>静态资源的压缩合并（JS 代码压缩合并、CSS 代码压缩合并、雪碧图）</li>
+<li>静态资源缓存（资源名称加 MD5 戳）</li>
+<li>使用 CDN 让资源加载更快</li>
+</ul>
+<h3 id="优化页面渲染"><a href="#优化页面渲染" class="headerlink" title="优化页面渲染"></a>优化页面渲染</h3><ul>
+<li>CSS 放前面，JS 放后面</li>
+<li>懒加载（图片懒加载、下拉加载更多）</li>
+<li>减少DOM 查询，对 DOM 查询做缓存</li>
+<li>减少DOM 操作，多个操作尽量合并在一起执行（<code>DocumentFragment</code>）</li>
+<li>事件节流</li>
+<li>尽早执行操作（<code>DOMContentLoaded</code>）</li>
+<li>使用 SSR 后端渲染，数据直接输出到 HTML 中，减少浏览器使用 JS 模板渲染页面 HTML 的时间</li>
+</ul>
+<h3 id="详细解释"><a href="#详细解释" class="headerlink" title="详细解释"></a>详细解释</h3><h4 id="静态资源的压缩合并"><a href="#静态资源的压缩合并" class="headerlink" title="静态资源的压缩合并"></a>静态资源的压缩合并</h4><p>如果不合并，每个都会走一遍之前介绍的请求过程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;a.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;b.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;c.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">深拷贝 </span><br><span class="line">（对象里面嵌套对象才涉及深拷贝）</span><br><span class="line">function deepCopy(source, target = &#123;&#125;) &#123;</span><br><span class="line">        var key;</span><br><span class="line">        for (key in source) &#123;</span><br><span class="line">            if (source.hasOwnProperty(key)) &#123;                         // 意思就是__proto__上面的属性,我不拷贝</span><br><span class="line">                if (typeof(source[key]) === &quot;object&quot;) &#123;               // 如果这一项是object类型,就递归调用deepCopy</span><br><span class="line">                    target[key] = Array.isArray(source[key]) ? [] : &#123;&#125;;</span><br><span class="line">                    deepCopy(source[key], target[key]);</span><br><span class="line">                &#125; else &#123;                                            // 如果不是object类型,就直接赋值拷贝</span><br><span class="line">                    target[key] = source[key];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+<p>如果合并了，就只走一遍请求过程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;abc.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>深拷贝黑科技</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var targetObj = JSON.parse(JSON.stringify(copyObj))</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">1、如果你的对象里有函数,函数无法被拷贝下来</span><br><span class="line">2、无法拷贝copyObj对象原型链上的属性和方法</span><br></pre></td></tr></table></figure>
+<h4 id="静态资源缓存"><a href="#静态资源缓存" class="headerlink" title="静态资源缓存"></a>静态资源缓存</h4><p>通过链接名称控制缓存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;abc_1.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
+<p>只有内容改变的时候，链接名称才会改变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;abc_2.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这个名称不用手动改，可通过前端构建工具根据文件内容，为文件名称添加 MD5 后缀。</p>
+<h4 id="使用-CDN-让资源加载更快"><a href="#使用-CDN-让资源加载更快" class="headerlink" title="使用 CDN 让资源加载更快"></a>使用 CDN 让资源加载更快</h4><p>CDN 会提供专业的加载优化方案，静态资源要尽量放在 CDN 上。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用-SSR-后端渲染"><a href="#使用-SSR-后端渲染" class="headerlink" title="使用 SSR 后端渲染"></a>使用 SSR 后端渲染</h4><p>可一次性输出 HTML 内容，不用在页面渲染完成之后，再通过 Ajax 加载数据、再渲染。例如使用 smarty、Vue SSR 等。</p>
+<h4 id="CSS-放前面，JS-放后面"><a href="#CSS-放前面，JS-放后面" class="headerlink" title="CSS 放前面，JS 放后面"></a>CSS 放前面，JS 放后面</h4><p>上文讲述浏览器渲染过程时已经提过，不再赘述。</p>
+<h4 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h4><p>一开始先给为 <code>src</code> 赋值成一个通用的预览图，下拉时候再动态赋值成正式的图片。如下，<code>preview.png</code>是预览图片，比较小，加载很快，而且很多图片都共用这个<code>preview.png</code>，加载一次即可。待页面下拉，图片显示出来时，再去替换<code>src</code>为<code>data-realsrc</code>的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;preview.png&quot; data-realsrc=&quot;abc.png&quot;/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>另外，这里为何要用<code>data-</code>开头的属性值？—— 所有 HTML 中自定义的属性，都应该用<code>data-</code>开头，因为<code>data-</code>开头的属性浏览器渲染的时候会忽略掉，提高渲染性能。</p>
+<h4 id="DOM-查询做缓存"><a href="#DOM-查询做缓存" class="headerlink" title="DOM 查询做缓存"></a>DOM 查询做缓存</h4><p>两段代码做一下对比：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var pList = document.getElementsByTagName(&apos;p&apos;)  // 只查询一个 DOM ，缓存在 pList 中了</span><br><span class="line">var i</span><br><span class="line">for (i = 0; i &lt; pList.length; i++) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var i</span><br><span class="line">for (i = 0; i &lt; document.getElementsByTagName(&apos;p&apos;).length; i++) &#123;  // 每次循环，都会查询 DOM ，耗费性能</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结：DOM 操作，无论查询还是修改，都是非常耗费性能的，应尽量减少。</p>
+<h4 id="合并-DOM-插入"><a href="#合并-DOM-插入" class="headerlink" title="合并 DOM 插入"></a>合并 DOM 插入</h4><p>DOM 操作是非常耗费性能的，因此插入多个标签时，先插入 Fragment 然后再统一插入 DOM。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var listNode = document.getElementById(&apos;list&apos;)</span><br><span class="line">// 要插入 10 个 li 标签</span><br><span class="line">var frag = document.createDocumentFragment();</span><br><span class="line">var x, li;</span><br><span class="line">for(x = 0; x &lt; 10; x++) &#123;</span><br><span class="line">    li = document.createElement(&quot;li&quot;);</span><br><span class="line">    li.innerHTML = &quot;List item &quot; + x;</span><br><span class="line">    frag.appendChild(li);  // 先放在 frag 中，最后一次性插入到 DOM 结构中。</span><br><span class="line">&#125;</span><br><span class="line">listNode.appendChild(frag);</span><br></pre></td></tr></table></figure>
+
+<h4 id="事件节流"><a href="#事件节流" class="headerlink" title="事件节流"></a>事件节流</h4><p>例如要在文字改变时触发一个 change 事件，通过 keyup 来监听。使用节流。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var textarea = document.getElementById(&apos;text&apos;)</span><br><span class="line">var timeoutId</span><br><span class="line">textarea.addEventListener(&apos;keyup&apos;, function () &#123;</span><br><span class="line">    if (timeoutId) &#123;</span><br><span class="line">        clearTimeout(timeoutId)</span><br><span class="line">    &#125;</span><br><span class="line">    timeoutId = setTimeout(function () &#123;</span><br><span class="line">        // 触发 change 事件</span><br><span class="line">    &#125;, 100)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="尽早执行操作"><a href="#尽早执行操作" class="headerlink" title="尽早执行操作"></a>尽早执行操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&apos;load&apos;, function () &#123;</span><br><span class="line">    // 页面的全部资源加载完才会执行，包括图片、视频等</span><br><span class="line">&#125;)</span><br><span class="line">document.addEventListener(&apos;DOMContentLoaded&apos;, function () &#123;</span><br><span class="line">    // DOM 渲染完即可执行，此时图片、视频还可能没有加载完</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="性能优化怎么做"><a href="#性能优化怎么做" class="headerlink" title="性能优化怎么做"></a>性能优化怎么做</h4><p>上面提到的都是性能优化的单个点，性能优化项目具体实施起来，应该按照下面步骤推进：</p>
+<ol>
+<li>建立性能数据收集平台，摸底当前性能数据，通过性能打点，将上述整个页面打开过程消耗时间记录下来</li>
+<li>分析耗时较长时间段原因，寻找优化点，确定优化目标</li>
+<li>开始优化</li>
+<li>通过数据收集平台记录优化效果</li>
+<li>不断调整优化点和预期目标，循环2~4步骤</li>
+</ol>
+<p>性能优化是个长期的事情，不是一蹴而就的，应该本着先摸底、再分析、后优化的原则逐步来做。</p>
+<hr>
+<h2 id="Web-安全"><a href="#Web-安全" class="headerlink" title="Web 安全"></a>Web 安全</h2><blockquote>
+<p>题目：前端常见的安全问题有哪些？</p>
+</blockquote>
+<p>Web 前端的安全问题，能回答出下文的两个问题，这个题目就能基本过关了。开始之前，先说一个最简单的攻击方式 —— SQL 注入。</p>
+<p>上学的时候就知道有一个「SQL注入」的攻击方式。例如做一个系统的登录界面，输入用户名和密码，提交之后，后端直接拿到数据就拼接 SQL 语句去查询数据库。如果在输入时进行了恶意的 SQL 拼装，那么最后生成的 SQL 就会有问题。但是现在稍微大型一点的系统，都不会这么做，从提交登录信息到最后拿到授权，要经过层层的验证。因此，SQL 注入都只出现在比较低端小型的系统上。</p>
+<h3 id="XSS（Cross-Site-Scripting，跨站脚本攻击）"><a href="#XSS（Cross-Site-Scripting，跨站脚本攻击）" class="headerlink" title="XSS（Cross Site Scripting，跨站脚本攻击）"></a>XSS（Cross Site Scripting，跨站脚本攻击）</h3><p>这是前端最常见的攻击方式，很多大型网站（如 Facebook）都被 XSS 攻击过。</p>
+<p>举一个例子，我在一个博客网站正常发表一篇文章，输入汉字、英文和图片，完全没有问题。但是如果我写的是恶意的 JS 脚本，例如获取到<code>document.cookie</code>然后传输到自己的服务器上，那我这篇博客的每一次浏览都会执行这个脚本，都会把访客 cookie 中的信息偷偷传递到我的服务器上来。</p>
+<p>其实原理上就是黑客通过某种方式（发布文章、发布评论等）将一段特定的 JS 代码隐蔽地输入进去。然后别人再看这篇文章或者评论时，之前注入的这段 JS 代码就执行了。<strong>JS 代码一旦执行，那可就不受控制了，因为它跟网页原有的 JS 有同样的权限</strong>，例如可以获取 server 端数据、可以获取 cookie 等。于是，攻击就这样发生了。</p>
+<h4 id="XSS的危害"><a href="#XSS的危害" class="headerlink" title="XSS的危害"></a>XSS的危害</h4><p>XSS 的危害相当大，如果页面可以随意执行别人不安全的 JS 代码，轻则会让页面错乱、功能缺失，重则会造成用户的信息泄露。</p>
+<p>比如早些年社交网站经常爆出 XSS 蠕虫，通过发布的文章内插入 JS，用户访问了感染不安全 JS 注入的文章，会自动重新发布新的文章，这样的文章会通过推荐系统进入到每个用户的文章列表面前，很快就会造成大规模的感染。</p>
+<p>还有利用获取 cookie 的方式，将 cookie 传入入侵者的服务器上，入侵者就可以模拟 cookie 登录网站，对用户的信息进行篡改。</p>
+<h4 id="XSS的预防"><a href="#XSS的预防" class="headerlink" title="XSS的预防"></a>XSS的预防</h4><p>那么如何预防 XSS 攻击呢？—— 最根本的方式，就是对用户输入的内容进行验证和替换，需要替换的字符有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&amp; 替换为：&amp;amp;</span><br><span class="line">&lt; 替换为：&amp;lt;</span><br><span class="line">&gt; 替换为：&amp;gt;</span><br><span class="line">” 替换为：&amp;quot;</span><br><span class="line">‘ 替换为：&amp;#x27;</span><br><span class="line">/ 替换为：&amp;#x2f;</span><br></pre></td></tr></table></figure>
+
+<p>替换了这些字符之后，黑客输入的攻击代码就会失效，XSS 攻击将不会轻易发生。</p>
+<p>除此之外，还可以通过对 cookie 进行较强的控制，比如对敏感的 cookie 增加<code>http-only</code>限制，让 JS 获取不到 cookie 的内容。</p>
+<h3 id="CSRF（Cross-site-request-forgery，跨站请求伪造）"><a href="#CSRF（Cross-site-request-forgery，跨站请求伪造）" class="headerlink" title="CSRF（Cross-site request forgery，跨站请求伪造）"></a>CSRF（Cross-site request forgery，跨站请求伪造）</h3><p>CSRF 是借用了当前操作者的权限来偷偷地完成某个操作，而不是拿到用户的信息。</p>
+<p>例如，一个支付类网站，给他人转账的接口是<code>http://buy.com/pay?touid=999&amp;money=100</code>，而这个接口在使用时没有任何密码或者 token 的验证，只要打开访问就直接给他人转账。一个用户已经登录了<code>http://buy.com</code>，在选择商品时，突然收到一封邮件，而这封邮件正文有这么一行代码<code>&lt;img src=&quot;http://buy.com/pay?touid=999&amp;money=100&quot;/&gt;</code>，他访问了邮件之后，其实就已经完成了购买。</p>
+<p>CSRF 的发生其实是借助了一个 cookie 的特性。我们知道，登录了<code>http://buy.com</code>之后，cookie 就会有登录过的标记了，此时请求<code>http://buy.com/pay?touid=999&amp;money=100</code>是会带着 cookie 的，因此 server 端就知道已经登录了。而如果在<code>http://buy.com</code>去请求其他域名的 API 例如<code>http://abc.com/api</code>时，是不会带 cookie 的，这是浏览器的同源策略的限制。但是 —— <strong>此时在其他域名的页面中，请求<code>http://buy.com/pay?touid=999&amp;money=100</code>，会带着<code>buy.com</code>的 cookie ，这是发生 CSRF 攻击的理论基础。</strong></p>
+<p>预防 CSRF 就是加入各个层级的权限验证，例如现在的购物网站，只要涉及现金交易，肯定要输入密码或者指纹才行。除此之外，敏感的接口使用<code>POST</code>请求而不是<code>GET</code>也是很重要的。</p>
+<hr>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本小节总结了前端运行环境（即浏览器）的一些常考查知识点，包括页面加载过程、如何性能优化以及需要注意的安全问题。</p>
 
     
 
@@ -282,7 +357,7 @@
           </li>
           <li>
             <strong>本文链接：</strong>
-            <a href="http://yoursite.com/2018/08/19/JS继承的继承方式/" title="JS继承的继承方式" target="_blank">http://yoursite.com/2018/08/19/JS继承的继承方式/</a>
+            <a href="http://yoursite.com/2019/08/22/浏览器知识点梳理/" title="浏览器知识点梳理" target="_blank">http://yoursite.com/2019/08/22/浏览器知识点梳理/</a>
           </li>
           <li>
             <strong>版权声明： </strong>
@@ -301,7 +376,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">知识点梳理</a>
         		</li>
       		
 		</ul>
@@ -357,7 +432,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/19/JS继承的继承方式/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/22/浏览器知识点梳理/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -372,18 +447,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/08/19/前端安全防御/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          前端安全防御
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/18/Event Loop/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Event Loop</div>
+    <a href="/2019/08/22/JS知识点梳理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS知识点梳理</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -410,7 +476,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#知识点梳理"><span class="toc-number">1.</span> <span class="toc-text">知识点梳理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加载页面和渲染过程"><span class="toc-number">2.</span> <span class="toc-text">加载页面和渲染过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#加载过程"><span class="toc-number">2.1.</span> <span class="toc-text">加载过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#渲染过程"><span class="toc-number">2.2.</span> <span class="toc-text">渲染过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#性能优化"><span class="toc-number">3.</span> <span class="toc-text">性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#优化原则和方向"><span class="toc-number">3.1.</span> <span class="toc-text">优化原则和方向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#减少页面体积，提升网络加载"><span class="toc-number">3.2.</span> <span class="toc-text">减少页面体积，提升网络加载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优化页面渲染"><span class="toc-number">3.3.</span> <span class="toc-text">优化页面渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#详细解释"><span class="toc-number">3.4.</span> <span class="toc-text">详细解释</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#静态资源的压缩合并"><span class="toc-number">3.4.1.</span> <span class="toc-text">静态资源的压缩合并</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#静态资源缓存"><span class="toc-number">3.4.2.</span> <span class="toc-text">静态资源缓存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用-CDN-让资源加载更快"><span class="toc-number">3.4.3.</span> <span class="toc-text">使用 CDN 让资源加载更快</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用-SSR-后端渲染"><span class="toc-number">3.4.4.</span> <span class="toc-text">使用 SSR 后端渲染</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS-放前面，JS-放后面"><span class="toc-number">3.4.5.</span> <span class="toc-text">CSS 放前面，JS 放后面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#懒加载"><span class="toc-number">3.4.6.</span> <span class="toc-text">懒加载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DOM-查询做缓存"><span class="toc-number">3.4.7.</span> <span class="toc-text">DOM 查询做缓存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#合并-DOM-插入"><span class="toc-number">3.4.8.</span> <span class="toc-text">合并 DOM 插入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#事件节流"><span class="toc-number">3.4.9.</span> <span class="toc-text">事件节流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#尽早执行操作"><span class="toc-number">3.4.10.</span> <span class="toc-text">尽早执行操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#性能优化怎么做"><span class="toc-number">3.4.11.</span> <span class="toc-text">性能优化怎么做</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web-安全"><span class="toc-number">4.</span> <span class="toc-text">Web 安全</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS（Cross-Site-Scripting，跨站脚本攻击）"><span class="toc-number">4.1.</span> <span class="toc-text">XSS（Cross Site Scripting，跨站脚本攻击）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#XSS的危害"><span class="toc-number">4.1.1.</span> <span class="toc-text">XSS的危害</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#XSS的预防"><span class="toc-number">4.1.2.</span> <span class="toc-text">XSS的预防</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSRF（Cross-site-request-forgery，跨站请求伪造）"><span class="toc-number">4.2.</span> <span class="toc-text">CSRF（Cross-site request forgery，跨站请求伪造）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小结"><span class="toc-number">5.</span> <span class="toc-text">小结</span></a></li></ol>
                     </div>
                 </span>
             </div>
