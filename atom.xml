@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-21T14:44:26.508Z</updated>
+  <updated>2019-08-22T12:47:24.333Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,23 +21,36 @@
     <link href="http://yoursite.com/2019/08/21/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80%E4%B8%8B/"/>
     <id>http://yoursite.com/2019/08/21/http协议基础下/</id>
     <published>2019-08-21T14:20:47.000Z</published>
-    <updated>2019-08-21T14:44:26.508Z</updated>
+    <updated>2019-08-22T12:47:24.333Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>http状态码</strong></p><blockquote><ul><li>1XX:接收信息正在处理</li><li>2XX:正常处理完毕（200请求成功）</li><li>3XX:重定向<ul><li>301 永久重定向</li><li>302 临时重定向</li></ul></li><li>4XX:客户端错误<ul><li>400:语法错误（参数不对）</li><li>401:未认证</li><li>403:禁止访问</li><li>404:资源未找到</li></ul></li><li>5XX:服务器错误<ul><li>500:服务器出错</li><li>503:服务器繁忙</li></ul></li></ul></blockquote><p><strong>HTTP首部字段</strong></p><blockquote><p><em>通用首部字段</em></p><ul><li>Cach-Control 控制缓存的行为</li><li>Date 创建报文的事件</li><li>Connection 连接管理</li><li>Pragma：报文指令</li><li>Trailer：报文末端的首部一览</li><li>Transfer-Encoding：指定报文主体的传输编码方式</li><li>Upgrade：升级为其他协议</li><li>Via：代理服务器的相关信息</li><li>Warning：错误通知</li></ul></blockquote><blockquote><p><em>请求首部字段（Request Header Fields）</em></p><ul><li>从客户端向服务器发送求报文时使用的首部。补充了请求的附加内容、客户端信息、响应内容相关优先级等信息。</li><li>Accept：用户代理可处理的媒体类型</li><li>Accept-Charset：优先的字符集</li><li>Accept-Encoding：优先的内容编码</li><li>Accept-Language：优先的语言（自然语言）</li><li>Authorization：Web认证信息</li><li>Expect：期待服务器的特定行为</li><li>From：用户的电子邮箱地址</li><li>Host：请求资源所在服务器</li><li>If-Match：比较实体标记（ETag）</li><li>If-Modified-Since：比较资源的更新时间</li><li>If-None-Match：比较实体标记（与If-Match相反）</li><li>If-Range：资源未更新时发送实体Byte的范围请求</li><li>If-Unmodified-Since：比较资源的更新时间（与If-Modified-Since相反）</li><li>Max-Forwards：最大传输逐跳数</li><li>Proxy-Authorization：代理服务器要求客户端的认真信息</li><li>Range：实体的直接范围请求</li><li>Referer：对请求中URI的原始获取方</li><li>TE：传输编码的优先级</li><li>User-Agent：HTTP客户端程序的信息</li></ul></blockquote><blockquote><p><em>响应首部字段（Response Header Fields）</em></p><ul><li>从服务器端向客户端返回响应报文时使用的首部。补充了响应的附加内容，也会请求客户端附加额外的内容信息。</li><li>Accept-Ranges：是否接受字节范围请求</li><li>Age：推算资源创建经过时间</li><li>ETag：资源的匹配信息</li><li>Location：令客户端重定向至指定URI</li><li>Proxy-Authenticate：代理服务器对客户端的认真信息</li><li>Retry-After：对再次发起请求的时机请求</li><li>Server：HTTP服务器的安装信息</li><li>Vary：代理服务器缓存的管理信息</li><li>WWW-Authenticate：服务器对客户端的认真信息</li></ul></blockquote><blockquote><p><em>实体首部字段（Entity Header Fields）</em><br>针对请求报文和响应报文的实体部分使用的首部。补充了资源内容更新时间等与实体相关的信息。</p></blockquote><ul><li>Allow：资源可支持的HTTP方法</li><li>Content-Encoding：实体主体适用的编码方法</li><li>Content-Language：实体主体的自然语言</li><li>Content-Length：实体主体的大小（单位：字节）</li><li>Content-Location：替代对应资源的URI</li><li>Content-MD5：实体主体的报文摘要</li><li>Content-Range：实体主体的位置范围</li><li>Content-Type：实体主体的媒体类型</li><li>Expires：实体主体过期的日期时间</li><li>Last-Modified：资源的最后修改日期时间</li></ul>]]></content>
+    <content type="html"><![CDATA[<p><strong>http状态码</strong></p><blockquote><ul><li>1XX:接收信息正在处理</li><li>2XX:正常处理完毕（200请求成功）</li><li>3XX:重定向<ul><li>301 永久重定向</li><li>302 临时重定向</li></ul></li><li>4XX:客户端错误<ul><li>400:语法错误（参数不对）</li><li>401:未认证</li><li>403:禁止访问</li><li>404:资源未找到</li></ul></li><li>5XX:服务器错误<ul><li>500:服务器出错</li><li>503:服务器繁忙</li></ul></li></ul></blockquote><a id="more"></a><p><strong>HTTP首部字段</strong></p><blockquote><p><em>通用首部字段</em></p><ul><li>Cach-Control 控制缓存的行为</li><li>Date 创建报文的事件</li><li>Connection 连接管理</li><li>Pragma：报文指令</li><li>Trailer：报文末端的首部一览</li><li>Transfer-Encoding：指定报文主体的传输编码方式</li><li>Upgrade：升级为其他协议</li><li>Via：代理服务器的相关信息</li><li>Warning：错误通知</li></ul></blockquote><blockquote><p><em>请求首部字段（Request Header Fields）</em></p><ul><li>从客户端向服务器发送求报文时使用的首部。补充了请求的附加内容、客户端信息、响应内容相关优先级等信息。</li><li>Accept：用户代理可处理的媒体类型</li><li>Accept-Charset：优先的字符集</li><li>Accept-Encoding：优先的内容编码</li><li>Accept-Language：优先的语言（自然语言）</li><li>Authorization：Web认证信息</li><li>Expect：期待服务器的特定行为</li><li>From：用户的电子邮箱地址</li><li>Host：请求资源所在服务器</li><li>If-Match：比较实体标记（ETag）</li><li>If-Modified-Since：比较资源的更新时间</li><li>If-None-Match：比较实体标记（与If-Match相反）</li><li>If-Range：资源未更新时发送实体Byte的范围请求</li><li>If-Unmodified-Since：比较资源的更新时间（与If-Modified-Since相反）</li><li>Max-Forwards：最大传输逐跳数</li><li>Proxy-Authorization：代理服务器要求客户端的认真信息</li><li>Range：实体的直接范围请求</li><li>Referer：对请求中URI的原始获取方</li><li>TE：传输编码的优先级</li><li>User-Agent：HTTP客户端程序的信息</li></ul></blockquote><blockquote><p><em>响应首部字段（Response Header Fields）</em></p><ul><li>从服务器端向客户端返回响应报文时使用的首部。补充了响应的附加内容，也会请求客户端附加额外的内容信息。</li><li>Accept-Ranges：是否接受字节范围请求</li><li>Age：推算资源创建经过时间</li><li>ETag：资源的匹配信息</li><li>Location：令客户端重定向至指定URI</li><li>Proxy-Authenticate：代理服务器对客户端的认真信息</li><li>Retry-After：对再次发起请求的时机请求</li><li>Server：HTTP服务器的安装信息</li><li>Vary：代理服务器缓存的管理信息</li><li>WWW-Authenticate：服务器对客户端的认真信息</li></ul></blockquote><blockquote><p><em>实体首部字段（Entity Header Fields）</em><br>针对请求报文和响应报文的实体部分使用的首部。补充了资源内容更新时间等与实体相关的信息。</p></blockquote><ul><li>Allow：资源可支持的HTTP方法</li><li>Content-Encoding：实体主体适用的编码方法</li><li>Content-Language：实体主体的自然语言</li><li>Content-Length：实体主体的大小（单位：字节）</li><li>Content-Location：替代对应资源的URI</li><li>Content-MD5：实体主体的报文摘要</li><li>Content-Range：实体主体的位置范围</li><li>Content-Type：实体主体的媒体类型</li><li>Expires：实体主体过期的日期时间</li><li>Last-Modified：资源的最后修改日期时间</li></ul>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;strong&gt;http状态码&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;http状态码&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;1XX:接收信息正在处理&lt;/li&gt;
 &lt;li&gt;2XX:正常处理完毕（200请求成功）&lt;/li&gt;
 &lt;li&gt;3XX:重定向&lt;ul&gt;
 &lt;li&gt;301 永久重定向&lt;/li&gt;
-&lt;li&gt;
-      
+&lt;li&gt;302 临时重定向&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;4XX:客户端错误&lt;ul&gt;
+&lt;li&gt;400:语法错误（参数不对）&lt;/li&gt;
+&lt;li&gt;401:未认证&lt;/li&gt;
+&lt;li&gt;403:禁止访问&lt;/li&gt;
+&lt;li&gt;404:资源未找到&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;5XX:服务器错误&lt;ul&gt;
+&lt;li&gt;500:服务器出错&lt;/li&gt;
+&lt;li&gt;503:服务器繁忙&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -120,16 +133,13 @@
     <link href="http://yoursite.com/2019/08/19/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/"/>
     <id>http://yoursite.com/2019/08/19/浏览器缓存机制/</id>
     <published>2019-08-19T12:29:58.000Z</published>
-    <updated>2019-08-22T12:42:17.819Z</updated>
+    <updated>2019-08-22T12:47:40.261Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>浏览器缓存机制是“通过 HTTP 协议 header 里的Cache-Control（或Expires）和Last-Modified（或Etag）等字段来控制文件缓存的机制”</p><h4 id="使用缓存的优点"><a href="#使用缓存的优点" class="headerlink" title="使用缓存的优点"></a>使用缓存的优点</h4><ul><li>减小网络带宽消耗</li><li>降低服务器压力</li><li>减小网络延迟，加快页面打开速度</li></ul><h4 id="浏览器缓存规则"><a href="#浏览器缓存规则" class="headerlink" title="浏览器缓存规则"></a>浏览器缓存规则</h4><p>新鲜度（过期机制）：缓存副本有效期</p><p>校验值（校验机制）：缓存实体标签etag</p><h4 id="缓存过程分析"><a href="#缓存过程分析" class="headerlink" title="缓存过程分析"></a>缓存过程分析</h4><p><strong>首次请求</strong></p><blockquote><p>这时候浏览器端是 没有缓存 的，所以会直接向服务器发送请求，且 不携带任何缓存相关参数，服务器接收到资源请求时，会在响应头中加入如下 参数(注意：这些参数对于浏览器而言是有优先级的！且对应着“浏览器端不同的缓存策略”)</p><ul><li>Expires：服务端设置的一个“资源过期时间”，但是因为客户端和服务端时间有误差，会导致缓存命中的误差，因此优先级较低</li><li>Cache-Control：控制缓存的行为，一般取值有 private（默认）、public、no-cache、max-age，no-store，但我们一般常见的值是 max-age，缓存的内容将在多少秒后失效</li><li>Last-Modified：资源的最后修改时间。</li><li>ETag：资源在服务器的唯一标识（生成规则由服务器决定，例如内容的hash值）</li></ul></blockquote><blockquote><p>对于浏览器接收到这些头参数的优先级是：Cache-Control &gt; Expires &gt; ETag &gt; Last-Modified,至此,服务端就将携带缓存头参数的信息返回给了浏览器，浏览器接收之后,一方面解析加载到浏览器上，另一方面会存储下来</p></blockquote><p><strong>再次请求</strong></p><blockquote><ul><li>先判断本地是否有缓存，没有的话，就回到第一次请求的流程</li><li>判断缓存是否过期,如果没过期,不需要发出请求，直接使用缓存资源即可,<strong>所谓强缓存</strong></li><li>如果过期了就会检查 <code>ETag</code> 和 <code>Last-Modified</code> 这两个参数，无论如何都会再次向服务器发出请求，ETag 对应头参数 <code>If-None-Match</code>，<code>Last-Modified</code> 对应头参数 <code>If-Modified-Since</code>，前者优先级更高，向服务端发起携带缓存头参数<code>If-None-Match</code> 和<code>If-Modified-Since</code>的请求后，服务端会决策浏览器端缓存的资源是否是最新的。如果是,就会返回只带响应头的响应报文，且状态码是我们常见的<code>304</code>。<strong>即协商缓存</strong>否则就会和第一次请求一样，重新返回最新的资源。</li></ul></blockquote>]]></content>
+    <content type="html"><![CDATA[<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>浏览器缓存机制是“通过 HTTP 协议 header 里的Cache-Control（或Expires）和Last-Modified（或Etag）等字段来控制文件缓存的机制”</p><a id="more"></a><h4 id="使用缓存的优点"><a href="#使用缓存的优点" class="headerlink" title="使用缓存的优点"></a>使用缓存的优点</h4><ul><li>减小网络带宽消耗</li><li>降低服务器压力</li><li>减小网络延迟，加快页面打开速度</li></ul><h4 id="浏览器缓存规则"><a href="#浏览器缓存规则" class="headerlink" title="浏览器缓存规则"></a>浏览器缓存规则</h4><p>新鲜度（过期机制）：缓存副本有效期</p><p>校验值（校验机制）：缓存实体标签etag</p><h4 id="缓存过程分析"><a href="#缓存过程分析" class="headerlink" title="缓存过程分析"></a>缓存过程分析</h4><p><strong>首次请求</strong></p><blockquote><p>这时候浏览器端是 没有缓存 的，所以会直接向服务器发送请求，且 不携带任何缓存相关参数，服务器接收到资源请求时，会在响应头中加入如下 参数(注意：这些参数对于浏览器而言是有优先级的！且对应着“浏览器端不同的缓存策略”)</p><ul><li>Expires：服务端设置的一个“资源过期时间”，但是因为客户端和服务端时间有误差，会导致缓存命中的误差，因此优先级较低</li><li>Cache-Control：控制缓存的行为，一般取值有 private（默认）、public、no-cache、max-age，no-store，但我们一般常见的值是 max-age，缓存的内容将在多少秒后失效</li><li>Last-Modified：资源的最后修改时间。</li><li>ETag：资源在服务器的唯一标识（生成规则由服务器决定，例如内容的hash值）</li></ul></blockquote><blockquote><p>对于浏览器接收到这些头参数的优先级是：Cache-Control &gt; Expires &gt; ETag &gt; Last-Modified,至此,服务端就将携带缓存头参数的信息返回给了浏览器，浏览器接收之后,一方面解析加载到浏览器上，另一方面会存储下来</p></blockquote><p><strong>再次请求</strong></p><blockquote><ul><li>先判断本地是否有缓存，没有的话，就回到第一次请求的流程</li><li>判断缓存是否过期,如果没过期,不需要发出请求，直接使用缓存资源即可,<strong>所谓强缓存</strong></li><li>如果过期了就会检查 <code>ETag</code> 和 <code>Last-Modified</code> 这两个参数，无论如何都会再次向服务器发出请求，ETag 对应头参数 <code>If-None-Match</code>，<code>Last-Modified</code> 对应头参数 <code>If-Modified-Since</code>，前者优先级更高，向服务端发起携带缓存头参数<code>If-None-Match</code> 和<code>If-Modified-Since</code>的请求后，服务端会决策浏览器端缓存的资源是否是最新的。如果是,就会返回只带响应头的响应报文，且状态码是我们常见的<code>304</code>。<strong>即协商缓存</strong>否则就会和第一次请求一样，重新返回最新的资源。</li></ul></blockquote>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h4 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h4&gt;&lt;p&gt;浏览器缓存机制是“通过 HTTP 协议 header 里的Cache-Control（或Expires）和Last-Modified（或Et
-      
+      &lt;h4 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h4&gt;&lt;p&gt;浏览器缓存机制是“通过 HTTP 协议 header 里的Cache-Control（或Expires）和Last-Modified（或Etag）等字段来控制文件缓存的机制”&lt;/p&gt;
     
     </summary>
     
