@@ -46,9 +46,9 @@
     <link href="http://yoursite.com/2018/08/21/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80%E4%B8%8B/"/>
     <id>http://yoursite.com/2018/08/21/http协议基础下/</id>
     <published>2018-08-21T14:20:47.000Z</published>
-    <updated>2019-08-22T13:02:32.368Z</updated>
+    <updated>2019-08-22T13:40:38.771Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>http状态码</strong></p><blockquote><ul><li>1XX:接收信息正在处理</li><li>2XX:正常处理完毕（200请求成功）</li><li>3XX:重定向<ul><li>301 永久重定向</li><li>302 临时重定向</li></ul></li><li>4XX:客户端错误<ul><li>400:语法错误（参数不对）</li><li>401:未认证</li><li>403:禁止访问</li><li>404:资源未找到</li></ul></li><li>5XX:服务器错误<ul><li>500:服务器出错</li><li>503:服务器繁忙</li></ul></li></ul></blockquote><a id="more"></a><p><strong>HTTP首部字段</strong></p><blockquote><p><em>通用首部字段</em></p><ul><li>Cach-Control 控制缓存的行为</li><li>Date 创建报文的事件</li><li>Connection 连接管理</li><li>Pragma：报文指令</li><li>Trailer：报文末端的首部一览</li><li>Transfer-Encoding：指定报文主体的传输编码方式</li><li>Upgrade：升级为其他协议</li><li>Via：代理服务器的相关信息</li><li>Warning：错误通知</li></ul></blockquote><blockquote><p><em>请求首部字段（Request Header Fields）</em></p><ul><li>从客户端向服务器发送求报文时使用的首部。补充了请求的附加内容、客户端信息、响应内容相关优先级等信息。</li><li>Accept：用户代理可处理的媒体类型</li><li>Accept-Charset：优先的字符集</li><li>Accept-Encoding：优先的内容编码</li><li>Accept-Language：优先的语言（自然语言）</li><li>Authorization：Web认证信息</li><li>Expect：期待服务器的特定行为</li><li>From：用户的电子邮箱地址</li><li>Host：请求资源所在服务器</li><li>If-Match：比较实体标记（ETag）</li><li>If-Modified-Since：比较资源的更新时间</li><li>If-None-Match：比较实体标记（与If-Match相反）</li><li>If-Range：资源未更新时发送实体Byte的范围请求</li><li>If-Unmodified-Since：比较资源的更新时间（与If-Modified-Since相反）</li><li>Max-Forwards：最大传输逐跳数</li><li>Proxy-Authorization：代理服务器要求客户端的认真信息</li><li>Range：实体的直接范围请求</li><li>Referer：对请求中URI的原始获取方</li><li>TE：传输编码的优先级</li><li>User-Agent：HTTP客户端程序的信息</li></ul></blockquote><blockquote><p><em>响应首部字段（Response Header Fields）</em></p><ul><li>从服务器端向客户端返回响应报文时使用的首部。补充了响应的附加内容，也会请求客户端附加额外的内容信息。</li><li>Accept-Ranges：是否接受字节范围请求</li><li>Age：推算资源创建经过时间</li><li>ETag：资源的匹配信息</li><li>Location：令客户端重定向至指定URI</li><li>Proxy-Authenticate：代理服务器对客户端的认真信息</li><li>Retry-After：对再次发起请求的时机请求</li><li>Server：HTTP服务器的安装信息</li><li>Vary：代理服务器缓存的管理信息</li><li>WWW-Authenticate：服务器对客户端的认真信息</li></ul></blockquote><blockquote><p><em>实体首部字段（Entity Header Fields）</em><br>针对请求报文和响应报文的实体部分使用的首部。补充了资源内容更新时间等与实体相关的信息。</p></blockquote><ul><li>Allow：资源可支持的HTTP方法</li><li>Content-Encoding：实体主体适用的编码方法</li><li>Content-Language：实体主体的自然语言</li><li>Content-Length：实体主体的大小（单位：字节）</li><li>Content-Location：替代对应资源的URI</li><li>Content-MD5：实体主体的报文摘要</li><li>Content-Range：实体主体的位置范围</li><li>Content-Type：实体主体的媒体类型</li><li>Expires：实体主体过期的日期时间</li><li>Last-Modified：资源的最后修改日期时间</li></ul>]]></content>
+    <content type="html"><![CDATA[<p><strong>http状态码</strong></p><blockquote><ul><li>1XX:接收信息正在处理</li><li>2XX:正常处理完毕（200请求成功）</li></ul></blockquote><a id="more"></a><blockquote><ul><li>3XX:重定向<ul><li>301 永久重定向</li><li>302 临时重定向</li></ul></li><li>4XX:客户端错误<ul><li>400:语法错误（参数不对）</li><li>401:未认证</li><li>403:禁止访问</li><li>404:资源未找到</li></ul></li><li>5XX:服务器错误<ul><li>500:服务器出错</li><li>503:服务器繁忙</li></ul></li></ul></blockquote><p><strong>HTTP首部字段</strong></p><blockquote><p><em>通用首部字段</em></p><ul><li>Cach-Control 控制缓存的行为</li><li>Date 创建报文的事件</li><li>Connection 连接管理</li><li>Pragma：报文指令</li><li>Trailer：报文末端的首部一览</li><li>Transfer-Encoding：指定报文主体的传输编码方式</li><li>Upgrade：升级为其他协议</li><li>Via：代理服务器的相关信息</li><li>Warning：错误通知</li></ul></blockquote><blockquote><p><em>请求首部字段（Request Header Fields）</em></p><ul><li>从客户端向服务器发送求报文时使用的首部。补充了请求的附加内容、客户端信息、响应内容相关优先级等信息。</li><li>Accept：用户代理可处理的媒体类型</li><li>Accept-Charset：优先的字符集</li><li>Accept-Encoding：优先的内容编码</li><li>Accept-Language：优先的语言（自然语言）</li><li>Authorization：Web认证信息</li><li>Expect：期待服务器的特定行为</li><li>From：用户的电子邮箱地址</li><li>Host：请求资源所在服务器</li><li>If-Match：比较实体标记（ETag）</li><li>If-Modified-Since：比较资源的更新时间</li><li>If-None-Match：比较实体标记（与If-Match相反）</li><li>If-Range：资源未更新时发送实体Byte的范围请求</li><li>If-Unmodified-Since：比较资源的更新时间（与If-Modified-Since相反）</li><li>Max-Forwards：最大传输逐跳数</li><li>Proxy-Authorization：代理服务器要求客户端的认真信息</li><li>Range：实体的直接范围请求</li><li>Referer：对请求中URI的原始获取方</li><li>TE：传输编码的优先级</li><li>User-Agent：HTTP客户端程序的信息</li></ul></blockquote><blockquote><p><em>响应首部字段（Response Header Fields）</em></p><ul><li>从服务器端向客户端返回响应报文时使用的首部。补充了响应的附加内容，也会请求客户端附加额外的内容信息。</li><li>Accept-Ranges：是否接受字节范围请求</li><li>Age：推算资源创建经过时间</li><li>ETag：资源的匹配信息</li><li>Location：令客户端重定向至指定URI</li><li>Proxy-Authenticate：代理服务器对客户端的认真信息</li><li>Retry-After：对再次发起请求的时机请求</li><li>Server：HTTP服务器的安装信息</li><li>Vary：代理服务器缓存的管理信息</li><li>WWW-Authenticate：服务器对客户端的认真信息</li></ul></blockquote><blockquote><p><em>实体首部字段（Entity Header Fields）</em><br>针对请求报文和响应报文的实体部分使用的首部。补充了资源内容更新时间等与实体相关的信息。</p></blockquote><ul><li>Allow：资源可支持的HTTP方法</li><li>Content-Encoding：实体主体适用的编码方法</li><li>Content-Language：实体主体的自然语言</li><li>Content-Length：实体主体的大小（单位：字节）</li><li>Content-Location：替代对应资源的URI</li><li>Content-MD5：实体主体的报文摘要</li><li>Content-Range：实体主体的位置范围</li><li>Content-Type：实体主体的媒体类型</li><li>Expires：实体主体过期的日期时间</li><li>Last-Modified：资源的最后修改日期时间</li></ul>]]></content>
     
     <summary type="html">
     
@@ -57,23 +57,6 @@
 &lt;ul&gt;
 &lt;li&gt;1XX:接收信息正在处理&lt;/li&gt;
 &lt;li&gt;2XX:正常处理完毕（200请求成功）&lt;/li&gt;
-&lt;li&gt;3XX:重定向&lt;ul&gt;
-&lt;li&gt;301 永久重定向&lt;/li&gt;
-&lt;li&gt;302 临时重定向&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;4XX:客户端错误&lt;ul&gt;
-&lt;li&gt;400:语法错误（参数不对）&lt;/li&gt;
-&lt;li&gt;401:未认证&lt;/li&gt;
-&lt;li&gt;403:禁止访问&lt;/li&gt;
-&lt;li&gt;404:资源未找到&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;5XX:服务器错误&lt;ul&gt;
-&lt;li&gt;500:服务器出错&lt;/li&gt;
-&lt;li&gt;503:服务器繁忙&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
     
