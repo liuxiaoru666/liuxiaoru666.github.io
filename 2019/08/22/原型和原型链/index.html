@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Javascript | 刘晓儒个人博客</title>
+  <title>原型和原型链 | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="刘晓儒个人博客">
-<meta property="og:url" content="http://yoursite.com/tags/Javascript/index.html">
+  <meta name="description" content="原型链还是接着上面的示例，如果执行f.toString()时，又发生了什么？ 123456// 省略 N 行// 测试f.printName()f.alertName()f.toString()  因为f本身没有toString()，并且f.__proto__（即Foo.prototype）中也没有toString。这个问题还是得拿出刚才那句话——当试图得到一个对象的某个属性时，如果这个对象本身没">
+<meta name="keywords" content="Javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原型和原型链">
+<meta property="og:url" content="http://yoursite.com/2019/08/22/原型和原型链/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
+<meta property="og:description" content="原型链还是接着上面的示例，如果执行f.toString()时，又发生了什么？ 123456// 省略 N 行// 测试f.printName()f.alertName()f.toString()  因为f本身没有toString()，并且f.__proto__（即Foo.prototype）中也没有toString。这个问题还是得拿出刚才那句话——当试图得到一个对象的某个属性时，如果这个对象本身没">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-22T13:47:08.292Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘晓儒个人博客">
+<meta name="twitter:title" content="原型和原型链">
+<meta name="twitter:description" content="原型链还是接着上面的示例，如果执行f.toString()时，又发生了什么？ 123456// 省略 N 行// 测试f.printName()f.alertName()f.toString()  因为f本身没有toString()，并且f.__proto__（即Foo.prototype）中也没有toString。这个问题还是得拿出刚才那句话——当试图得到一个对象的某个属性时，如果这个对象本身没">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -174,41 +179,75 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-原型和原型链" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      原型和原型链
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2019/08/22/原型和原型链/" class="archive-article-date">
         <time datetime="2019-08-22T13:46:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/22/原型和原型链/">原型和原型链</a>
-	
-    </h1>
   
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p>还是接着上面的示例，如果执行<code>f.toString()</code>时，又发生了什么？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 省略 N 行</span><br><span class="line"></span><br><span class="line">// 测试</span><br><span class="line">f.printName()</span><br><span class="line">f.alertName()</span><br><span class="line">f.toString()</span><br></pre></td></tr></table></figure>
 
+<p>因为<code>f</code>本身没有<code>toString()</code>，并且<code>f.__proto__</code>（即<code>Foo.prototype</code>）中也没有<code>toString</code>。这个问题还是得拿出刚才那句话——<strong>当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会去它的<code>__proto__</code>（即它的构造函数的<code>prototype</code>）中寻找</strong>。</p>
+<p>如果在<code>f.__proto__</code>中没有找到<code>toString</code>，那么就继续去<code>f.__proto__.__proto__</code>中寻找，因为<code>f.__proto__</code>就是一个普通的对象而已嘛！</p>
+<ul>
+<li><code>f.__proto__</code>即<code>Foo.prototype</code>，没有找到<code>toString</code>，继续往上找</li>
+<li><code>f.__proto__.__proto__</code>即<code>Foo.prototype.__proto__</code>。<code>Foo.prototype</code>就是一个普通的对象，因此<code>Foo.prototype.__proto__</code>就是<code>Object.prototype</code>，在这里可以找到<code>toString</code></li>
+<li>因此<code>f.toString</code>最终对应到了<code>Object.prototype.toString</code></li>
+</ul>
+<p>这样一直往上找，你会发现是一个链式的结构，所以叫做“原型链”。如果一直找到最上层都没有找到，那么就宣告失败，返回<code>undefined</code>。最上层是什么 —— <code>Object.prototype.__proto__ === null</code></p>
+<h3 id="原型链中的this"><a href="#原型链中的this" class="headerlink" title="原型链中的this"></a>原型链中的<code>this</code></h3><p>所有从原型或更高级原型中得到、执行的方法，其中的<code>this</code>在执行时，就指向了当前这个触发事件执行的对象。因此<code>printName</code>和<code>alertName</code>中的<code>this</code>都是<code>f</code>。</p>
 
-        <div class="article-info info-on-right">
-          
+    
+
+    
+
+    
+      <div> 
+        <ul class="post-copyright">
+          <li>
+            <strong>本文作者：</strong>
+            刘晓儒
+          </li>
+          <li>
+            <strong>本文链接：</strong>
+            <a href="http://yoursite.com/2019/08/22/原型和原型链/" title="原型和原型链" target="_blank">http://yoursite.com/2019/08/22/原型和原型链/</a>
+          </li>
+          <li>
+            <strong>版权声明： </strong>
+            本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+          </li>
+        </ul>
+      </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -220,62 +259,120 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/22/原型和原型链/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/22/模块化进化史/" class="archive-article-date">
-        <time datetime="2019-08-22T13:37:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/22/模块化进化史/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">模块化进化史</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/22/模块化进化史/">模块化进化史</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#原型链"><span class="toc-number">1.</span> <span class="toc-text">原型链</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原型链中的this"><span class="toc-number">2.</span> <span class="toc-text">原型链中的this</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+        
+    </div>
+</aside>
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -316,9 +413,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
