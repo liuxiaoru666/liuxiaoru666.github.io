@@ -180,6 +180,336 @@
             
 
   
+    <article id="post-computed和watch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/08/22/computed和watch/">computed和watch</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/08/22/computed和watch/" class="archive-article-date">
+        <time datetime="2019-08-22T15:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h3><ul>
+<li>需要依赖别的属性来动态获得值的时候使用computed</li>
+<li>computed 用来监控自己定义的变量，该变量不在data里面声明，直接在computed里面定义
+    
+    <a class="article-more-a" href="/2019/08/22/computed和watch/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Vue组件通信" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/08/22/Vue组件通信/">Vue组件通信</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/08/22/Vue组件通信/" class="archive-article-date">
+        <time datetime="2019-08-22T15:43:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h6 id="父–-gt-子"><a href="#父–-gt-子" class="headerlink" title="父–&gt;子"></a>父–&gt;子</h6><p>父向子传递数据通过props</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//父组件代码</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;header-box :title-txt=&quot;showTitleTxt&quot;&gt;&lt;/header-box&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    import Header from &apos;./header&apos;</span><br><span class="line">    export default &#123;</span><br><span class="line">        name: &apos;index&apos;,</span><br><span class="line">        components: &#123;</span><br><span class="line">            &apos;header-box&apos;: Header</span><br><span class="line">        &#125;,</span><br><span class="line">        data () &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                showTitleTxt: &apos;首页&apos;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/2019/08/22/Vue组件通信/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-js获取宽高及位置方法集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/08/22/js获取宽高及位置方法集合/">js获取宽高及位置方法集合</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/08/22/js获取宽高及位置方法集合/" class="archive-article-date">
+        <time datetime="2019-08-22T15:36:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><strong>offsetWidth、offsetHeight</strong> <code>元素在水平、垂直方向上占用的空间大小</code>：<br><strong>offsetTop、offsetLeft</strong> 元素的外边框至 <code>offsetParent</code> 元素的内边框之间的像素距离；</p>
+    
+    <a class="article-more-a" href="/2019/08/22/js获取宽高及位置方法集合/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-this指向问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/08/22/this指向问题/">this指向问题</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/08/22/this指向问题/" class="archive-article-date">
+        <time datetime="2019-08-22T15:21:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>从学 JavaScript 的面向对象开始，this 关键字学习就变得尤为的重要。</p>
+<p>我一开始看 this 的时候，感觉很复杂，后来在知乎上看到一个人说的话，总结了一下：</p>
+<p><code>谁调用函数，this 就指向谁</code>。</p>
+<p>在后来的学习中，我验证了一下这句话，发现总结的很好，现在就来详细的讲一下 this 关键字。</p>
+    
+    <a class="article-more-a" href="/2019/08/22/this指向问题/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-浏览器知识点梳理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -209,136 +539,10 @@
     <h2 id="知识点梳理"><a href="#知识点梳理" class="headerlink" title="知识点梳理"></a>知识点梳理</h2><ul>
 <li>浏览器加载页面和渲染过程</li>
 <li>性能优化</li>
-<li>Web 安全</li>
-</ul>
-<p>本小节会从浏览器的加载过程开始讲解，然后介绍如何进行性能优化，最后介绍下 Web 开发中常见的安全问题和预防。</p>
-<hr>
-<h2 id="加载页面和渲染过程"><a href="#加载页面和渲染过程" class="headerlink" title="加载页面和渲染过程"></a>加载页面和渲染过程</h2><p>可将加载过程和渲染过程分开说。回答问题的时候，关键要抓住核心的要点，把要点说全面，稍加解析即可，简明扼要不拖沓。</p>
-<blockquote>
-<p>题目：浏览器从加载页面到渲染页面的过程</p>
-</blockquote>
-<h3 id="加载过程"><a href="#加载过程" class="headerlink" title="加载过程"></a>加载过程</h3><p>要点如下：</p>
-<ul>
-<li>浏览器根据 DNS 服务器得到域名的 IP 地址</li>
-<li>向这个 IP 的机器发送 HTTP 请求</li>
-<li>服务器收到、处理并返回 HTTP 请求</li>
-<li>浏览器得到返回内容</li>
-</ul>
-<p>例如在浏览器输入<code>https://juejin.im/timeline</code>，然后经过 DNS 解析，<code>juejin.im</code>对应的 IP 是<code>36.248.217.149</code>（不同时间、地点对应的 IP 可能会不同）。然后浏览器向该 IP 发送 HTTP 请求。</p>
-<p>server 端接收到 HTTP 请求，然后经过计算（向不同的用户推送不同的内容），返回 HTTP 请求，返回的内容如下：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c107496accac7?w=1176&h=294&f=png&s=77020" alt></p>
-<p>其实就是一堆 HMTL 格式的字符串，因为只有 HTML 格式浏览器才能正确解析，这是 W3C 标准的要求。接下来就是浏览器的渲染过程。</p>
-<h3 id="渲染过程"><a href="#渲染过程" class="headerlink" title="渲染过程"></a>渲染过程</h3><p>要点如下：</p>
-<ul>
-<li>根据 HTML 结构生成 DOM 树</li>
-<li>根据 CSS 生成 CSSOM</li>
-<li>将 DOM 和 CSSOM 整合形成 RenderTree</li>
-<li>根据 RenderTree 开始渲染和展示</li>
-<li>遇到<code>&lt;script&gt;</code>时，会执行并阻塞渲染</li>
-</ul>
-<p>上文中，浏览器已经拿到了 server 端返回的 HTML 内容，开始解析并渲染。最初拿到的内容就是一堆字符串，必须先结构化成计算机擅长处理的基本数据结构，因此要把 HTML 字符串转化成 DOM 树 —— 树是最基本的数据结构之一。</p>
-<p>解析过程中，如果遇到<code>&lt;link href=&quot;...&quot;&gt;</code>和<code>&lt;script src=&quot;...&quot;&gt;</code>这种外链加载 CSS 和 JS 的标签，浏览器会异步下载，下载过程和上文中下载 HTML 的流程一样。只不过，这里下载下来的字符串是 CSS 或者 JS 格式的。</p>
-<p>浏览器将 CSS 生成 CSSOM，再将 DOM 和 CSSOM 整合成 RenderTree ，然后针对 RenderTree 即可进行渲染了。大家可以想一下，有 DOM 结构、有样式，此时就能满足渲染的条件了。另外，这里也可以解释一个问题 —— <strong>为何要将 CSS 放在 HTML 头部？</strong>—— 这样会让浏览器尽早拿到 CSS 尽早生成 CSSOM，然后在解析 HTML 之后可一次性生成最终的 RenderTree，渲染一次即可。如果 CSS 放在 HTML 底部，会出现渲染卡顿的情况，影响性能和体验。</p>
-<p>最后，渲染过程中，如果遇到<code>&lt;script&gt;</code>就停止渲染，执行 JS 代码。因为浏览器渲染和 JS 执行共用一个线程，而且这里必须是单线程操作，多线程会产生渲染 DOM 冲突。待<code>&lt;script&gt;</code>内容执行完之后，浏览器继续渲染。最后再思考一个问题 —— <strong>为何要将 JS 放在 HTML 底部？</strong>—— JS 放在底部可以保证让浏览器优先渲染完现有的 HTML 内容，让用户先看到内容，体验好。另外，JS 执行如果涉及 DOM 操作，得等待 DOM 解析完成才行，JS 放在底部执行时，HTML 肯定都解析成了 DOM 结构。JS 如果放在 HTML 顶部，JS 执行的时候 HTML 还没来得及转换为 DOM 结构，可能会报错。</p>
-<p>关于浏览器整个流程，百度的多益大神有更加详细的文章，推荐阅读下：《<a href="http://fex.baidu.com/blog/2014/05/what-happen/" target="_blank" rel="noopener">从输入 URL 到页面加载完成的过程中都发生了什么事情？</a> 》。</p>
-<hr>
-<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><p>性能优化的题目也是面试常考的，这类题目有很大的扩展性，能够扩展出来很多小细节，而且对个人的技术视野和业务能力有很大的挑战。这部分笔者会重点讲下常用的性能优化方案。</p>
-<blockquote>
-<p>题目：总结前端性能优化的解决方案</p>
-</blockquote>
-<h3 id="优化原则和方向"><a href="#优化原则和方向" class="headerlink" title="优化原则和方向"></a>优化原则和方向</h3><p>性能优化的原则是<strong>以更好的用户体验为标准</strong>，具体就是实现下面的目标：</p>
-<ol>
-<li>多使用内存、缓存或者其他方法</li>
-<li>减少 CPU 和GPU 计算，更快展现</li>
-</ol>
-<p>优化的方向有两个：</p>
-<ul>
-<li><strong>减少页面体积，提升网络加载</strong></li>
-<li><strong>优化页面渲染</strong></li>
-</ul>
-<h3 id="减少页面体积，提升网络加载"><a href="#减少页面体积，提升网络加载" class="headerlink" title="减少页面体积，提升网络加载"></a>减少页面体积，提升网络加载</h3><ul>
-<li>静态资源的压缩合并（JS 代码压缩合并、CSS 代码压缩合并、雪碧图）</li>
-<li>静态资源缓存（资源名称加 MD5 戳）</li>
-<li>使用 CDN 让资源加载更快</li>
-</ul>
-<h3 id="优化页面渲染"><a href="#优化页面渲染" class="headerlink" title="优化页面渲染"></a>优化页面渲染</h3><ul>
-<li>CSS 放前面，JS 放后面</li>
-<li>懒加载（图片懒加载、下拉加载更多）</li>
-<li>减少DOM 查询，对 DOM 查询做缓存</li>
-<li>减少DOM 操作，多个操作尽量合并在一起执行（<code>DocumentFragment</code>）</li>
-<li>事件节流</li>
-<li>尽早执行操作（<code>DOMContentLoaded</code>）</li>
-<li>使用 SSR 后端渲染，数据直接输出到 HTML 中，减少浏览器使用 JS 模板渲染页面 HTML 的时间</li>
-</ul>
-<h3 id="详细解释"><a href="#详细解释" class="headerlink" title="详细解释"></a>详细解释</h3><h4 id="静态资源的压缩合并"><a href="#静态资源的压缩合并" class="headerlink" title="静态资源的压缩合并"></a>静态资源的压缩合并</h4><p>如果不合并，每个都会走一遍之前介绍的请求过程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;a.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;b.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;c.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>如果合并了，就只走一遍请求过程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;abc.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="静态资源缓存"><a href="#静态资源缓存" class="headerlink" title="静态资源缓存"></a>静态资源缓存</h4><p>通过链接名称控制缓存</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;abc_1.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>只有内容改变的时候，链接名称才会改变</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;abc_2.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>这个名称不用手动改，可通过前端构建工具根据文件内容，为文件名称添加 MD5 后缀。</p>
-<h4 id="使用-CDN-让资源加载更快"><a href="#使用-CDN-让资源加载更快" class="headerlink" title="使用 CDN 让资源加载更快"></a>使用 CDN 让资源加载更快</h4><p>CDN 会提供专业的加载优化方案，静态资源要尽量放在 CDN 上。例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用-SSR-后端渲染"><a href="#使用-SSR-后端渲染" class="headerlink" title="使用 SSR 后端渲染"></a>使用 SSR 后端渲染</h4><p>可一次性输出 HTML 内容，不用在页面渲染完成之后，再通过 Ajax 加载数据、再渲染。例如使用 smarty、Vue SSR 等。</p>
-<h4 id="CSS-放前面，JS-放后面"><a href="#CSS-放前面，JS-放后面" class="headerlink" title="CSS 放前面，JS 放后面"></a>CSS 放前面，JS 放后面</h4><p>上文讲述浏览器渲染过程时已经提过，不再赘述。</p>
-<h4 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h4><p>一开始先给为 <code>src</code> 赋值成一个通用的预览图，下拉时候再动态赋值成正式的图片。如下，<code>preview.png</code>是预览图片，比较小，加载很快，而且很多图片都共用这个<code>preview.png</code>，加载一次即可。待页面下拉，图片显示出来时，再去替换<code>src</code>为<code>data-realsrc</code>的值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;preview.png&quot; data-realsrc=&quot;abc.png&quot;/&gt;</span><br></pre></td></tr></table></figure>
-
-<p>另外，这里为何要用<code>data-</code>开头的属性值？—— 所有 HTML 中自定义的属性，都应该用<code>data-</code>开头，因为<code>data-</code>开头的属性浏览器渲染的时候会忽略掉，提高渲染性能。</p>
-<h4 id="DOM-查询做缓存"><a href="#DOM-查询做缓存" class="headerlink" title="DOM 查询做缓存"></a>DOM 查询做缓存</h4><p>两段代码做一下对比：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var pList = document.getElementsByTagName(&apos;p&apos;)  // 只查询一个 DOM ，缓存在 pList 中了</span><br><span class="line">var i</span><br><span class="line">for (i = 0; i &lt; pList.length; i++) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var i</span><br><span class="line">for (i = 0; i &lt; document.getElementsByTagName(&apos;p&apos;).length; i++) &#123;  // 每次循环，都会查询 DOM ，耗费性能</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>总结：DOM 操作，无论查询还是修改，都是非常耗费性能的，应尽量减少。</p>
-<h4 id="合并-DOM-插入"><a href="#合并-DOM-插入" class="headerlink" title="合并 DOM 插入"></a>合并 DOM 插入</h4><p>DOM 操作是非常耗费性能的，因此插入多个标签时，先插入 Fragment 然后再统一插入 DOM。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var listNode = document.getElementById(&apos;list&apos;)</span><br><span class="line">// 要插入 10 个 li 标签</span><br><span class="line">var frag = document.createDocumentFragment();</span><br><span class="line">var x, li;</span><br><span class="line">for(x = 0; x &lt; 10; x++) &#123;</span><br><span class="line">    li = document.createElement(&quot;li&quot;);</span><br><span class="line">    li.innerHTML = &quot;List item &quot; + x;</span><br><span class="line">    frag.appendChild(li);  // 先放在 frag 中，最后一次性插入到 DOM 结构中。</span><br><span class="line">&#125;</span><br><span class="line">listNode.appendChild(frag);</span><br></pre></td></tr></table></figure>
-
-<h4 id="事件节流"><a href="#事件节流" class="headerlink" title="事件节流"></a>事件节流</h4><p>例如要在文字改变时触发一个 change 事件，通过 keyup 来监听。使用节流。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var textarea = document.getElementById(&apos;text&apos;)</span><br><span class="line">var timeoutId</span><br><span class="line">textarea.addEventListener(&apos;keyup&apos;, function () &#123;</span><br><span class="line">    if (timeoutId) &#123;</span><br><span class="line">        clearTimeout(timeoutId)</span><br><span class="line">    &#125;</span><br><span class="line">    timeoutId = setTimeout(function () &#123;</span><br><span class="line">        // 触发 change 事件</span><br><span class="line">    &#125;, 100)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h4 id="尽早执行操作"><a href="#尽早执行操作" class="headerlink" title="尽早执行操作"></a>尽早执行操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&apos;load&apos;, function () &#123;</span><br><span class="line">    // 页面的全部资源加载完才会执行，包括图片、视频等</span><br><span class="line">&#125;)</span><br><span class="line">document.addEventListener(&apos;DOMContentLoaded&apos;, function () &#123;</span><br><span class="line">    // DOM 渲染完即可执行，此时图片、视频还可能没有加载完</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h4 id="性能优化怎么做"><a href="#性能优化怎么做" class="headerlink" title="性能优化怎么做"></a>性能优化怎么做</h4><p>上面提到的都是性能优化的单个点，性能优化项目具体实施起来，应该按照下面步骤推进：</p>
-<ol>
-<li>建立性能数据收集平台，摸底当前性能数据，通过性能打点，将上述整个页面打开过程消耗时间记录下来</li>
-<li>分析耗时较长时间段原因，寻找优化点，确定优化目标</li>
-<li>开始优化</li>
-<li>通过数据收集平台记录优化效果</li>
-<li>不断调整优化点和预期目标，循环2~4步骤</li>
-</ol>
-<p>性能优化是个长期的事情，不是一蹴而就的，应该本着先摸底、再分析、后优化的原则逐步来做。</p>
-<hr>
-<h2 id="Web-安全"><a href="#Web-安全" class="headerlink" title="Web 安全"></a>Web 安全</h2><blockquote>
-<p>题目：前端常见的安全问题有哪些？</p>
-</blockquote>
-<p>Web 前端的安全问题，能回答出下文的两个问题，这个题目就能基本过关了。开始之前，先说一个最简单的攻击方式 —— SQL 注入。</p>
-<p>上学的时候就知道有一个「SQL注入」的攻击方式。例如做一个系统的登录界面，输入用户名和密码，提交之后，后端直接拿到数据就拼接 SQL 语句去查询数据库。如果在输入时进行了恶意的 SQL 拼装，那么最后生成的 SQL 就会有问题。但是现在稍微大型一点的系统，都不会这么做，从提交登录信息到最后拿到授权，要经过层层的验证。因此，SQL 注入都只出现在比较低端小型的系统上。</p>
-<h3 id="XSS（Cross-Site-Scripting，跨站脚本攻击）"><a href="#XSS（Cross-Site-Scripting，跨站脚本攻击）" class="headerlink" title="XSS（Cross Site Scripting，跨站脚本攻击）"></a>XSS（Cross Site Scripting，跨站脚本攻击）</h3><p>这是前端最常见的攻击方式，很多大型网站（如 Facebook）都被 XSS 攻击过。</p>
-<p>举一个例子，我在一个博客网站正常发表一篇文章，输入汉字、英文和图片，完全没有问题。但是如果我写的是恶意的 JS 脚本，例如获取到<code>document.cookie</code>然后传输到自己的服务器上，那我这篇博客的每一次浏览都会执行这个脚本，都会把访客 cookie 中的信息偷偷传递到我的服务器上来。</p>
-<p>其实原理上就是黑客通过某种方式（发布文章、发布评论等）将一段特定的 JS 代码隐蔽地输入进去。然后别人再看这篇文章或者评论时，之前注入的这段 JS 代码就执行了。<strong>JS 代码一旦执行，那可就不受控制了，因为它跟网页原有的 JS 有同样的权限</strong>，例如可以获取 server 端数据、可以获取 cookie 等。于是，攻击就这样发生了。</p>
-<h4 id="XSS的危害"><a href="#XSS的危害" class="headerlink" title="XSS的危害"></a>XSS的危害</h4><p>XSS 的危害相当大，如果页面可以随意执行别人不安全的 JS 代码，轻则会让页面错乱、功能缺失，重则会造成用户的信息泄露。</p>
-<p>比如早些年社交网站经常爆出 XSS 蠕虫，通过发布的文章内插入 JS，用户访问了感染不安全 JS 注入的文章，会自动重新发布新的文章，这样的文章会通过推荐系统进入到每个用户的文章列表面前，很快就会造成大规模的感染。</p>
-<p>还有利用获取 cookie 的方式，将 cookie 传入入侵者的服务器上，入侵者就可以模拟 cookie 登录网站，对用户的信息进行篡改。</p>
-<h4 id="XSS的预防"><a href="#XSS的预防" class="headerlink" title="XSS的预防"></a>XSS的预防</h4><p>那么如何预防 XSS 攻击呢？—— 最根本的方式，就是对用户输入的内容进行验证和替换，需要替换的字符有：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&amp; 替换为：&amp;amp;</span><br><span class="line">&lt; 替换为：&amp;lt;</span><br><span class="line">&gt; 替换为：&amp;gt;</span><br><span class="line">” 替换为：&amp;quot;</span><br><span class="line">‘ 替换为：&amp;#x27;</span><br><span class="line">/ 替换为：&amp;#x2f;</span><br></pre></td></tr></table></figure>
-
-<p>替换了这些字符之后，黑客输入的攻击代码就会失效，XSS 攻击将不会轻易发生。</p>
-<p>除此之外，还可以通过对 cookie 进行较强的控制，比如对敏感的 cookie 增加<code>http-only</code>限制，让 JS 获取不到 cookie 的内容。</p>
-<h3 id="CSRF（Cross-site-request-forgery，跨站请求伪造）"><a href="#CSRF（Cross-site-request-forgery，跨站请求伪造）" class="headerlink" title="CSRF（Cross-site request forgery，跨站请求伪造）"></a>CSRF（Cross-site request forgery，跨站请求伪造）</h3><p>CSRF 是借用了当前操作者的权限来偷偷地完成某个操作，而不是拿到用户的信息。</p>
-<p>例如，一个支付类网站，给他人转账的接口是<code>http://buy.com/pay?touid=999&amp;money=100</code>，而这个接口在使用时没有任何密码或者 token 的验证，只要打开访问就直接给他人转账。一个用户已经登录了<code>http://buy.com</code>，在选择商品时，突然收到一封邮件，而这封邮件正文有这么一行代码<code>&lt;img src=&quot;http://buy.com/pay?touid=999&amp;money=100&quot;/&gt;</code>，他访问了邮件之后，其实就已经完成了购买。</p>
-<p>CSRF 的发生其实是借助了一个 cookie 的特性。我们知道，登录了<code>http://buy.com</code>之后，cookie 就会有登录过的标记了，此时请求<code>http://buy.com/pay?touid=999&amp;money=100</code>是会带着 cookie 的，因此 server 端就知道已经登录了。而如果在<code>http://buy.com</code>去请求其他域名的 API 例如<code>http://abc.com/api</code>时，是不会带 cookie 的，这是浏览器的同源策略的限制。但是 —— <strong>此时在其他域名的页面中，请求<code>http://buy.com/pay?touid=999&amp;money=100</code>，会带着<code>buy.com</code>的 cookie ，这是发生 CSRF 攻击的理论基础。</strong></p>
-<p>预防 CSRF 就是加入各个层级的权限验证，例如现在的购物网站，只要涉及现金交易，肯定要输入密码或者指纹才行。除此之外，敏感的接口使用<code>POST</code>请求而不是<code>GET</code>也是很重要的。</p>
-<hr>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本小节总结了前端运行环境（即浏览器）的一些常考查知识点，包括页面加载过程、如何性能优化以及需要注意的安全问题。</p>
-
+<li>Web 安全
+    
+    <a class="article-more-a" href="/2019/08/22/浏览器知识点梳理/#more">more >></a>
+    
     
 
     
@@ -353,6 +557,10 @@
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
+        		</li>
+      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">知识点梳理</a>
         		</li>
@@ -449,314 +657,9 @@
 </li>
 </ul>
 <hr>
-<h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><p>JavaScript 是一种弱类型脚本语言，所谓弱类型指的是定义变量时，不需要什么类型，在程序运行过程中会自动判断类型。</p>
-<p>ECMAScript 中定义了 6 种原始类型：</p>
-<ul>
-<li>Boolean</li>
-<li>String</li>
-<li>Number</li>
-<li>Null</li>
-<li>Undefined</li>
-<li>Symbol（ES6 新定义）</li>
-</ul>
-<p><strong>注意</strong>：原始类型不包含 Object。</p>
-<blockquote>
-<p>题目：类型判断用到哪些方法？</p>
-</blockquote>
-<h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a><code>typeof</code></h3><p><code>typeof xxx</code>得到的值有以下几种类型：<code>undefined</code> <code>boolean</code> <code>number</code> <code>string</code> <code>object</code> <code>function</code>、<code>symbol</code> ，比较简单，不再一一演示了。这里需要注意的有三点：</p>
-<ul>
-<li><code>typeof null</code>结果是<code>object</code> ，实际这是<code>typeof</code>的一个bug，null是原始值，非引用类型</li>
-<li><code>typeof [1, 2]</code>结果是<code>object</code>，结果中没有<code>array</code>这一项，引用类型除了<code>function</code>其他的全部都是<code>object</code></li>
-<li><code>typeof Symbol()</code> 用<code>typeof</code>获取<code>symbol</code>类型的值得到的是<code>symbol</code>，这是 ES6 新增的知识点</li>
-</ul>
-<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a><code>instanceof</code></h3><p>用于实例和构造函数的对应。例如判断一个变量是否是数组，使用<code>typeof</code>无法判断，但可以使用<code>[1, 2] instanceof Array</code>来判断。因为，<code>[1, 2]</code>是数组，它的构造函数就是<code>Array</code>。同理：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function Foo(name) &#123;</span><br><span class="line">    this.name = name</span><br><span class="line">&#125;</span><br><span class="line">var foo = new Foo(&apos;bar&apos;)</span><br><span class="line">console.log(foo instanceof Foo) // true</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>题目：值类型和引用类型的区别</p>
-</blockquote>
-<h3 id="值类型-vs-引用类型"><a href="#值类型-vs-引用类型" class="headerlink" title="值类型 vs 引用类型"></a>值类型 vs 引用类型</h3><p>除了原始类型，ES 还有引用类型，上文提到的<code>typeof</code>识别出来的类型中，只有<code>object</code>和<code>function</code>是引用类型，其他都是值类型。</p>
-<p>根据 JavaScript 中的变量类型传递方式，又分为<strong>值类型</strong>和<strong>引用类型</strong>，值类型变量包括 Boolean、String、Number、Undefined、Null，引用类型包括了 Object 类的所有，如 Date、Array、Function 等。在参数传递方式上，值类型是按值传递，引用类型是按共享传递。</p>
-<p>下面通过一个小题目，来看下两者的主要区别，以及实际开发中需要注意的地方。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 值类型</span><br><span class="line">var a = 10</span><br><span class="line">var b = a</span><br><span class="line">b = 20</span><br><span class="line">console.log(a)  // 10</span><br><span class="line">console.log(b)  // 20</span><br></pre></td></tr></table></figure>
-
-<p>上述代码中，<code>a</code> <code>b</code>都是值类型，两者分别修改赋值，相互之间没有任何影响。再看引用类型的例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 引用类型</span><br><span class="line">var a = &#123;x: 10, y: 20&#125;</span><br><span class="line">var b = a</span><br><span class="line">b.x = 100</span><br><span class="line">b.y = 200</span><br><span class="line">console.log(a)  // &#123;x: 100, y: 200&#125;</span><br><span class="line">console.log(b)  // &#123;x: 100, y: 200&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上述代码中，<code>a</code> <code>b</code>都是引用类型。在执行了<code>b = a</code>之后，修改<code>b</code>的属性值，<code>a</code>的也跟着变化。因为<code>a</code>和<code>b</code>都是引用类型，指向了同一个内存地址，即两者引用的是同一个值，因此<code>b</code>修改属性时，<code>a</code>的值随之改动。</p>
-<p>再借助题目进一步讲解一下。</p>
-<blockquote>
-<p>说出下面代码的执行结果，并分析其原因。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function foo(a)&#123;</span><br><span class="line">    a = a * 10;</span><br><span class="line">&#125;</span><br><span class="line">function bar(b)&#123;</span><br><span class="line">    b.value = &apos;new&apos;;</span><br><span class="line">&#125;</span><br><span class="line">var a = 1;</span><br><span class="line">var b = &#123;value: &apos;old&apos;&#125;;</span><br><span class="line">foo(a);</span><br><span class="line">bar(b);</span><br><span class="line">console.log(a); // 1</span><br><span class="line">console.log(b); // value: new</span><br></pre></td></tr></table></figure>
-
-<p>通过代码执行，会发现：</p>
-<ul>
-<li><code>a</code>的值没有发生改变</li>
-<li>而<code>b</code>的值发生了改变</li>
-</ul>
-<p>这就是因为<code>Number</code>类型的<code>a</code>是按值传递的，而<code>Object</code>类型的<code>b</code>是按共享传递的。</p>
-<p>JS 中这种设计的原因是：按值传递的类型，复制一份存入栈内存，这类类型一般不占用太多内存，而且按值传递保证了其访问速度。按共享传递的类型，是复制其引用，而不是整个复制其值（C 语言中的指针），保证过大的对象等不会因为不停复制内容而造成内存的浪费。</p>
-<p>引用类型经常会在代码中按照下面的写法使用，或者说<strong>容易不知不觉中造成错误</strong>！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">    a: 1,</span><br><span class="line">    b: [1,2,3]</span><br><span class="line">&#125;</span><br><span class="line">var a = obj.a</span><br><span class="line">var b = obj.b</span><br><span class="line">a = 2</span><br><span class="line">b.push(4)</span><br><span class="line">console.log(obj, a, b)</span><br></pre></td></tr></table></figure>
-
-<p>虽然<code>obj</code>本身是个引用类型的变量（对象），但是内部的<code>a</code>和<code>b</code>一个是值类型一个是引用类型，<code>a</code>的赋值不会改变<code>obj.a</code>，但是<code>b</code>的操作却会反映到<code>obj</code>对象上。</p>
-<hr>
-<h2 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h2><p>JavaScript 是基于原型的语言，原型理解起来非常简单，但却特别重要，下面还是通过题目来理解下JavaScript 的原型概念。</p>
-<blockquote>
-<p>题目：如何理解 JavaScript 的原型</p>
-</blockquote>
-<p>对于这个问题，可以从下面这几个要点来理解和回答，<strong>下面几条必须记住并且理解</strong></p>
-<ul>
-<li><strong>所有的引用类型（数组、对象、函数），都具有对象特性，即可自由扩展属性（<code>null</code>除外）</strong></li>
-<li><strong>所有的引用类型（数组、对象、函数），都有一个<code>__proto__</code>属性，属性值是一个普通的对象</strong></li>
-<li><strong>所有的函数，都有一个<code>prototype</code>属性，属性值也是一个普通的对象</strong></li>
-<li><strong>所有的引用类型（数组、对象、函数），<code>__proto__</code>属性值指向它的构造函数的<code>prototype</code>属性值</strong></li>
-</ul>
-<p>通过代码解释一下，大家可自行运行以下代码，看结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 要点一：自由扩展属性</span><br><span class="line">var obj = &#123;&#125;; obj.a = 100;</span><br><span class="line">var arr = []; arr.a = 100;</span><br><span class="line">function fn () &#123;&#125;</span><br><span class="line">fn.a = 100;</span><br><span class="line"></span><br><span class="line">// 要点二：__proto__</span><br><span class="line">console.log(obj.__proto__);</span><br><span class="line">console.log(arr.__proto__);</span><br><span class="line">console.log(fn.__proto__);</span><br><span class="line"></span><br><span class="line">// 要点三：函数有 prototype</span><br><span class="line">console.log(fn.prototype)</span><br><span class="line"></span><br><span class="line">// 要点四：引用类型的 __proto__ 属性值指向它的构造函数的 prototype 属性值</span><br><span class="line">console.log(obj.__proto__ === Object.prototype)</span><br></pre></td></tr></table></figure>
-
-<h3 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h3><p>先写一个简单的代码示例。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 构造函数</span><br><span class="line">function Foo(name, age) &#123;</span><br><span class="line">    this.name = name</span><br><span class="line">&#125;</span><br><span class="line">Foo.prototype.alertName = function () &#123;</span><br><span class="line">    alert(this.name)</span><br><span class="line">&#125;</span><br><span class="line">// 创建示例</span><br><span class="line">var f = new Foo(&apos;zhangsan&apos;)</span><br><span class="line">f.printName = function () &#123;</span><br><span class="line">    console.log(this.name)</span><br><span class="line">&#125;</span><br><span class="line">// 测试</span><br><span class="line">f.printName()</span><br><span class="line">f.alertName()</span><br></pre></td></tr></table></figure>
-
-<p>执行<code>printName</code>时很好理解，但是执行<code>alertName</code>时发生了什么？这里再记住一个重点 <strong>当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会去它的<code>__proto__</code>（即它的构造函数的<code>prototype</code>）中寻找</strong>，因此<code>f.alertName</code>就会找到<code>Foo.prototype.alertName</code>。</p>
-<p>那么如何判断这个属性是不是对象本身的属性呢？使用<code>hasOwnProperty</code>，常用的地方是遍历一个对象的时候。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var item</span><br><span class="line">for (item in f) &#123;</span><br><span class="line">    // 高级浏览器已经在 for in 中屏蔽了来自原型的属性，但是这里建议大家还是加上这个判断，保证程序的健壮性</span><br><span class="line">    if (f.hasOwnProperty(item)) &#123;</span><br><span class="line">        console.log(item)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>题目：如何理解 JS 的原型链</p>
-</blockquote>
-<h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p>还是接着上面的示例，如果执行<code>f.toString()</code>时，又发生了什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 省略 N 行</span><br><span class="line"></span><br><span class="line">// 测试</span><br><span class="line">f.printName()</span><br><span class="line">f.alertName()</span><br><span class="line">f.toString()</span><br></pre></td></tr></table></figure>
-
-<p>因为<code>f</code>本身没有<code>toString()</code>，并且<code>f.__proto__</code>（即<code>Foo.prototype</code>）中也没有<code>toString</code>。这个问题还是得拿出刚才那句话——<strong>当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会去它的<code>__proto__</code>（即它的构造函数的<code>prototype</code>）中寻找</strong>。</p>
-<p>如果在<code>f.__proto__</code>中没有找到<code>toString</code>，那么就继续去<code>f.__proto__.__proto__</code>中寻找，因为<code>f.__proto__</code>就是一个普通的对象而已嘛！</p>
-<ul>
-<li><code>f.__proto__</code>即<code>Foo.prototype</code>，没有找到<code>toString</code>，继续往上找</li>
-<li><code>f.__proto__.__proto__</code>即<code>Foo.prototype.__proto__</code>。<code>Foo.prototype</code>就是一个普通的对象，因此<code>Foo.prototype.__proto__</code>就是<code>Object.prototype</code>，在这里可以找到<code>toString</code></li>
-<li>因此<code>f.toString</code>最终对应到了<code>Object.prototype.toString</code></li>
-</ul>
-<p>这样一直往上找，你会发现是一个链式的结构，所以叫做“原型链”。如果一直找到最上层都没有找到，那么就宣告失败，返回<code>undefined</code>。最上层是什么 —— <code>Object.prototype.__proto__ === null</code></p>
-<h3 id="原型链中的this"><a href="#原型链中的this" class="headerlink" title="原型链中的this"></a>原型链中的<code>this</code></h3><p>所有从原型或更高级原型中得到、执行的方法，其中的<code>this</code>在执行时，就指向了当前这个触发事件执行的对象。因此<code>printName</code>和<code>alertName</code>中的<code>this</code>都是<code>f</code>。</p>
-<hr>
-<h2 id="作用域和闭包"><a href="#作用域和闭包" class="headerlink" title="作用域和闭包"></a>作用域和闭包</h2><p>作用域和闭包是前端面试中，最可能考查的知识点。例如下面的题目：</p>
-<blockquote>
-<p>题目：现在有个 HTML 片段，要求编写代码，点击编号为几的链接就<code>alert</code>弹出其编号</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;编号1，点击我请弹出1&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;2&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;3&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;4&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;5&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-
-<p>一般不知道这个题目用闭包的话，会写出下面的代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var list = document.getElementsByTagName(&apos;li&apos;);</span><br><span class="line">for (var i = 0; i &lt; list.length; i++) &#123;</span><br><span class="line">    list[i].addEventListener(&apos;click&apos;, function()&#123;</span><br><span class="line">        alert(i + 1)</span><br><span class="line">    &#125;, true)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>实际上执行才会发现始终弹出的是<code>6</code>，这时候就应该通过闭包来解决：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var list = document.getElementsByTagName(&apos;li&apos;);</span><br><span class="line">for (var i = 0; i &lt; list.length; i++) &#123;</span><br><span class="line">    list[i].addEventListener(&apos;click&apos;, function(i)&#123;</span><br><span class="line">        return function()&#123;</span><br><span class="line">            alert(i + 1)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;(i), true)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>要理解闭包，就需要我们从「执行上下文」开始讲起。</p>
-<h3 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h3><p>先讲一个关于 <strong>变量提升</strong> 的知识点，面试中可能会遇见下面的问题，很多候选人都回答错误：</p>
-<blockquote>
-<p>题目：说出下面执行的结果（这里笔者直接注释输出了）</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">console.log(a)  // undefined</span><br><span class="line">var a = 100</span><br><span class="line"></span><br><span class="line">fn(&apos;zhangsan&apos;)  // &apos;zhangsan&apos; 20</span><br><span class="line">function fn(name) &#123;</span><br><span class="line">    age = 20</span><br><span class="line">    console.log(name, age)</span><br><span class="line">    var age</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(b); // 这里报错</span><br><span class="line">// Uncaught ReferenceError: b is not defined</span><br><span class="line">b = 100;</span><br></pre></td></tr></table></figure>
-
-<p>在一段 JS 脚本（即一个<code>&lt;script&gt;</code>标签中）执行之前，要先解析代码（所以说 JS 是解释执行的脚本语言），解析的时候会先创建一个 <strong>全局执行上下文</strong> 环境，先把代码中即将执行的（内部函数的不算，因为你不知道函数何时执行）变量、函数声明都拿出来。变量先暂时赋值为<code>undefined</code>，函数则先声明好可使用。这一步做完了，然后再开始正式执行程序。再次强调，这是在代码执行之前才开始的工作。</p>
-<p>我们来看下上面的面试小题目，为什么<code>a</code>是<code>undefined</code>，而<code>b</code>却报错了，实际 JS 在代码执行之前，要「全文解析」，发现<code>var a</code>，知道有个<code>a</code>的变量，存入了执行上下文，而<code>b</code>没有找到<code>var</code>关键字，这时候没有在执行上下文提前「占位」，所以代码执行的时候，提前报到的<code>a</code>是有记录的，只不过值暂时还没有赋值，即为<code>undefined</code>，而<code>b</code>在执行上下文没有找到，自然会报错（没有找到<code>b</code>的引用）。</p>
-<p>另外，一个函数在执行之前，也会创建一个 <strong>函数执行上下文</strong> 环境，跟 <strong>全局上下文</strong> 差不多，不过 <strong>函数执行上下文</strong> 中会多出<code>this</code> <code>arguments</code>和函数的参数。参数和<code>arguments</code>好理解，这里的<code>this</code>咱们需要专门讲解。</p>
-<p>总结一下：</p>
-<ul>
-<li>范围：一段<code>&lt;script&gt;</code>、js 文件或者一个函数</li>
-<li>全局上下文：变量定义，函数声明</li>
-<li>函数上下文：变量定义，函数声明，<code>this</code>，<code>arguments</code></li>
-</ul>
-<h3 id="this"><a href="#this" class="headerlink" title="this"></a><code>this</code></h3><p>先搞明白一个很重要的概念 —— <strong><code>this</code>的值是在执行的时候才能确认，定义的时候不能确认！</strong> 为什么呢 —— 因为<code>this</code>是执行上下文环境的一部分，而执行上下文需要在代码执行之前确定，而不是定义的时候。看如下例子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;</span><br><span class="line">    name: &apos;A&apos;,</span><br><span class="line">    fn: function () &#123;</span><br><span class="line">        console.log(this.name)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">a.fn()  // this === a</span><br><span class="line">a.fn.call(&#123;name: &apos;B&apos;&#125;)  // this === &#123;name: &apos;B&apos;&#125;</span><br><span class="line">var fn1 = a.fn</span><br><span class="line">fn1()  // this === window</span><br></pre></td></tr></table></figure>
-
-<p><code>this</code>执行会有不同，主要集中在这几个场景中</p>
-<ul>
-<li>作为构造函数执行，构造函数中</li>
-<li>作为对象属性执行，上述代码中<code>a.fn()</code></li>
-<li>作为普通函数执行，上述代码中<code>fn1()</code></li>
-<li>用于<code>call</code> <code>apply</code> <code>bind</code>，上述代码中<code>a.fn.call({name: &#39;B&#39;})</code></li>
-</ul>
-<p>下面再来讲解下什么是作用域和作用域链，作用域链和作用域也是常考的题目。</p>
-<blockquote>
-<p>题目：如何理解 JS 的作用域和作用域链</p>
-</blockquote>
-<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p>ES6 之前 JS 没有块级作用域。例如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if (true) &#123;</span><br><span class="line">    var name = &apos;zhangsan&apos;</span><br><span class="line">&#125;</span><br><span class="line">console.log(name)</span><br></pre></td></tr></table></figure>
-
-<p>从上面的例子可以体会到作用域的概念，作用域就是一个独立的地盘，让变量不会外泄、暴露出去。上面的<code>name</code>就被暴露出去了，因此，<strong>JS 没有块级作用域，只有全局作用域和函数作用域</strong>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = 100</span><br><span class="line">function fn() &#123;</span><br><span class="line">    var a = 200</span><br><span class="line">    console.log(&apos;fn&apos;, a)</span><br><span class="line">&#125;</span><br><span class="line">console.log(&apos;global&apos;, a)</span><br><span class="line">fn()</span><br></pre></td></tr></table></figure>
-
-<p>全局作用域就是最外层的作用域，如果我们写了很多行 JS 代码，变量定义都没有用函数包括，那么它们就全部都在全局作用域中。这样的坏处就是很容易撞车、冲突。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 张三写的代码中</span><br><span class="line">var data = &#123;a: 100&#125;</span><br><span class="line"></span><br><span class="line">// 李四写的代码中</span><br><span class="line">var data = &#123;x: true&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这就是为何 jQuery、Zepto 等库的源码，所有的代码都会放在<code>(function(){....})()</code>中。因为放在里面的所有变量，都不会被外泄和暴露，不会污染到外面，不会对其他的库或者 JS 脚本造成影响。这是函数作用域的一个体现。</p>
-<p>附：ES6 中开始加入了块级作用域，使用<code>let</code>定义变量即可，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if (true) &#123;</span><br><span class="line">    let name = &apos;zhangsan&apos;</span><br><span class="line">&#125;</span><br><span class="line">console.log(name)  // 报错，因为let定义的name是在if这个块级作用域</span><br></pre></td></tr></table></figure>
-
-<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>首先认识一下什么叫做 <strong>自由变量</strong> 。如下代码中，<code>console.log(a)</code>要得到<code>a</code>变量，但是在当前的作用域中没有定义<code>a</code>（可对比一下<code>b</code>）。当前作用域没有定义的变量，这成为 <strong>自由变量</strong> 。自由变量如何得到 —— 向父级作用域寻找。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = 100</span><br><span class="line">function fn() &#123;</span><br><span class="line">    var b = 200</span><br><span class="line">    console.log(a)</span><br><span class="line">    console.log(b)</span><br><span class="line">&#125;</span><br><span class="line">fn()</span><br></pre></td></tr></table></figure>
-
-<p>如果父级也没呢？再一层一层向上寻找，直到找到全局作用域还是没找到，就宣布放弃。这种一层一层的关系，就是 <strong>作用域链</strong> 。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var a = 100</span><br><span class="line">function F1() &#123;</span><br><span class="line">    var b = 200</span><br><span class="line">    function F2() &#123;</span><br><span class="line">        var c = 300</span><br><span class="line">        console.log(a) // 自由变量，顺作用域链向父作用域找</span><br><span class="line">        console.log(b) // 自由变量，顺作用域链向父作用域找</span><br><span class="line">        console.log(c) // 本作用域的变量</span><br><span class="line">    &#125;</span><br><span class="line">    F2()</span><br><span class="line">&#125;</span><br><span class="line">F1()</span><br></pre></td></tr></table></figure>
-
-<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>讲完这些内容，我们再来看一个例子，通过例子来理解闭包。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function F1() &#123;</span><br><span class="line">    var a = 100</span><br><span class="line">    return function () &#123;</span><br><span class="line">        console.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var f1 = F1()</span><br><span class="line">var a = 200</span><br><span class="line">f1()</span><br></pre></td></tr></table></figure>
-
-<p>自由变量将从作用域链中去寻找，但是 <strong>依据的是函数定义时的作用域链，而不是函数执行时</strong>，以上这个例子就是闭包。闭包主要有两个应用场景：</p>
-<ul>
-<li><strong>函数作为返回值</strong>，上面的例子就是</li>
-<li><strong>函数作为参数传递</strong>，看以下例子</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function F1() &#123;</span><br><span class="line">    var a = 100</span><br><span class="line">    return function () &#123;</span><br><span class="line">        console.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function F2(f1) &#123;</span><br><span class="line">    var a = 200</span><br><span class="line">    console.log(f1())</span><br><span class="line">&#125;</span><br><span class="line">var f1 = F1()</span><br><span class="line">F2(f1)</span><br></pre></td></tr></table></figure>
-
-<p>至此，对应着「作用域和闭包」这部分一开始的点击弹出<code>alert</code>的代码再看闭包，就很好理解了。</p>
-<hr>
-<h2 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h2><p>异步和同步也是面试中常考的内容，下面笔者来讲解下同步和异步的区别。</p>
-<h3 id="同步-vs-异步"><a href="#同步-vs-异步" class="headerlink" title="同步 vs 异步"></a>同步 vs 异步</h3><p>先看下面的 demo，根据程序阅读起来表达的意思，应该是先打印<code>100</code>，1秒钟之后打印<code>200</code>，最后打印<code>300</code>。但是实际运行根本不是那么回事。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(100)</span><br><span class="line">setTimeout(function () &#123;</span><br><span class="line">    console.log(200)</span><br><span class="line">&#125;, 1000)</span><br><span class="line">console.log(300)</span><br></pre></td></tr></table></figure>
-
-<p>再对比以下程序。先打印<code>100</code>，再弹出<code>200</code>（等待用户确认），最后打印<code>300</code>。这个运行效果就符合预期要求。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">console.log(100)</span><br><span class="line">alert(200)  // 1秒钟之后点击确认</span><br><span class="line">console.log(300)</span><br></pre></td></tr></table></figure>
-
-<p>这俩到底有何区别？—— 第一个示例中间的步骤根本没有阻塞接下来程序的运行，而第二个示例却阻塞了后面程序的运行。前面这种表现就叫做 <strong>异步</strong>（后面这个叫做 <strong>同步</strong> ），即<strong>不会阻塞后面程序的运行</strong>。</p>
-<h3 id="异步和单线程"><a href="#异步和单线程" class="headerlink" title="异步和单线程"></a>异步和单线程</h3><p>JS 需要异步的根本原因是 <strong>JS 是单线程运行的</strong>，即在同一时间只能做一件事，不能“一心二用”。</p>
-<p>一个 Ajax 请求由于网络比较慢，请求需要 5 秒钟。如果是同步，这 5 秒钟页面就卡死在这里啥也干不了了。异步的话，就好很多了，5 秒等待就等待了，其他事情不耽误做，至于那 5 秒钟等待是网速太慢，不是因为 JS 的原因。</p>
-<p>讲到单线程，我们再来看个真题：</p>
-<blockquote>
-<p>题目：讲解下面代码的执行过程和结果</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = true;</span><br><span class="line">setTimeout(function()&#123;</span><br><span class="line">    a = false;</span><br><span class="line">&#125;, 100)</span><br><span class="line">while(a)&#123;</span><br><span class="line">    console.log(&apos;while执行了&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这是一个很有迷惑性的题目，不少候选人认为<code>100ms</code>之后，由于<code>a</code>变成了<code>false</code>，所以<code>while</code>就中止了，实际不是这样，因为JS是单线程的，所以进入<code>while</code>循环之后，没有「时间」（线程）去跑定时器了，所以这个代码跑起来是个死循环！</p>
-<h3 id="前端异步的场景"><a href="#前端异步的场景" class="headerlink" title="前端异步的场景"></a>前端异步的场景</h3><ul>
-<li>定时 <code>setTimeout</code> <code>setInterval</code></li>
-<li>网络请求，如 <code>Ajax</code> <code>&lt;img&gt;</code>加载</li>
-</ul>
-<p>Ajax 代码示例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(&apos;start&apos;)</span><br><span class="line">$.get(&apos;./data1.json&apos;, function (data1) &#123;</span><br><span class="line">    console.log(data1)</span><br><span class="line">&#125;)</span><br><span class="line">console.log(&apos;end&apos;)</span><br></pre></td></tr></table></figure>
-
-<p>img 代码示例（常用于打点统计）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">console.log(&apos;start&apos;)</span><br><span class="line">var img = document.createElement(&apos;img&apos;)</span><br><span class="line">// 或者 img = new Image()</span><br><span class="line">img.onload = function () &#123;</span><br><span class="line">    console.log(&apos;loaded&apos;)</span><br><span class="line">    img.onload = null</span><br><span class="line">&#125;</span><br><span class="line">img.src = &apos;/xxx.png&apos;</span><br><span class="line">console.log(&apos;end&apos;)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="ES6-7-新标准的考查"><a href="#ES6-7-新标准的考查" class="headerlink" title="ES6/7 新标准的考查"></a>ES6/7 新标准的考查</h2><blockquote>
-<p>题目：ES6 箭头函数中的<code>this</code>和普通函数中的有什么不同</p>
-</blockquote>
-<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>箭头函数是 ES6 中新的函数定义形式，<code>function name(arg1, arg2) {...}</code>可以使用<code>(arg1, arg2) =&gt; {...}</code>来定义。示例如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// JS 普通函数</span><br><span class="line">var arr = [1, 2, 3]</span><br><span class="line">arr.map(function (item) &#123;</span><br><span class="line">    console.log(index)</span><br><span class="line">    return item + 1</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// ES6 箭头函数</span><br><span class="line">const arr = [1, 2, 3]</span><br><span class="line">arr.map((item, index) =&gt; &#123;</span><br><span class="line">    console.log(index)</span><br><span class="line">    return item + 1</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>箭头函数存在的意义，第一写起来更加简洁，第二可以解决 ES6 之前函数执行中<code>this</code>是全局变量的问题，看如下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function fn() &#123;</span><br><span class="line">    console.log(&apos;real&apos;, this)  // &#123;a: 100&#125; ，该作用域下的 this 的真实的值</span><br><span class="line">    var arr = [1, 2, 3]</span><br><span class="line">    // 普通 JS</span><br><span class="line">    arr.map(function (item) &#123;</span><br><span class="line">        console.log(&apos;js&apos;, this)  // window 。普通函数，这里打印出来的是全局变量，令人费解</span><br><span class="line">        return item + 1</span><br><span class="line">    &#125;)</span><br><span class="line">    // 箭头函数</span><br><span class="line">    arr.map(item =&gt; &#123;</span><br><span class="line">        console.log(&apos;es6&apos;, this)  // &#123;a: 100&#125; 。箭头函数，这里打印的就是父作用域的 this</span><br><span class="line">        return item + 1</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">fn.call(&#123;a: 100&#125;)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>题目：ES6 模块化如何使用？</p>
-</blockquote>
-<h3 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h3><p>ES6 中模块化语法更加简洁，直接看示例。</p>
-<p>如果只是输出一个唯一的对象，使用<code>export default</code>即可，代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 创建 util1.js 文件，内容如</span><br><span class="line">export default &#123;</span><br><span class="line">    a: 100</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 创建 index.js 文件，内容如</span><br><span class="line">import obj from &apos;./util1.js&apos;</span><br><span class="line">console.log(obj)</span><br></pre></td></tr></table></figure>
-
-<p>如果想要输出许多个对象，就不能用<code>default</code>了，且<code>import</code>时候要加<code>{...}</code>，代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 创建 util2.js 文件，内容如</span><br><span class="line">export function fn1() &#123;</span><br><span class="line">    alert(&apos;fn1&apos;)</span><br><span class="line">&#125;</span><br><span class="line">export function fn2() &#123;</span><br><span class="line">    alert(&apos;fn2&apos;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 创建 index.js 文件，内容如</span><br><span class="line">import &#123; fn1, fn2 &#125; from &apos;./util2.js&apos;</span><br><span class="line">fn1()</span><br><span class="line">fn2()</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>题目：ES6 class 和普通构造函数的区别</p>
-</blockquote>
-<h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><p>class 其实一直是 JS 的关键字（保留字），但是一直没有正式使用，直到 ES6 。 ES6 的 class 就是取代之前构造函数初始化对象的形式，从语法上更加符合面向对象的写法。例如：</p>
-<p>JS 构造函数的写法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function MathHandle(x, y) &#123;</span><br><span class="line">  this.x = x;</span><br><span class="line">  this.y = y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MathHandle.prototype.add = function () &#123;</span><br><span class="line">  return this.x + this.y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var m = new MathHandle(1, 2);</span><br><span class="line">console.log(m.add())</span><br></pre></td></tr></table></figure>
-
-<p>用 ES6 class 的写法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class MathHandle &#123;</span><br><span class="line">  constructor(x, y) &#123;</span><br><span class="line">    this.x = x;</span><br><span class="line">    this.y = y;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  add() &#123;</span><br><span class="line">    return this.x + this.y;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">const m = new MathHandle(1, 2);</span><br><span class="line">console.log(m.add())</span><br></pre></td></tr></table></figure>
-
-<p>注意以下几点，全都是关于 class 语法的：</p>
-<ul>
-<li>class 是一种新的语法形式，是<code>class Name {...}</code>这种形式，和函数的写法完全不一样</li>
-<li>两者对比，构造函数函数体的内容要放在 class 中的<code>constructor</code>函数中，<code>constructor</code>即构造器，初始化实例时默认执行</li>
-<li>class 中函数的写法是<code>add() {...}</code>这种形式，并没有<code>function</code>关键字</li>
-</ul>
-<p>使用 class 来实现继承就更加简单了，至少比构造函数实现继承简单很多。看下面例子</p>
-<p>JS 构造函数实现继承</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 动物</span><br><span class="line">function Animal() &#123;</span><br><span class="line">    this.eat = function () &#123;</span><br><span class="line">        console.log(&apos;animal eat&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 狗</span><br><span class="line">function Dog() &#123;</span><br><span class="line">    this.bark = function () &#123;</span><br><span class="line">        console.log(&apos;dog bark&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Dog.prototype = new Animal()</span><br><span class="line">// 哈士奇</span><br><span class="line">var hashiqi = new Dog()</span><br></pre></td></tr></table></figure>
-
-<p>ES6 class 实现继承</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Animal &#123;</span><br><span class="line">    constructor(name) &#123;</span><br><span class="line">        this.name = name</span><br><span class="line">    &#125;</span><br><span class="line">    eat() &#123;</span><br><span class="line">        console.log(`$&#123;this.name&#125; eat`)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Dog extends Animal &#123;</span><br><span class="line">    constructor(name) &#123;</span><br><span class="line">        super(name)</span><br><span class="line">        this.name = name</span><br><span class="line">    &#125;</span><br><span class="line">    say() &#123;</span><br><span class="line">        console.log(`$&#123;this.name&#125; say`)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">const dog = new Dog(&apos;哈士奇&apos;)</span><br><span class="line">dog.say()</span><br><span class="line">dog.eat()</span><br></pre></td></tr></table></figure>
-
-<p>注意以下两点：</p>
-<ul>
-<li>使用<code>extends</code>即可实现继承，更加符合经典面向对象语言的写法，如 Java</li>
-<li>子类的<code>constructor</code>一定要执行<code>super()</code>，以调用父类的<code>constructor</code></li>
-</ul>
-<blockquote>
-<p>题目：ES6 中新增的数据类型有哪些？</p>
-</blockquote>
-<h3 id="Set-和-Map"><a href="#Set-和-Map" class="headerlink" title="Set 和 Map"></a>Set 和 Map</h3><p>Set 和 Map 都是 ES6 中新增的数据结构，是对当前 JS 数组和对象这两种重要数据结构的扩展。由于是新增的数据结构，目前尚未被大规模使用，但是作为前端程序员，提前了解是必须做到的。先总结一下两者最关键的地方：</p>
-<ul>
-<li>Set 类似于数组，但数组可以允许元素重复，Set 不允许元素重复</li>
-<li>Map 类似于对象，但普通对象的 key 必须是字符串或者数字，而 Map 的 key 可以是任何数据类型</li>
-</ul>
-<p><strong>Set</strong></p>
-<p>Set 实例不允许元素有重复，可以通过以下示例证明。可以通过一个数组初始化一个 Set 实例，或者通过<code>add</code>添加元素，元素不能重复，重复的会被忽略。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 例1</span><br><span class="line">const set = new Set([1, 2, 3, 4, 4]);</span><br><span class="line">console.log(set) // Set(4) &#123;1, 2, 3, 4&#125;</span><br><span class="line"></span><br><span class="line">// 例2</span><br><span class="line">const set = new Set();</span><br><span class="line">[2, 3, 5, 4, 5, 8, 8].forEach(item =&gt; set.add(item));</span><br><span class="line">for (let item of set) &#123;</span><br><span class="line">  console.log(item);</span><br><span class="line">&#125;</span><br><span class="line">// 2 3 5 4 8</span><br></pre></td></tr></table></figure>
-
-<p>Set 实例的属性和方法有</p>
-<ul>
-<li><code>size</code>：获取元素数量。</li>
-<li><code>add(value)</code>：添加元素，返回 Set 实例本身。</li>
-<li><code>delete(value)</code>：删除元素，返回一个布尔值，表示删除是否成功。</li>
-<li><code>has(value)</code>：返回一个布尔值，表示该值是否是 Set 实例的元素。</li>
-<li><code>clear()</code>：清除所有元素，没有返回值。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const s = new Set();</span><br><span class="line">s.add(1).add(2).add(2); // 添加元素</span><br><span class="line"></span><br><span class="line">s.size // 2</span><br><span class="line"></span><br><span class="line">s.has(1) // true</span><br><span class="line">s.has(2) // true</span><br><span class="line">s.has(3) // false</span><br><span class="line"></span><br><span class="line">s.delete(2);</span><br><span class="line">s.has(2) // false</span><br><span class="line"></span><br><span class="line">s.clear();</span><br><span class="line">console.log(s);  // Set(0) &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Set 实例的遍历，可使用如下方法</p>
-<ul>
-<li><code>keys()</code>：返回键名的遍历器。</li>
-<li><code>values()</code>：返回键值的遍历器。不过由于 Set 结构没有键名，只有键值（或者说键名和键值是同一个值），所以<code>keys()</code>和<code>values()</code>返回结果一致。</li>
-<li><code>entries()</code>：返回键值对的遍历器。</li>
-<li><code>forEach()</code>：使用回调函数遍历每个成员。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">let set = new Set([&apos;aaa&apos;, &apos;bbb&apos;, &apos;ccc&apos;]);</span><br><span class="line"></span><br><span class="line">for (let item of set.keys()) &#123;</span><br><span class="line">  console.log(item);</span><br><span class="line">&#125;</span><br><span class="line">// aaa</span><br><span class="line">// bbb</span><br><span class="line">// ccc</span><br><span class="line"></span><br><span class="line">for (let item of set.values()) &#123;</span><br><span class="line">  console.log(item);</span><br><span class="line">&#125;</span><br><span class="line">// aaa</span><br><span class="line">// bbb</span><br><span class="line">// ccc</span><br><span class="line"></span><br><span class="line">for (let item of set.entries()) &#123;</span><br><span class="line">  console.log(item);</span><br><span class="line">&#125;</span><br><span class="line">// [&quot;aaa&quot;, &quot;aaa&quot;]</span><br><span class="line">// [&quot;bbb&quot;, &quot;bbb&quot;]</span><br><span class="line">// [&quot;ccc&quot;, &quot;ccc&quot;]</span><br><span class="line"></span><br><span class="line">set.forEach((value, key) =&gt; console.log(key + &apos; : &apos; + value))</span><br><span class="line">// aaa : aaa</span><br><span class="line">// bbb : bbb</span><br><span class="line">// ccc : ccc</span><br></pre></td></tr></table></figure>
-
-<p><strong>Map</strong></p>
-<p>Map 的用法和普通对象基本一致，先看一下它能用非字符串或者数字作为 key 的特性。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const map = new Map();</span><br><span class="line">const obj = &#123;p: &apos;Hello World&apos;&#125;;</span><br><span class="line"></span><br><span class="line">map.set(obj, &apos;OK&apos;)</span><br><span class="line">map.get(obj) // &quot;OK&quot;</span><br><span class="line"></span><br><span class="line">map.has(obj) // true</span><br><span class="line">map.delete(obj) // true</span><br><span class="line">map.has(obj) // false</span><br></pre></td></tr></table></figure>
-
-<p>需要使用<code>new Map()</code>初始化一个实例，下面代码中<code>set</code> <code>get</code> <code>has</code> <code>delete</code>顾名即可思义（下文也会演示）。其中，<code>map.set(obj, &#39;OK&#39;)</code>就是用对象作为的 key （不光可以是对象，任何数据类型都可以），并且后面通过<code>map.get(obj)</code>正确获取了。</p>
-<p>Map 实例的属性和方法如下：</p>
-<ul>
-<li><code>size</code>：获取成员的数量</li>
-<li><code>set</code>：设置成员 key 和 value</li>
-<li><code>get</code>：获取成员属性值</li>
-<li><code>has</code>：判断成员是否存在</li>
-<li><code>delete</code>：删除成员</li>
-<li><code>clear</code>：清空所有</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const map = new Map();</span><br><span class="line">map.set(&apos;aaa&apos;, 100);</span><br><span class="line">map.set(&apos;bbb&apos;, 200);</span><br><span class="line"></span><br><span class="line">map.size // 2</span><br><span class="line"></span><br><span class="line">map.get(&apos;aaa&apos;) // 100</span><br><span class="line"></span><br><span class="line">map.has(&apos;aaa&apos;) // true</span><br><span class="line"></span><br><span class="line">map.delete(&apos;aaa&apos;)</span><br><span class="line">map.has(&apos;aaa&apos;) // false</span><br><span class="line"></span><br><span class="line">map.clear()</span><br></pre></td></tr></table></figure>
-
-<p>Map 实例的遍历方法有：</p>
-<ul>
-<li><code>keys()</code>：返回键名的遍历器。</li>
-<li><code>values()</code>：返回键值的遍历器。</li>
-<li><code>entries()</code>：返回所有成员的遍历器。</li>
-<li><code>forEach()</code>：遍历 Map 的所有成员。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">const map = new Map();</span><br><span class="line">map.set(&apos;aaa&apos;, 100);</span><br><span class="line">map.set(&apos;bbb&apos;, 200);</span><br><span class="line"></span><br><span class="line">for (let key of map.keys()) &#123;</span><br><span class="line">  console.log(key);</span><br><span class="line">&#125;</span><br><span class="line">// &quot;aaa&quot;</span><br><span class="line">// &quot;bbb&quot;</span><br><span class="line"></span><br><span class="line">for (let value of map.values()) &#123;</span><br><span class="line">  console.log(value);</span><br><span class="line">&#125;</span><br><span class="line">// 100</span><br><span class="line">// 200</span><br><span class="line"></span><br><span class="line">for (let item of map.entries()) &#123;</span><br><span class="line">  console.log(item[0], item[1]);</span><br><span class="line">&#125;</span><br><span class="line">// aaa 100</span><br><span class="line">// bbb 200</span><br><span class="line"></span><br><span class="line">// 或者</span><br><span class="line">for (let [key, value] of map.entries()) &#123;</span><br><span class="line">  console.log(key, value);</span><br><span class="line">&#125;</span><br><span class="line">// aaa 100</span><br><span class="line">// bbb 200</span><br></pre></td></tr></table></figure>
-
-<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><p><code>Promise</code>是 CommonJS 提出来的这一种规范，有多个版本，在 ES6 当中已经纳入规范，原生支持 Promise 对象，非 ES6 环境可以用类似 Bluebird、Q 这类库来支持。</p>
-<p><code>Promise</code> 可以将回调变成链式调用写法，流程更加清晰，代码更加优雅。</p>
-<p>简单归纳下 Promise：<strong>三个状态、两个过程、一个方法</strong>，快速记忆方法：<strong>3-2-1</strong></p>
-<p>三个状态：<code>pending</code>、<code>fulfilled</code>、<code>rejected</code></p>
-<p>两个过程：</p>
-<ul>
-<li>pending→fulfilled（resolve）</li>
-<li>pending→rejected（reject）</li>
-</ul>
-<p>一个方法：<code>then</code></p>
-<p>当然还有其他概念，如<code>catch</code>、 <code>Promise.all/race</code>，这里就不展开了。</p>
-<p>关于 ES6/7 的考查内容还有很多，本小节就不逐一介绍了，如果想继续深入学习，可以在线看《<a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">ES6入门</a>》。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本小节主要总结了 ES 基础语法中面试经常考查的知识点，包括之前就考查较多的原型、异步、作用域，以及 ES6 的一些新内容，这些知识点希望大家都要掌握。</p>
-
+    
+    <a class="article-more-a" href="/2019/08/22/JS知识点梳理/#more">more >></a>
+    
     
 
     
@@ -843,196 +746,9 @@
 <li>存储</li>
 </ul>
 <hr>
-<h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><p>BOM（浏览器对象模型）是浏览器本身的一些信息的设置和获取，例如获取浏览器的宽度、高度，设置让浏览器跳转到哪个地址。</p>
-<ul>
-<li><code>navigator</code></li>
-<li><code>screen</code></li>
-<li><code>location</code></li>
-<li><code>history</code></li>
-</ul>
-<p>这些对象就是一堆非常简单粗暴的 API，没任何技术含量，讲起来一点意思都没有，大家去 MDN 或者 w3school 这种网站一查就都明白了。面试的时候，面试官基本不会出太多这方面的题目，因为只要基础知识过关了，这些 API 即便你记不住，上网一查也都知道了。下面列举一下常用功能的代码示例</p>
-<p>获取浏览器特性（即俗称的<code>UA</code>）然后识别客户端，例如判断是不是 Chrome 浏览器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var ua = navigator.userAgent</span><br><span class="line">var isChrome = ua.indexOf(&apos;Chrome&apos;)</span><br><span class="line">console.log(isChrome)</span><br></pre></td></tr></table></figure>
-
-<p>获取屏幕的宽度和高度</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(screen.width)</span><br><span class="line">console.log(screen.height)</span><br></pre></td></tr></table></figure>
-
-<p>获取网址、协议、path、参数、hash 等</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 例如当前网址是 https://juejin.im/timeline/frontend?a=10&amp;b=10#some</span><br><span class="line">console.log(location.href)  // https://juejin.im/timeline/frontend?a=10&amp;b=10#some</span><br><span class="line">console.log(location.protocol) // https:</span><br><span class="line">console.log(location.pathname) // /timeline/frontend</span><br><span class="line">console.log(location.search) // ?a=10&amp;b=10</span><br><span class="line">console.log(location.hash) // #some</span><br></pre></td></tr></table></figure>
-
-<p>另外，还有调用浏览器的前进、后退功能等</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">history.back()</span><br><span class="line">history.forward()</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><blockquote>
-<p>题目：DOM 和 HTML 区别和联系</p>
-</blockquote>
-<h3 id="什么是-DOM"><a href="#什么是-DOM" class="headerlink" title="什么是 DOM"></a>什么是 DOM</h3><p>讲 DOM 先从 HTML 讲起，讲 HTML 先从 XML 讲起。XML 是一种可扩展的标记语言，所谓可扩展就是它可以描述任何结构化的数据，它是一棵树！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;note&gt;</span><br><span class="line">  &lt;to&gt;Tove&lt;/to&gt;</span><br><span class="line">  &lt;from&gt;Jani&lt;/from&gt;</span><br><span class="line">  &lt;heading&gt;Reminder&lt;/heading&gt;</span><br><span class="line">  &lt;body&gt;Don&apos;t forget me this weekend!&lt;/body&gt;</span><br><span class="line">  &lt;other&gt;</span><br><span class="line">    &lt;a&gt;&lt;/a&gt;</span><br><span class="line">    &lt;b&gt;&lt;/b&gt;</span><br><span class="line">  &lt;/other&gt;</span><br><span class="line">&lt;/note&gt;</span><br></pre></td></tr></table></figure>
-
-<p>HTML 是一个有既定标签标准的 XML 格式，标签的名字、层级关系和属性，都被标准化（否则浏览器无法解析）。同样，它也是一棵树。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p&gt;this is p&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<p>我们开发完的 HTML 代码会保存到一个文档中（一般以<code>.html</code>或者<code>.htm</code>结尾），文档放在服务器上，浏览器请求服务器，这个文档被返回。因此，最终浏览器拿到的是一个文档而已，文档的内容就是 HTML 格式的代码。</p>
-<p>但是浏览器要把这个文档中的 HTML 按照标准渲染成一个页面，此时浏览器就需要将这堆代码处理成自己能理解的东西，也得处理成 JS 能理解的东西，因为还得允许 JS 修改页面内容呢。</p>
-<p>基于以上需求，浏览器就需要把 HTML 转变成 DOM，HTML 是一棵树，DOM 也是一棵树。对 DOM 的理解，可以暂时先抛开浏览器的内部因素，先从 JS 着手，即可以认为 DOM 就是 JS 能识别的 HTML 结构，一个普通的 JS 对象或者数组。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c1050cf00d5bd?w=2102&h=1612&f=png&s=806057" alt="DOM图示"></p>
-<h3 id="获取-DOM-节点"><a href="#获取-DOM-节点" class="headerlink" title="获取 DOM 节点"></a>获取 DOM 节点</h3><p>最常用的 DOM API 就是获取节点，其中常用的获取方法如下面代码示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 通过 id 获取</span><br><span class="line">var div1 = document.getElementById(&apos;div1&apos;) // 元素</span><br><span class="line"></span><br><span class="line">// 通过 tagname 获取</span><br><span class="line">var divList = document.getElementsByTagName(&apos;div&apos;)  // 集合</span><br><span class="line">console.log(divList.length)</span><br><span class="line">console.log(divList[0])</span><br><span class="line"></span><br><span class="line">// 通过 class 获取</span><br><span class="line">var containerList = document.getElementsByClassName(&apos;container&apos;) // 集合</span><br><span class="line"></span><br><span class="line">// 通过 CSS 选择器获取</span><br><span class="line">var pList = document.querySelectorAll(&apos;p&apos;) // 集合</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>题目：property 和 attribute 的区别是什么？</p>
-</blockquote>
-<h3 id="property"><a href="#property" class="headerlink" title="property"></a>property</h3><p>DOM 节点就是一个 JS 对象，它符合之前讲述的对象的特征 —— 可扩展属性，因为 DOM 节点本质上也是一个 JS 对象。因此，如下代码所示，<code>p</code>可以有<code>style</code>属性，有<code>className</code> <code>nodeName</code> <code>nodeType</code>属性。注意，<strong>这些都是 JS 范畴的属性，符合 JS 语法标准的</strong>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var pList = document.querySelectorAll(&apos;p&apos;)</span><br><span class="line">var p = pList[0]</span><br><span class="line">console.log(p.style.width)  // 获取样式</span><br><span class="line">p.style.width = &apos;100px&apos;  // 修改样式</span><br><span class="line">console.log(p.className)  // 获取 class</span><br><span class="line">p.className = &apos;p1&apos;  // 修改 class</span><br><span class="line"></span><br><span class="line">// 获取 nodeName 和 nodeType</span><br><span class="line">console.log(p.nodeName)</span><br><span class="line">console.log(p.nodeType)</span><br></pre></td></tr></table></figure>
-
-<h3 id="attribute"><a href="#attribute" class="headerlink" title="attribute"></a>attribute</h3><p>property 的获取和修改，是直接改变 JS 对象，而 attribute 是直接改变 HTML 的属性，两种有很大的区别。attribute 就是对 HTML 属性的 get 和 set，和 DOM 节点的 JS 范畴的 property 没有关系。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var pList = document.querySelectorAll(&apos;p&apos;)</span><br><span class="line">var p = pList[0]</span><br><span class="line">p.getAttribute(&apos;data-name&apos;)</span><br><span class="line">p.setAttribute(&apos;data-name&apos;, &apos;juejin&apos;)</span><br><span class="line">p.getAttribute(&apos;style&apos;)</span><br><span class="line">p.setAttribute(&apos;style&apos;, &apos;font-size:30px;&apos;)</span><br></pre></td></tr></table></figure>
-
-<p>而且，get 和 set attribute 时，还会触发 DOM 的查询或者重绘、重排，频繁操作会影响页面性能。</p>
-<blockquote>
-<p>题目：DOM 操作的基本 API 有哪些？</p>
-</blockquote>
-<h3 id="DOM-树操作"><a href="#DOM-树操作" class="headerlink" title="DOM 树操作"></a>DOM 树操作</h3><p>新增节点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var div1 = document.getElementById(&apos;div1&apos;)</span><br><span class="line"></span><br><span class="line">// 添加新节点</span><br><span class="line">var p1 = document.createElement(&apos;p&apos;)</span><br><span class="line">p1.innerHTML = &apos;this is p1&apos;</span><br><span class="line">div1.appendChild(p1) // 添加新创建的元素</span><br><span class="line"></span><br><span class="line">// 移动已有节点。注意，这里是“移动”，并不是拷贝</span><br><span class="line">var p2 = document.getElementById(&apos;p2&apos;)</span><br><span class="line">div1.appendChild(p2)</span><br></pre></td></tr></table></figure>
-
-<p>获取父元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var div1 = document.getElementById(&apos;div1&apos;)</span><br><span class="line">var parent = div1.parentElement</span><br></pre></td></tr></table></figure>
-
-<p>获取子元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var div1 = document.getElementById(&apos;div1&apos;)</span><br><span class="line">var child = div1.childNodes</span><br></pre></td></tr></table></figure>
-
-<p>删除节点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var div1 = document.getElementById(&apos;div1&apos;)</span><br><span class="line">var child = div1.childNodes</span><br><span class="line">div1.removeChild(child[0])</span><br></pre></td></tr></table></figure>
-
-<p>还有其他操作的API，例如获取前一个节点、获取后一个节点等，但是面试过程中经常考到的就是上面几个。</p>
-<hr>
-<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><p>普通的事件绑定写法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var btn = document.getElementById(&apos;btn1&apos;)</span><br><span class="line">btn.addEventListener(&apos;click&apos;, function (event) &#123;</span><br><span class="line">    // event.preventDefault() // 阻止默认行为</span><br><span class="line">    // event.stopPropagation() // 阻止冒泡</span><br><span class="line">    console.log(&apos;clicked&apos;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>为了编写简单的事件绑定，可以编写通用的事件绑定函数。这里虽然比较简单，但是会随着后文的讲解，来继续完善和丰富这个函数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 通用的事件绑定函数</span><br><span class="line">function bindEvent(elem, type, fn) &#123;</span><br><span class="line">    elem.addEventListener(type, fn)</span><br><span class="line">&#125;</span><br><span class="line">var a = document.getElementById(&apos;link1&apos;)</span><br><span class="line">// 写起来更加简单了</span><br><span class="line">bindEvent(a, &apos;click&apos;, function(e) &#123;</span><br><span class="line">    e.preventDefault() // 阻止默认行为</span><br><span class="line">    alert(&apos;clicked&apos;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>最后，<strong>如果面试被问到 IE 低版本兼容性问题，我劝你果断放弃这份工作机会</strong>。现在互联网流量都在 App 上， IE 占比越来越少，再去为 IE 浪费青春不值得，要尽量去做 App 相关的工作。</p>
-<blockquote>
-<p>题目：什么是事件冒泡？</p>
-</blockquote>
-<h3 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&quot;div1&quot;&gt;</span><br><span class="line">        &lt;p id=&quot;p1&quot;&gt;激活&lt;/p&gt;</span><br><span class="line">        &lt;p id=&quot;p2&quot;&gt;取消&lt;/p&gt;</span><br><span class="line">        &lt;p id=&quot;p3&quot;&gt;取消&lt;/p&gt;</span><br><span class="line">        &lt;p id=&quot;p4&quot;&gt;取消&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;div2&quot;&gt;</span><br><span class="line">        &lt;p id=&quot;p5&quot;&gt;取消&lt;/p&gt;</span><br><span class="line">        &lt;p id=&quot;p6&quot;&gt;取消&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-
-<p>对于以上 HTML 代码结构，要求点击<code>p1</code>时候进入激活状态，点击其他任何<code>&lt;p&gt;</code>都取消激活状态，如何实现？代码如下，注意看注释：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var body = document.body</span><br><span class="line">bindEvent(body, &apos;click&apos;, function (e) &#123;</span><br><span class="line">    // 所有 p 的点击都会冒泡到 body 上，因为 DOM 结构中 body 是 p 的上级节点，事件会沿着 DOM 树向上冒泡</span><br><span class="line">    alert(&apos;取消&apos;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">var p1 = document.getElementById(&apos;p1&apos;)</span><br><span class="line">bindEvent(p1, &apos;click&apos;, function (e) &#123;</span><br><span class="line">    e.stopPropagation() // 阻止冒泡</span><br><span class="line">    alert(&apos;激活&apos;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>如果我们在<code>p1</code> <code>div1</code> <code>body</code>中都绑定了事件，它是会根据 DOM 的结构来冒泡，从下到上挨个执行的。但是我们使用<code>e.stopPropagation()</code>就可以阻止冒泡</p>
-<blockquote>
-<p>题目：如何使用事件代理？有何好处？</p>
-</blockquote>
-<h3 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h3><p>我们设定一种场景，如下代码，一个<code>&lt;div&gt;</code>中包含了若干个<code>&lt;a&gt;</code>，而且还能继续增加。那如何快捷方便地为所有<code>&lt;a&gt;</code>绑定事件呢？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;div1&quot;&gt;</span><br><span class="line">    &lt;a href=&quot;#&quot;&gt;a1&lt;/a&gt;</span><br><span class="line">    &lt;a href=&quot;#&quot;&gt;a2&lt;/a&gt;</span><br><span class="line">    &lt;a href=&quot;#&quot;&gt;a3&lt;/a&gt;</span><br><span class="line">    &lt;a href=&quot;#&quot;&gt;a4&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;button&gt;点击增加一个 a 标签&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-
-<p>这里就会用到事件代理。我们要监听<code>&lt;a&gt;</code>的事件，但要把具体的事件绑定到<code>&lt;div&gt;</code>上，然后看事件的触发点是不是<code>&lt;a&gt;</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var div1 = document.getElementById(&apos;div1&apos;)</span><br><span class="line">div1.addEventListener(&apos;click&apos;, function (e) &#123;</span><br><span class="line">    // e.target 可以监听到触发点击事件的元素是哪一个</span><br><span class="line">    var target = e.target</span><br><span class="line">    if (e.nodeName === &apos;A&apos;) &#123;</span><br><span class="line">        // 点击的是 &lt;a&gt; 元素</span><br><span class="line">        alert(target.innerHTML)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>我们现在完善一下之前写的通用事件绑定函数，加上事件代理。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">function bindEvent(elem, type, selector, fn) &#123;</span><br><span class="line">    // 这样处理，可接收两种调用方式 bindEvent(div1, &apos;click&apos;, &apos;a&apos;, function () &#123;...&#125;) 和 bindEvent(div1, &apos;click&apos;, function () &#123;...&#125;) 这两种</span><br><span class="line">    if (fn == null) &#123;</span><br><span class="line">        fn = selector</span><br><span class="line">        selector = null</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 绑定事件</span><br><span class="line">    elem.addEventListener(type, function (e) &#123;</span><br><span class="line">        var target</span><br><span class="line">        if (selector) &#123;</span><br><span class="line">            // 有 selector 说明需要做事件代理</span><br><span class="line">            // 获取触发时间的元素，即 e.target</span><br><span class="line">            target = e.target</span><br><span class="line">            // 看是否符合 selector 这个条件</span><br><span class="line">            if (target.matches(selector)) &#123;</span><br><span class="line">                fn.call(target, e)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            // 无 selector ，说明不需要事件代理</span><br><span class="line">            fn(e)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后这样使用，简单很多。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 使用代理，bindEvent 多一个 &apos;a&apos; 参数</span><br><span class="line">var div1 = document.getElementById(&apos;div1&apos;)</span><br><span class="line">bindEvent(div1, &apos;click&apos;, &apos;a&apos;, function (e) &#123;</span><br><span class="line">    console.log(this.innerHTML)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// 不使用代理</span><br><span class="line">var a = document.getElementById(&apos;a1&apos;)</span><br><span class="line">bindEvent(div1, &apos;click&apos;, function (e) &#123;</span><br><span class="line">    console.log(a.innerHTML)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>最后，使用代理的优点如下：</p>
-<ul>
-<li>使代码简洁</li>
-<li>减少浏览器的内存占用</li>
-</ul>
-<hr>
-<h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h2><h3 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h3><blockquote>
-<p>题目：手写 XMLHttpRequest 不借助任何库</p>
-</blockquote>
-<p>这是很多奇葩的、个性的面试官经常用的手段。这种考查方式存在很多争议，但是你不能完全说它是错误的，毕竟也是考查对最基础知识的掌握情况。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMLHttpRequest()</span><br><span class="line">xhr.onreadystatechange = function () &#123;</span><br><span class="line">    // 这里的函数异步执行，可参考之前 JS 基础中的异步模块</span><br><span class="line">    if (xhr.readyState == 4) &#123;</span><br><span class="line">        if (xhr.status == 200) &#123;</span><br><span class="line">            alert(xhr.responseText)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">xhr.open(&quot;GET&quot;, &quot;/api&quot;, false)</span><br><span class="line">xhr.send(null)</span><br></pre></td></tr></table></figure>
-
-<p>当然，使用 jQuery、Zepto 或 Fetch 等库来写就更加简单了，这里不再赘述。</p>
-<h3 id="状态码说明"><a href="#状态码说明" class="headerlink" title="状态码说明"></a>状态码说明</h3><p>上述代码中，有两处状态码需要说明。<code>xhr.readyState</code>是浏览器判断请求过程中各个阶段的，<code>xhr.status</code>是 HTTP 协议中规定的不同结果的返回状态说明。</p>
-<p><code>xhr.readyState</code>的状态码说明：</p>
-<ul>
-<li>0 -代理被创建，但尚未调用 <code>open()</code> 方法。</li>
-<li>1 -<code>open()</code> 方法已经被调用。</li>
-<li>2 -<code>send()</code> 方法已经被调用，并且头部和状态已经可获得。</li>
-<li>3 -下载中， <code>responseText</code> 属性已经包含部分数据。</li>
-<li>4 -下载操作已完成</li>
-</ul>
-<blockquote>
-<p>题目：HTTP 协议中，response 的状态码，常见的有哪些？</p>
-</blockquote>
-<p><code>xhr.status</code>即 HTTP 状态码，有 <code>2xx</code> <code>3xx</code> <code>4xx</code> <code>5xx</code> 这几种，比较常用的有以下几种：</p>
-<ul>
-<li><code>200</code> 正常</li>
-<li><code>3xx</code><ul>
-<li><code>301</code> 永久重定向。如<code>http://xxx.com</code>这个 GET 请求（最后没有<code>/</code>），就会被<code>301</code>到<code>http://xxx.com/</code>（最后是<code>/</code>）</li>
-<li><code>302</code> 临时重定向。临时的，不是永久的</li>
-<li><code>304</code> 资源找到但是不符合请求条件，不会返回任何主体。如发送 GET 请求时，head 中有<code>If-Modified-Since: xxx</code>（要求返回更新时间是<code>xxx</code>时间之后的资源），如果此时服务器 端资源未更新，则会返回<code>304</code>，即不符合要求</li>
-</ul>
-</li>
-<li><code>404</code> 找不到资源</li>
-<li><code>5xx</code> 服务器端出错了</li>
-</ul>
-<p>看完要明白，为何上述代码中要同时满足<code>xhr.readyState == 4</code>和<code>xhr.status == 200</code>。</p>
-<h3 id="Fetch-API"><a href="#Fetch-API" class="headerlink" title="Fetch API"></a>Fetch API</h3><p>目前已经有一个获取 HTTP 请求更加方便的 API：<code>Fetch</code>，通过<code>Fetch</code>提供的<code>fetch()</code>这个全局函数方法可以很简单地发起异步请求，并且支持<code>Promise</code>的回调。但是 Fetch API 是比较新的 API，具体使用的时候还需要查查 <a href="https://caniuse.com/" target="_blank" rel="noopener">caniuse</a>，看下其浏览器兼容情况。</p>
-<p>看一个简单的例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fetch(&apos;some/api/data.json&apos;, &#123;</span><br><span class="line">  method:&apos;POST&apos;, //请求类型 GET、POST</span><br><span class="line">  headers:&#123;&#125;, // 请求的头信息，形式为 Headers 对象或 ByteString</span><br><span class="line">  body:&#123;&#125;, //请求发送的数据 blob、BufferSource、FormData、URLSearchParams（get 或head 方法中不能包含 body）</span><br><span class="line">  mode:&apos;&apos;, //请求的模式，是否跨域等，如 cors、 no-cors 或 same-origin</span><br><span class="line">  credentials:&apos;&apos;, //cookie 的跨域策略，如 omit、same-origin 或 include</span><br><span class="line">  cache:&apos;&apos;, //请求的 cache 模式: default、no-store、reload、no-cache、 force-cache 或 only-if-cached</span><br><span class="line">&#125;).then(function(response) &#123; ... &#125;);</span><br></pre></td></tr></table></figure>
-
-<p><code>Fetch</code> 支持<code>headers</code>定义，通过<code>headers</code>自定义可以方便地实现多种请求方法（ PUT、GET、POST 等）、请求头（包括跨域）和<code>cache</code>策略等；除此之外还支持 response（返回数据）多种类型，比如支持二进制文件、字符串和<code>formData</code>等。</p>
-<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><blockquote>
-<p>题目：如何实现跨域？</p>
-</blockquote>
-<p>浏览器中有 <strong>同源策略</strong> ，即一个域下的页面中，无法通过 Ajax 获取到其他域的接口。例如有一个接口<code>http://m.juejin.com/course/ajaxcourserecom?cid=459</code>，你自己的一个页面<code>http://www.yourname.com/page1.html</code>中的 Ajax 无法获取这个接口。这正是命中了“同源策略”。如果浏览器哪些地方忽略了同源策略，那就是浏览器的安全漏洞，需要紧急修复。</p>
-<p>url 哪些地方不同算作跨域？</p>
-<ul>
-<li>协议</li>
-<li>域名</li>
-<li>端口</li>
-</ul>
-<p>但是 HTML 中几个标签能逃避过同源策略——<code>&lt;script src=&quot;xxx&quot;&gt;</code>、<code>&lt;img src=&quot;xxxx&quot;/&gt;</code>、<code>&lt;link href=&quot;xxxx&quot;&gt;</code>，这三个标签的<code>src/href</code>可以加载其他域的资源，不受同源策略限制。</p>
-<p>因此，这使得这三个标签可以做一些特殊的事情。</p>
-<ul>
-<li><code>&lt;img&gt;</code>可以做打点统计，因为统计方并不一定是同域的，在讲解 JS 基础知识异步的时候有过代码示例。除了能跨域之外，<code>&lt;img&gt;</code>几乎没有浏览器兼容问题，它是一个非常古老的标签。</li>
-<li><code>&lt;script&gt;</code>和<code>&lt;link&gt;</code>可以使用 CDN，CDN 基本都是其他域的链接。</li>
-<li>另外<code>&lt;script&gt;</code>还可以实现 JSONP，能获取其他域接口的信息，接下来马上讲解。</li>
-</ul>
-<p>但是请注意，所有的跨域请求方式，最终都需要信息提供方来做出相应的支持和改动，也就是要经过信息提供方的同意才行，否则接收方是无法得到它们的信息的，浏览器是不允许的。</p>
-<h3 id="解决跨域-JSONP"><a href="#解决跨域-JSONP" class="headerlink" title="解决跨域 - JSONP"></a>解决跨域 - JSONP</h3><p>首先，有一个概念你要明白，例如访问<code>http://coding.m.juejin.com/classindex.html</code>的时候，服务器端就一定有一个<code>classindex.html</code>文件吗？—— 不一定，服务器可以拿到这个请求，动态生成一个文件，然后返回。 同理，<code>&lt;script src=&quot;http://coding.m.juejin.com/api.js&quot;&gt;</code>也不一定加载一个服务器端的静态文件，服务器也可以动态生成文件并返回。OK，接下来正式开始。</p>
-<p>例如我们的网站和掘金网，肯定不是一个域。我们需要掘金网提供一个接口，供我们来获取。首先，我们在自己的页面这样定义</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">window.callback = function (data) &#123;</span><br><span class="line">    // 这是我们跨域得到信息</span><br><span class="line">    console.log(data)</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>然后掘金网给我提供了一个<code>http://coding.m.juejin.com/api.js</code>，内容如下（之前说过，服务器可动态生成内容）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">callback(&#123;x:100, y:200&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>最后我们在页面中加入<code>&lt;script src=&quot;http://coding.m.juejin.com/api.js&quot;&gt;&lt;/script&gt;</code>，那么这个js加载之后，就会执行内容，我们就得到内容了。</p>
-<h3 id="解决跨域-服务器端设置-http-header"><a href="#解决跨域-服务器端设置-http-header" class="headerlink" title="解决跨域 - 服务器端设置 http header"></a>解决跨域 - 服务器端设置 http header</h3><p>这是需要在服务器端设置的，作为前端工程师我们不用详细掌握，但是要知道有这么个解决方案。而且，现在推崇的跨域解决方案是这一种，比 JSONP 简单许多。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&quot;Access-Control-Allow-Origin&quot;, &quot;http://m.juejin.com/&quot;);  // 第二个参数填写允许跨域的域名称，不建议直接写 &quot;*&quot;</span><br><span class="line">response.setHeader(&quot;Access-Control-Allow-Headers&quot;, &quot;X-Requested-With&quot;);</span><br><span class="line">response.setHeader(&quot;Access-Control-Allow-Methods&quot;, &quot;PUT,POST,GET,DELETE,OPTIONS&quot;);</span><br><span class="line"></span><br><span class="line">// 接收跨域的cookie</span><br><span class="line">response.setHeader(&quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;);</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h2><blockquote>
-<p>题目：cookie 和 localStorage 有何区别？</p>
-</blockquote>
-<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>cookie 本身不是用来做服务器端存储的（计算机领域有很多这种“狗拿耗子”的例子，例如 CSS 中的 float），它是设计用来在服务器和客户端进行信息传递的，因此我们的每个 HTTP 请求都带着 cookie。但是 cookie 也具备浏览器端存储的能力（例如记住用户名和密码），因此就被开发者用上了。</p>
-<p>使用起来也非常简单，<code>document.cookie = ....</code>即可。</p>
-<p>但是 cookie 有它致命的缺点：</p>
-<ul>
-<li>存储量太小，只有 4KB</li>
-<li>所有 HTTP 请求都带着，会影响获取资源的效率</li>
-<li>API 简单，需要封装才能用</li>
-</ul>
-<h3 id="localStorage-和-sessionStorage"><a href="#localStorage-和-sessionStorage" class="headerlink" title="localStorage 和 sessionStorage"></a>localStorage 和 sessionStorage</h3><p>后来，HTML5 标准就带来了<code>sessionStorage</code>和<code>localStorage</code>，先拿<code>localStorage</code>来说，它是专门为了浏览器端缓存而设计的。其优点有：</p>
-<ul>
-<li>存储量增大到 5MB</li>
-<li>不会带到 HTTP 请求中</li>
-<li>API 适用于数据存储 <code>localStorage.setItem(key, value)</code> <code>localStorage.getItem(key)</code></li>
-</ul>
-<p><code>sessionStorage</code>的区别就在于它是根据 session 过去时间而实现，而<code>localStorage</code>会永久有效，应用场景不同。例如，一些需要及时失效的重要信息放在<code>sessionStorage</code>中，一些不重要但是不经常设置的信息，放在<code>localStorage</code>中。</p>
-<p>另外告诉大家一个小技巧，针对<code>localStorage.setItem</code>，使用时尽量加入到<code>try-catch</code>中，某些浏览器是禁用这个 API 的，要注意。</p>
-<hr>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本小节总结了 W3C 标准中 Web-API 部分，面试中常考的知识点，这些也是日常开发中最常用的 API 和知识。</p>
-
+    
+    <a class="article-more-a" href="/2019/08/22/JS-WEB-API知识点梳理/#more">more >></a>
+    
     
 
     
@@ -1136,256 +852,9 @@
 <li>重绘和回流</li>
 </ul>
 <hr>
-<h2 id="选择器的权重和优先级"><a href="#选择器的权重和优先级" class="headerlink" title="选择器的权重和优先级"></a>选择器的权重和优先级</h2><p>CSS 选择器有很多，不同的选择器的权重和优先级不一样，对于一个元素，如果存在多个选择器，那么就需要根据权重来计算其优先级。</p>
-<p>权重分为四级，分别是：</p>
-<ol>
-<li>代表内联样式，如<code>style=&quot;xxx&quot;</code>，权值为 1000；</li>
-<li>代表 ID 选择器，如<code>#content</code>，权值为 100；</li>
-<li>代表类、伪类和属性选择器，如<code>.content</code>、<code>:hover</code>、<code>[attribute]</code>，权值为 10；</li>
-<li>代表元素选择器和伪元素选择器，如<code>div</code>、<code>p</code>，权值为 1。</li>
-</ol>
-<p><strong>需要注意的是：通用选择器（*）、子选择器（&gt;）和相邻同胞选择器（+）并不在这四个等级中，所以他们的权值都为 0</strong>。 权重值大的选择器其优先级也高，相同权重的优先级又遵循后定义覆盖前面定义的情况。</p>
-<h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><h3 id="什么是“盒子”"><a href="#什么是“盒子”" class="headerlink" title="什么是“盒子”"></a>什么是“盒子”</h3><p>初学 CSS 的朋友，一开始学 CSS 基础知识的时候一定学过<code>padding</code> <code>border</code>和<code>margin</code>，即内边距、边框和外边距。它们三者就构成了一个“盒子”。就像我们收到的快递，本来买了一部小小的手机，收到的却是那么大一个盒子。因为手机白色的包装盒和手机机器之间有间隔层（内边距），手机白色盒子有厚度，虽然很薄（边框），盒子和快递箱子之间还有一层泡沫板（外边距）。这就是一个典型的盒子。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c106628765b93?w=255&h=146&f=png&s=5774" alt></p>
-<p>如上图，真正的内容就是这些文字，文字外围有 10px 的内边距，5px 的边框，10px 的外边距。看到盒子了吧？</p>
-<blockquote>
-<p>题目：盒子模型的宽度如何计算</p>
-</blockquote>
-<h3 id="固定宽度的盒子"><a href="#固定宽度的盒子" class="headerlink" title="固定宽度的盒子"></a>固定宽度的盒子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;padding:10px; border:5px solid blue; margin: 10px; width:300px;&quot;&gt;</span><br><span class="line">    之前看过一篇文章，叫做《浏览器工作原理：新式网络浏览器幕后揭秘》，</span><br><span class="line">    文章言简意赅的介绍的浏览器的工作过程，web前端</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/28/161db8f616b1aa63?w=832&h=228&f=png&s=34678" alt></p>
-<p>如上图，得到网页效果之后，我们可以用截图工具来量一下文字内容的宽度。发现，文字内容的宽度刚好是 300px，也就是我们设置的宽度。</p>
-<p>因此，<strong>在盒子模型中，我们设置的宽度都是内容宽度，不是整个盒子的宽度。而整个盒子的宽度是：（内容宽度 + <code>border</code>宽度 + <code>padding</code>宽度 + <code>margin</code>宽度）之和</strong>。这样我们改四个中的其中一个，都会导致盒子宽度的改变。这对我们来说不友好。</p>
-<p>没关系，这个东西不友好早就有人发现了，而且已经解决，下文再说。</p>
-<h3 id="充满父容器的盒子"><a href="#充满父容器的盒子" class="headerlink" title="充满父容器的盒子"></a>充满父容器的盒子</h3><p>默认情况下，<code>div</code>是<code>display:block</code>，宽度会充满整个父容器。如下图：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;padding:10px; border:5px solid blue; margin: 10px; width:300px;&quot;&gt;</span><br><span class="line">    之前看过一篇文章，叫做《浏览器工作原理：新式网络浏览器幕后揭秘》，</span><br><span class="line">    文章言简意赅的介绍的浏览器的工作过程，web前端</span><br><span class="line">    之前看过一篇文章，叫做《浏览器工作原理：新式网络浏览器幕后揭秘》，</span><br><span class="line">    文章言简意赅的介绍的浏览器的工作过程，web前端</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/28/161db8f616fe21e3?w=1384&h=230&f=png&s=49446" alt></p>
-<p>但是别忘记，这个 div 是个盒子模型，它的整个宽度包括（内容宽度 + <code>border</code>宽度 + <code>padding</code>宽度 + <code>margin</code>宽度），整个的宽度充满父容器。</p>
-<p>问题就在这里。如果父容器宽度不变，我们手动增大<code>margin</code>、<code>border</code>或<code>padding</code>其中一项的宽度值，都会导致内容宽度的减少。极端情况下，如果内容的宽度压缩到不能再压缩了（例如一个字的宽度），那么浏览器会强迫增加父容器的宽度。这可不是我们想要看到的。</p>
-<h3 id="包裹内容的盒子"><a href="#包裹内容的盒子" class="headerlink" title="包裹内容的盒子"></a>包裹内容的盒子</h3><p>这种情况下比较简单，内容的宽度按照内容计算，盒子的宽度将在内容宽度的基础上再增加（<code>padding</code>宽度 + <code>border</code>宽度 + <code>margin</code>宽度）之和。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;padding:10px; border:5px solid blue; margin: 10px; width:300px;&quot;&gt;</span><br><span class="line">    之前看过一篇文章，叫做《浏览器工作原理：新式网络浏览器幕后揭秘》</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/28/161db8f61768fdde?w=1384&h=172&f=png&s=21314" alt></p>
-<h3 id="box-sizing-border-box"><a href="#box-sizing-border-box" class="headerlink" title="box-sizing:border-box"></a><code>box-sizing:border-box</code></h3><p>前面提到，为盒子模型设置宽度，结果只是设置了内容的宽度，这个不合理。如何解决这一问题？答案就是为盒子指定样式：<strong><code>box-sizing:border-box</code></strong>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;padding:10px; border:5px solid blue; margin: 10px; width:300px; box-sizing:border-box;&quot;&gt;</span><br><span class="line">    之前看过一篇文章，叫做《浏览器工作原理：新式网络浏览器幕后揭秘》</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/28/161db8f617aff82e?w=798&h=524&f=png&s=88750" alt></p>
-<p>上图中，为<code>div</code>设置了<code>box-sizing:border-box</code>之后，300px 的<strong>宽度是内容 + <code>padding</code> + 边框的宽度（不包括<code>margin</code>）</strong>，这样就比较符合我们的实际要求了。建议大家在为系统写 CSS 时候，第一个样式是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    box-sizing:border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>大名鼎鼎的 Bootstrap 也把<code>box-sizing:border-box</code>加入到它的<code>*</code>选择器中，我们为什么不这样做呢？</p>
-<h3 id="纵向-margin-重叠"><a href="#纵向-margin-重叠" class="headerlink" title="纵向 margin 重叠"></a>纵向 margin 重叠</h3><p>这里提到 margin，就不得不提一下 margin 的这一特性——纵向重叠。如<code>&lt;p&gt;</code>的纵向 margin 是 16px，那么两个<code>&lt;p&gt;</code>之间纵向的距离是多少？—— 按常理来说应该是 16 + 16 = 32px，但是答案仍然是 16px。因为纵向的 margin 是会重叠的，如果两者不一样大的话，大的会把小的“吃掉”。</p>
-<hr>
-<h2 id="浮动float"><a href="#浮动float" class="headerlink" title="浮动float"></a>浮动<code>float</code></h2><p>float 用于网页布局比较多，使用起来也比较简单，这里总结了一些比较重要、需要注意的知识点，供大家参考。</p>
-<h3 id="误解和误用"><a href="#误解和误用" class="headerlink" title="误解和误用"></a>误解和误用</h3><p>float 被设计出来的初衷是用于<strong>文字环绕效果</strong>，即一个图片一段文字，图片<code>float:left</code>之后，文字会环绕图片。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;img src=&quot;image/1.png&quot; style=&quot;float:left&quot;&gt;</span><br><span class="line">    一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>但是，后来大家发现结合<code>float + div</code>可以实现之前通过<code>table</code>实现的网页布局，因此就被“误用”于网页布局了。</p>
-<blockquote>
-<p>题目：为何 float 会导致父元素塌陷？</p>
-</blockquote>
-<h3 id="破坏性"><a href="#破坏性" class="headerlink" title="破坏性"></a>破坏性</h3><p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c106660020bd4?w=1024&h=224&f=png&s=73435" alt></p>
-<p>float 的<strong>破坏性</strong> —— float 破坏了父标签的原本结构，使得父标签出现了坍塌现象。导致这一现象的最根本原因在于：<strong>被设置了 float 的元素会脱离文档流</strong>。其根本原因在于 float 的设计初衷是解决文字环绕图片的问题。大家要记住 float 的这个影响。</p>
-<h3 id="包裹性"><a href="#包裹性" class="headerlink" title="包裹性"></a>包裹性</h3><p><strong>包裹性</strong>也是 float 的一个非常重要的特性，大家用 float 时一定要熟知这一特性。咱们还是先从一个小例子看起：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/28/161db8f617bc8f2e?w=1310&h=180&f=png&s=15396" alt></p>
-<p>如上图，普通的 div 如果没有设置宽度，它会撑满整个屏幕，在之前的盒子模型那一节也讲到过。而如果给 div 增加<code>float:left</code>之后，它突然变得紧凑了，宽度发生了变化，把内容中的三个字包裹了——这就是包裹性。为 div 设置了 float 之后，其宽度会自动调整为包裹住内容宽度，而不是撑满整个父容器。</p>
-<p>注意，此时 div 虽然体现了包裹性，但是它的 display 样式是没有变化的，还是<code>display: block</code>。</p>
-<p>float 为什么要具有包裹性？其实答案还是得从 float 的设计初衷来寻找，float 是被设计用于实现文字环绕效果的。文字环绕图片比较好理解，但是如果想要让文字环绕一个 div 呢？此时 div 不被“包裹”起来的话，就无法实现环绕效果了。</p>
-<h3 id="清空格"><a href="#清空格" class="headerlink" title="清空格"></a>清空格</h3><p>float 还有一个大家可能不是很熟悉的特性——清空格。按照惯例，咱还是先举例子说明。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;border: 2px solid blue; padding:3px;&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;image/1.png&quot;/&gt;</span><br><span class="line">    &lt;img src=&quot;image/2.png&quot;/&gt;</span><br><span class="line">    &lt;img src=&quot;image/3.png&quot;/&gt;</span><br><span class="line">    &lt;img src=&quot;image/4.png&quot;/&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/28/161db8f617bf4874?w=1376&h=148&f=png&s=71295" alt></p>
-<p>加上<code>float:left</code>之后：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/28/161db8f644302e40?w=1376&h=132&f=png&s=70562" alt></p>
-<p>上面第一张图中，正常的 img 中间是会有空格的，因为多个 img 标签会有换行，而浏览器识别换行为空格，这也是很正常的。第二张图中，为 img 增加了<code>float:left</code>的样式，这就使得 img 之间没有了空格，4 个 img 紧紧挨着。</p>
-<p>如果大家之前没注意，现在想想之前写过的程序，是不是有这个特性。为什么 float 适合用于网页排版（俗称“砌砖头”）？就是因为 float 排版出来的网页严丝合缝，中间连个苍蝇都飞不进去。</p>
-<p>“清空格”这一特性的根本原因是 float 会导致节点脱离文档流结构。它都不属于文档流结构了，那么它身边的什么换行、空格就都和它没了关系，它就尽量往一边靠拢，能靠多近就靠多近，这就是清空格的本质。</p>
-<blockquote>
-<p>题目：手写 clearfix</p>
-</blockquote>
-<h3 id="clearfix"><a href="#clearfix" class="headerlink" title="clearfix"></a><code>clearfix</code></h3><p>清除浮动的影响，一般使用的样式如下，统称<code>clearfix</code>代码。所有 float 元素的父容器，一般情况下都应该加<code>clearfix</code>这个 class。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.clearfix:after &#123;</span><br><span class="line">    content: &apos;&apos;;</span><br><span class="line">    display: table;</span><br><span class="line">    clear: both;</span><br><span class="line">&#125;</span><br><span class="line">.clearfix &#123;</span><br><span class="line">    *zoom: 1; /* 兼容 IE 低版本 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;clearfix&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;image/1.png&quot; style=&quot;float: left&quot;/&gt;</span><br><span class="line">    &lt;img src=&quot;image/2.png&quot; style=&quot;float: left&quot;/&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>float 的设计初衷是解决文字环绕图片的问题，后来误打误撞用于做布局，因此有许多不合适或者需要注意的地方，上文基本都讲到了需要的知识点。如果是刚开始接触 float 的同学，学完上面的基础知识之后，还应该做一些练习实战一下 —— 经典的“圣杯布局”和“双飞翼布局”。这里就不再展开讲了，网上资料非常多，例如<a href="https://juejin.im/entry/5a8868cdf265da4e7e10c133?utm_source=gold_browser_extension" target="_blank" rel="noopener">浅谈面试中常考的两种经典布局——圣杯与双飞翼</a>（此文的最后两张图清晰地展示了这两种布局）。</p>
-<hr>
-<h2 id="定位position"><a href="#定位position" class="headerlink" title="定位position"></a>定位<code>position</code></h2><p>position 用于网页元素的定位，可设置 static/relative/absolute/fixed 这些值，其中 static 是默认值，不用介绍。</p>
-<blockquote>
-<p>题目：relative 和 absolute 有何区别？</p>
-</blockquote>
-<h3 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h3><p>相对定位 relative 可以用一个例子很轻松地演示出来。例如我们写 4 个<code>&lt;p&gt;</code>，出来的样子大家不用看也能知道。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;第一段文字&lt;/p&gt;</span><br><span class="line">&lt;p&gt;第二段文字&lt;/p&gt;</span><br><span class="line">&lt;p&gt;第三段文字&lt;/p&gt;</span><br><span class="line">&lt;p&gt;第四段文字&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/28/161db8f645d10bf0?w=1280&h=382&f=png&s=33884" alt></p>
-<p>然后我们在第三个<code>&lt;p&gt;</code>上面，加上<code>position:relative</code>并且设置<code>left</code>和<code>top</code>值，看这个<code>&lt;p&gt;</code>有什么变化。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;第一段文字&lt;/p&gt;</span><br><span class="line">&lt;p&gt;第二段文字&lt;/p&gt;</span><br><span class="line">&lt;p style=&quot;position:relative; top: 10px; left: 10px&quot;&gt;第三段文字&lt;/p&gt;</span><br><span class="line">&lt;p&gt;第四段文字&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/28/161db8f644cb137d?w=1288&h=382&f=png&s=33953" alt></p>
-<p>上图中，大家应该要识别出两个信息（相信大部分人会忽略第二个信息）</p>
-<ul>
-<li>第三个<code>&lt;p&gt;</code>发生了位置变化，分别向右向下移动了10px；</li>
-<li>其他的三个<code>&lt;p&gt;</code>位置没有发生变化，这一点也很重要。</li>
-</ul>
-<p>可见，<strong>relative 会导致自身位置的相对变化，而不会影响其他元素的位置、大小</strong>。这是 relative 的要点之一。还有第二个要点，就是 relative 产生一个新的定位上下文。下文有关于定位上下文的详细介绍，这里可以先通过一个例子来展示一下区别：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c1066884e2378?w=1031&h=337&f=png&s=37425" alt></p>
-<p>注意看这两图的区别，下文将有解释。</p>
-<h3 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h3><p>还是先写一个基本的 demo。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;第一段文字&lt;/p&gt;</span><br><span class="line">&lt;p&gt;第二段文字&lt;/p&gt;</span><br><span class="line">&lt;p style=&quot;background: yellow&quot;&gt;第三段文字&lt;/p&gt;</span><br><span class="line">&lt;p&gt;第四段文字&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/28/161db8f64b045e56?w=1274&h=372&f=png&s=33793" alt></p>
-<p>然后，我们把第三个<code>&lt;p&gt;</code>改为<code>position:absolute;</code>，看看会发生什么变化。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/28/161db8f64768cf3e?w=1276&h=304&f=png&s=30596" alt></p>
-<p>从上面的结果中，我们能看出几点信息：</p>
-<ul>
-<li>absolute 元素脱离了文档结构。和 relative 不同，其他三个元素的位置重新排列了。只要元素会脱离文档结构，它就会产生破坏性，导致父元素坍塌。（此时你应该能立刻想起来，float 元素也会脱离文档结构。）</li>
-<li>absolute 元素具有“包裹性”。之前<code>&lt;p&gt;</code>的宽度是撑满整个屏幕的，而此时<code>&lt;p&gt;</code>的宽度刚好是内容的宽度。</li>
-<li>absolute 元素具有“跟随性”。虽然 absolute 元素脱离了文档结构，但是它的位置并没有发生变化，还是老老实实地呆在它原本的位置，因为我们此时没有设置 top、left 的值。</li>
-<li>absolute 元素会悬浮在页面上方，会遮挡住下方的页面内容。</li>
-</ul>
-<p>最后，通过给 absolute元素设置 top、left 值，可自定义其内容，这个都是平时比较常用的了。这里需要注意的是，设置了 top、left 值时，元素是相对于最近的定位上下文来定位的，而不是相对于浏览器定位。</p>
-<h3 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h3><p>其实 fixed 和 absolute 是一样的，唯一的区别在于：absolute 元素是根据最近的定位上下文确定位置，而 fixed 根据 window （或者 iframe）确定位置。</p>
-<blockquote>
-<p>题目：relative、absolute 和 fixed 分别依据谁来定位？</p>
-</blockquote>
-<h3 id="定位上下文"><a href="#定位上下文" class="headerlink" title="定位上下文"></a>定位上下文</h3><p>relative 元素的定位永远是相对于元素自身位置的，和其他元素没关系，也不会影响其他元素。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c1066a5b83ae8?w=448&h=105&f=png&s=2459" alt></p>
-<p>fixed 元素的定位是相对于 window （或者 iframe）边界的，和其他元素没有关系。但是它具有破坏性，会导致其他元素位置的变化。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c1066ab856721?w=516&h=135&f=png&s=2570" alt></p>
-<p>absolute 的定位相对于前两者要复杂许多。如果为 absolute 设置了 top、left，浏览器会根据什么去确定它的纵向和横向的偏移量呢？答案是浏览器会递归查找该元素的所有父元素，如果找到一个设置了<code>position:relative/absolute/fixed</code>的元素，就以该元素为基准定位，如果没找到，就以浏览器边界定位。如下两个图所示：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c1066ad4ffc63?w=576&h=183&f=png&s=5209" alt></p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c1066b419cfe6?w=516&h=137&f=png&s=2659" alt></p>
-<hr>
-<h2 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a><code>flex</code>布局</h2><p>布局的传统解决方案基于盒子模型，依赖 <code>display</code> 属性 + <code>position</code> 属性 + <code>float</code> 属性。它对于那些特殊布局非常不方便，比如，垂直居中（下文会专门讲解）就不容易实现。在目前主流的移动端页面中，使用 flex 布局能更好地完成需求，因此 flex 布局的知识是必须要掌握的。</p>
-<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><p>任何一个容器都可以使用 flex 布局，代码也很简单。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    .container &#123;</span><br><span class="line">      display: flex;</span><br><span class="line">    &#125;</span><br><span class="line">    .item &#123;</span><br><span class="line">        border: 1px solid #000;</span><br><span class="line">        flex: 1;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;item&quot;&gt;aaa&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;item&quot; style=&quot;flex: 2&quot;&gt;bbb&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;item&quot;&gt;ccc&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;item&quot;&gt;ddd&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c1066b5766be2?w=796&h=122&f=png&s=11605" alt></p>
-<p>注意，第三个<code>&lt;div&gt;</code>的<code>flex: 2</code>，其他的<code>&lt;div&gt;</code>的<code>flex: 1</code>，这样第二个<code>&lt;div&gt;</code>的宽度就是其他的<code>&lt;div&gt;</code>的两倍。</p>
-<h3 id="设计原理"><a href="#设计原理" class="headerlink" title="设计原理"></a>设计原理</h3><p>设置了<code>display: flex</code>的元素，我们称为“容器”（flex container），其所有的子节点我们称为“成员”（flex item）。容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做 main start，结束位置叫做 main end；交叉轴的开始位置叫做 cross start，结束位置叫做cross end。项目默认沿主轴排列。单个项目占据的主轴空间叫做 main size，占据的交叉轴空间叫做 cross size。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c1066ba95ed28?w=1022&h=582&f=png&s=54081" alt></p>
-<p>将以上文字和图片结合起来，再详细看一遍，这样就能理解 flex 的设计原理，才能更好地实际使用。</p>
-<h3 id="设置主轴的方向"><a href="#设置主轴的方向" class="headerlink" title="设置主轴的方向"></a>设置主轴的方向</h3><p><code>flex-direction</code>可决定主轴的方向，有四个可选值：</p>
-<ul>
-<li>row（默认值）：主轴为水平方向，起点在左端。</li>
-<li>row-reverse：主轴为水平方向，起点在右端。</li>
-<li>column：主轴为垂直方向，起点在上沿。</li>
-<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">  flex-direction: column-reverse| column | row | row-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>以上代码设置的主轴方向，将依次对应下图：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c1066cc8d122c?w=1898&h=418&f=png&s=39850" alt></p>
-<h3 id="设置主轴的对齐方式"><a href="#设置主轴的对齐方式" class="headerlink" title="设置主轴的对齐方式"></a>设置主轴的对齐方式</h3><p><code>justify-content</code>属性定义了项目在主轴上的对齐方式，值如下：</p>
-<ul>
-<li>flex-start（默认值）：向主轴开始方向对齐。</li>
-<li>flex-end：向主轴结束方向对齐。</li>
-<li>center： 居中。</li>
-<li>space-between：两端对齐，项目之间的间隔都相等。</li>
-<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">    justify-content: flex-start | flex-end | center | space-between | space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c1066ccd09d05?w=1140&h=1020&f=png&s=68933" alt></p>
-<h3 id="交叉轴的对齐方式"><a href="#交叉轴的对齐方式" class="headerlink" title="交叉轴的对齐方式"></a>交叉轴的对齐方式</h3><p><code>align-items</code>属性定义项目在交叉轴上如何对齐，值如下：</p>
-<ul>
-<li>flex-start：交叉轴的起点对齐。</li>
-<li>flex-end：交叉轴的终点对齐。</li>
-<li>center：交叉轴的中点对齐。</li>
-<li>baseline: 项目的第一行文字的基线对齐。</li>
-<li>stretch（默认值）：如果项目未设置高度或设为 auto，将占满整个容器的高度。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">    align-items: flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2018/2/23/161c1066d1feaa64?w=1064&h=1148&f=png&s=77952" alt></p>
-<hr>
-<h2 id="如何实现居中对齐？"><a href="#如何实现居中对齐？" class="headerlink" title="如何实现居中对齐？"></a>如何实现居中对齐？</h2><blockquote>
-<p>题目：如何实现水平居中？</p>
-</blockquote>
-<h3 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h3><p>inline 元素用<code>text-align: center;</code>即可，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">   text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>block 元素可使用<code>margin: auto;</code>，PC 时代的很多网站都这么搞。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">    text-align: center; </span><br><span class="line">&#125;</span><br><span class="line">.item &#123;</span><br><span class="line">    width: 1000px;</span><br><span class="line">    margin: auto; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>绝对定位元素可结合<code>left</code>和<code>margin</code>实现，但是必须知道宽度。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    width: 500px;</span><br><span class="line">&#125;</span><br><span class="line">.item &#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 50%;</span><br><span class="line">    margin: -150px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>题目：如何实现垂直居中？</p>
-</blockquote>
-<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><p>inline 元素可设置<code>line-height</code>的值等于<code>height</code>值，如单行文字垂直居中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">   height: 50px;</span><br><span class="line">   line-height: 50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>绝对定位元素，可结合<code>left</code>和<code>margin</code>实现，但是必须知道尺寸。</p>
-<ul>
-<li>优点：兼容性好</li>
-<li>缺点：需要提前知道尺寸</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    height: 200px;</span><br><span class="line">&#125;</span><br><span class="line">.item &#123;</span><br><span class="line">    width: 80px;</span><br><span class="line">    height: 40px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    margin-top: -20px;</span><br><span class="line">    margin-left: -40px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>绝对定位可结合<code>transform</code>实现居中。</p>
-<ul>
-<li>优点：不需要提前知道尺寸</li>
-<li>缺点：兼容性不好</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    height: 200px;</span><br><span class="line">&#125;</span><br><span class="line">.item &#123;</span><br><span class="line">    width: 80px;</span><br><span class="line">    height: 40px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    transform: translate(-50%, -50%);</span><br><span class="line">    background: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>绝对定位结合<code>margin: auto</code>，不需要提前知道尺寸，兼容性好。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    height: 300px;</span><br><span class="line">&#125;</span><br><span class="line">.item &#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 50px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 0;</span><br><span class="line">    top: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其他的解决方案还有，不过没必要掌握太多，能说出上文的这几个解决方案即可。</p>
-<hr>
-<h2 id="理解语义化"><a href="#理解语义化" class="headerlink" title="理解语义化"></a>理解语义化</h2><blockquote>
-<p>题目：如何理解 HTML 语义化？</p>
-</blockquote>
-<p>所谓“语义”就是为了更易读懂，这要分两部分：</p>
-<ul>
-<li>让人（写程序、读程序）更易读懂</li>
-<li>让机器（浏览器、搜索引擎）更易读懂</li>
-</ul>
-<h3 id="让人更易读懂"><a href="#让人更易读懂" class="headerlink" title="让人更易读懂"></a>让人更易读懂</h3><p>对于人来说，代码可读性、语义化就是一个非常广泛的概念了，例如定义 JS 变量的时候使用更易读懂的名称，定义 CSS class 的时候也一样，例如<code>length</code> <code>list</code>等，而不是使用<code>a</code> <code>b</code>这种谁都看不懂的名称。</p>
-<p>不过我们平常考查的“语义化”并不会考查这么广义、这么泛的问题，而是考查 HTML 的语义化，是为了更好地让机器读懂 HTML。</p>
-<h3 id="让机器更易读懂"><a href="#让机器更易读懂" class="headerlink" title="让机器更易读懂"></a>让机器更易读懂</h3><p>HTML 符合 XML 标准，但又和 XML 不一样 —— HTML 不允许像 XML 那样自定义标签名称，HTML 有自己规定的标签名称。问题就在这里 —— HTML 为何要自己规定那么多标签名称呢，例如<code>p</code> <code>div</code> <code>h1</code> <code>ul</code>等 —— 就是为了语义化。其实，如果你精通 CSS 的话，你完全可以全部用<code>&lt;div&gt;</code>标签来实现所有的网页效果，其他的<code>p</code> <code>h1</code> <code>ul</code>等标签可以一个都不用。但是我们不推荐这么做，这样做就失去了 HTML 语义化的意义。</p>
-<p>拿搜索引擎来说，爬虫下载到我们网页的 HTML 代码，它如何更好地去理解网页的内容呢？—— 就是根据 HTML 既定的标签。<code>h1</code>标签就代表是标题；<code>p</code>里面的就是段落详细内容，权重肯定没有标题高；<code>ul</code>里面就是列表；<code>strong</code>就是加粗的强调的内容 …… 如果我们不按照 HTML 语义化来写，全部都用<code>&lt;div&gt;</code>标签，那搜索引擎将很难理解我们网页的内容。</p>
-<p>为了加强 HTML 语义化，HTML5 标准中又增加了<code>header</code> <code>section</code> <code>article</code>等标签。因此，书写 HTML 时，语义化是非常重要的，否则 W3C 也没必要辛辛苦苦制定出这些标准来。</p>
-<hr>
-<h2 id="CSS3-动画"><a href="#CSS3-动画" class="headerlink" title="CSS3 动画"></a>CSS3 动画</h2><p>CSS3 可以实现动画，代替原来的 Flash 和 JavaScript 方案。</p>
-<p>首先，使用<code>@keyframes</code>定义一个动画，名称为<code>testAnimation</code>，如下代码，通过百分比来设置不同的 CSS 样式，规定动画的变化。所有的动画变化都可以这么定义出来。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@keyframes testAnimation</span><br><span class="line">&#123;</span><br><span class="line">    0%   &#123;background: red; left:0; top:0;&#125;</span><br><span class="line">    25%  &#123;background: yellow; left:200px; top:0;&#125;</span><br><span class="line">    50%  &#123;background: blue; left:200px; top:200px;&#125;</span><br><span class="line">    75%  &#123;background: green; left:0; top:200px;&#125;</span><br><span class="line">    100% &#123;background: red; left:0; top:0;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后，针对一个 CSS 选择器来设置动画，例如针对<code>div</code>元素设置动画，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 50px;</span><br><span class="line">    position: absolute;</span><br><span class="line"></span><br><span class="line">    animation-name: myfirst;</span><br><span class="line">    animation-duration: 5s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>animation-name</code>对应到动画名称，<code>animation-duration</code>是动画时长，还有其他属性：</p>
-<ul>
-<li><code>animation-timing-function</code>：规定动画的速度曲线。默认是<code>ease</code></li>
-<li><code>animation-delay</code>：规定动画何时开始。默认是 0</li>
-<li><code>animation-iteration-count</code>：规定动画被播放的次数。默认是 1</li>
-<li><code>animation-direction</code>：规定动画是否在下一周期逆向地播放。默认是<code>normal</code></li>
-<li><code>animation-play-state</code> ：规定动画是否正在运行或暂停。默认是<code>running</code></li>
-<li><code>animation-fill-mode</code>：规定动画执行之前和之后如何给动画的目标应用，默认是<code>none</code>，保留在最后一帧可以用<code>forwards</code></li>
-</ul>
-<blockquote>
-<p>题目：CSS 的<code>transition</code>和<code>animation</code>有何区别？</p>
-</blockquote>
-<p>首先<code>transition</code>和<code>animation</code>都可以做动效，从语义上来理解，<code>transition</code>是过渡，由一个状态过渡到另一个状态，比如高度<code>100px</code>过渡到<code>200px</code>；而<code>animation</code>是动画，即更专业做动效的，<code>animation</code>有帧的概念，可以设置关键帧<code>keyframe</code>，一个动画可以由多个关键帧多个状态过渡组成，另外<code>animation</code>也包含上面提到的多个属性。</p>
-<h2 id="重绘和回流"><a href="#重绘和回流" class="headerlink" title="重绘和回流"></a>重绘和回流</h2><p>重绘和回流是面试题经常考的题目，也是性能优化当中应该注意的点，下面笔者简单介绍下。</p>
-<ul>
-<li><strong>重绘</strong>：指的是当页面中的元素不脱离文档流，而简单地进行样式的变化，比如修改颜色、背景等，浏览器重新绘制样式</li>
-<li><strong>回流</strong>：指的是处于文档流中 DOM 的尺寸大小、位置或者某些属性发生变化时，导致浏览器重新渲染部分或全部文档的情况</li>
-</ul>
-<p>相比之下，<strong>回流要比重绘消耗性能开支更大</strong>。另外，一些属性的读取也会引起回流，比如读取某个 DOM 的高度和宽度，或者使用<code>getComputedStyle</code>方法。在写代码的时候要避免回流和重绘。比如在笔试中可能会遇见下面的题目：</p>
-<blockquote>
-<p>题目：找出下面代码的优化点，并且优化它</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var data = [&apos;string1&apos;, &apos;string2&apos;, &apos;string3&apos;];</span><br><span class="line">for(var i = 0; i &lt; data.length; i++)&#123;</span><br><span class="line">    var dom = document.getElementById(&apos;list&apos;);</span><br><span class="line">    dom.innerHTML += &apos;&lt;li&gt;&apos; + data[i] + &apos;&lt;/li&gt;&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上面的代码在循环中每次都获取<code>dom</code>，然后对其内部的 HTML 进行累加<code>li</code>，每次都会操作 DOM 结构，可以改成使用<code>documentFragment</code>或者先遍历组成 HTML 的字符串，最后操作一次<code>innerHTML</code>。</p>
-<hr>
-<h2 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h2><p>本小节总结了 CSS 和 HTML 常考的知识点，包括 CSS 中比较重要的定位、布局的知识，也介绍了一些 CSS3 的知识点概念和题目，以及 HTML 的语义化。</p>
-
+    
+    <a class="article-more-a" href="/2019/08/22/HTML-CSS知识点梳理/#more">more >></a>
+    
     
 
     
@@ -1642,342 +1111,6 @@
 
 
   
-    <article id="post-http协议基础下" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class=" article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/08/21/http协议基础下/">http协议基础（下)</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/08/21/http协议基础下/" class="archive-article-date">
-        <time datetime="2018-08-21T14:20:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-21</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><strong>http状态码</strong></p>
-<blockquote>
-<ul>
-<li>1XX:接收信息正在处理</li>
-<li>2XX:正常处理完毕（200请求成功）</li>
-</ul>
-</blockquote>
-    
-    <a class="article-more-a" href="/2018/08/21/http协议基础下/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-浏览器缓存机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class=" article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/08/21/浏览器缓存机制/">浏览器缓存机制</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/08/21/浏览器缓存机制/" class="archive-article-date">
-        <time datetime="2018-08-21T12:29:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-21</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>浏览器缓存机制是“通过 HTTP 协议 header 里的Cache-Control（或Expires）和Last-Modified（或Etag）等字段来控制文件缓存的机制”</p>
-    
-    <a class="article-more-a" href="/2018/08/21/浏览器缓存机制/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-options" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class=" article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/08/20/options/">options请求是什么鬼</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/08/20/options/" class="archive-article-date">
-        <time datetime="2018-08-20T15:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>options出现的情况只有两种：</p>
-<blockquote>
-<ul>
-<li>1、获取目的资源所支持的通信方式<br>黑客有可能经常用到这个；在响应报文中包含一个Allow首部字段，该字段的值表明了服务器支持的所有HTTP方法，如下：</li>
-<li>2、跨域请求中，options请求是浏览器自发起的preflight request(预检请求)，以检测实际请求是否可以被浏览器接受.</li>
-</ul>
-</blockquote>
-    
-    <a class="article-more-a" href="/2018/08/20/options/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-reffer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class=" article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/08/20/reffer/">Referer</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/08/20/reffer/" class="archive-article-date">
-        <time datetime="2018-08-20T14:55:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
-</a>
-
-  
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Referer  是  HTTP  请求header 的一部分，当浏览器（或者模拟浏览器行为）向web 服务器发送请求的时候，头信息里有包含  Referer  。比如我在<a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a> 里有一个<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 链接，那么点击这个<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> ，它的header 信息里就有：<code>Referer=http://www.google.com</code>它就是表示一个来源。</p>
-    
-    <a class="article-more-a" href="/2018/08/20/reffer/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -2153,6 +1286,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
             <div class="clearfix"></div>
