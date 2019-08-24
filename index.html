@@ -632,35 +632,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>在对几种模块规范的复习后，总结一下规范的区别和关系<br>CommonJS，AMD，CMD，ES Module</p>
-<h3 id="偏向性"><a href="#偏向性" class="headerlink" title="偏向性"></a>偏向性</h3><p>虽然对于这四个规范来说，都可以在浏览器端和服务器端运行，但除了<code>ES Module</code>外，其他都具有一定的偏向性<br>对<code>CommonJS</code>来说，因其模块加载是<code>同步</code>的，没有做好合适的异步处理，所以如果在浏览器环境下的话，会受到网络环境的影响，无法保证模块能及时加载好，所以不太适合<code>在浏览器端使用</code><br>对<code>AMD</code>和<code>CMD</code>来说，是偏向浏览器端的，浏览器端要保证效率，需要<code>采用异步加载</code>，这就需要一个预处理，提前将所需要的模块文件并行加载好，而AMD和CMD恰好就是异步的</p>
-<h3 id="CommonJS与AMD的比较"><a href="#CommonJS与AMD的比较" class="headerlink" title="CommonJS与AMD的比较"></a>CommonJS与AMD的比较</h3><ul>
-<li>偏向性不同，CommonJS偏向于服务器端，而AMD偏向于浏览器端</li>
-<li>CommonJS是同步加载的，而AMD是异步加载的</li>
-<li>CommonJS基于node.js，而AMD依赖于require.js</li>
-</ul>
-<h3 id="AMD与CMD的比较"><a href="#AMD与CMD的比较" class="headerlink" title="AMD与CMD的比较"></a>AMD与CMD的比较</h3><ul>
-<li>AMD在加载依赖模块时是提前加载，而CMD是延迟加载<blockquote>
-<p>AMD在执行后面的方法前，先将模块加载好，而CMD到了需要的时候才加载对应的模块</p>
-</blockquote>
-</li>
-<li>AMD一般依赖前置，而CMD是依赖就近<blockquote>
-<p>AMD将需要使用的依赖前置到define的第一个参数，在顶部加载好后才继续后面的方法，而CMD的依赖一般是到了要使用的时候才引入，所以是依赖就近</p>
-</blockquote>
-</li>
-<li>AMD依赖于require.js而CMD依赖于sea.js</li>
-</ul>
-<h3 id="CommonJS与ES-Module的比较"><a href="#CommonJS与ES-Module的比较" class="headerlink" title="CommonJS与ES Module的比较"></a>CommonJS与ES Module的比较</h3><ul>
-<li>CommonJS输出的是值的拷贝，而ES Module输出的是值的引用<blockquote>
-<p>这也就是说，对于CommonJS引入的值来说，只要这个值已经被引入了，那么源模块的该值不管发生什么变化，也不会影响到之前就引入的值，而对于ES Module来说，如果源模块的值发生变化，会连带影响当前引入的值。</p>
-</blockquote>
-</li>
-<li>CommonJS 模块是运行时加载，ES Module是编译时输出接口<blockquote>
-<p>CommonJS在js文件运行时，如果遇到require语句，就会先停下来加载对应的模块，对于ES Module，如果遇上了一个import语句，就会生成一个只读的引用，当真正执行到需要改模块的内容时，再通过改引用去获取相应的值</p>
-</blockquote>
-</li>
-</ul>
-
+              <p>在对几种模块规范的复习后，总结一下规范的区别和关系<br>CommonJS，AMD，CMD，ES Module</p>
+          
       
     </div>
     
@@ -673,6 +646,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js模块化/">js模块化</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a   href="/2019/08/24/js各种模块化规范的区别/#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

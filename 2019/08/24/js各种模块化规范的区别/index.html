@@ -9,18 +9,18 @@
   
   <title>js各种模块化规范的区别 | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在对几种模块规范的复习后，总结一下规范的区别和关系CommonJS，AMD，CMD，ES Module 偏向性虽然对于这四个规范来说，都可以在浏览器端和服务器端运行，但除了ES Module外，其他都具有一定的偏向性对CommonJS来说，因其模块加载是同步的，没有做好合适的异步处理，所以如果在浏览器环境下的话，会受到网络环境的影响，无法保证模块能及时加载好，所以不太适合在浏览器端使用对AMD和C">
+  <meta name="description" content="在对几种模块规范的复习后，总结一下规范的区别和关系CommonJS，AMD，CMD，ES Module">
 <meta name="keywords" content="js模块化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js各种模块化规范的区别">
 <meta property="og:url" content="http://yoursite.com/2019/08/24/js各种模块化规范的区别/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
-<meta property="og:description" content="在对几种模块规范的复习后，总结一下规范的区别和关系CommonJS，AMD，CMD，ES Module 偏向性虽然对于这四个规范来说，都可以在浏览器端和服务器端运行，但除了ES Module外，其他都具有一定的偏向性对CommonJS来说，因其模块加载是同步的，没有做好合适的异步处理，所以如果在浏览器环境下的话，会受到网络环境的影响，无法保证模块能及时加载好，所以不太适合在浏览器端使用对AMD和C">
+<meta property="og:description" content="在对几种模块规范的复习后，总结一下规范的区别和关系CommonJS，AMD，CMD，ES Module">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-08-24T02:23:23.706Z">
+<meta property="og:updated_time" content="2019-08-24T03:45:06.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js各种模块化规范的区别">
-<meta name="twitter:description" content="在对几种模块规范的复习后，总结一下规范的区别和关系CommonJS，AMD，CMD，ES Module 偏向性虽然对于这四个规范来说，都可以在浏览器端和服务器端运行，但除了ES Module外，其他都具有一定的偏向性对CommonJS来说，因其模块加载是同步的，没有做好合适的异步处理，所以如果在浏览器环境下的话，会受到网络环境的影响，无法保证模块能及时加载好，所以不太适合在浏览器端使用对AMD和C">
+<meta name="twitter:description" content="在对几种模块规范的复习后，总结一下规范的区别和关系CommonJS，AMD，CMD，ES Module">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -314,6 +314,7 @@
       
           
         <p>在对几种模块规范的复习后，总结一下规范的区别和关系<br>CommonJS，AMD，CMD，ES Module</p>
+<a id="more"></a>
 <h3 id="偏向性"><a href="#偏向性" class="headerlink" title="偏向性"></a>偏向性</h3><p>虽然对于这四个规范来说，都可以在浏览器端和服务器端运行，但除了<code>ES Module</code>外，其他都具有一定的偏向性<br>对<code>CommonJS</code>来说，因其模块加载是<code>同步</code>的，没有做好合适的异步处理，所以如果在浏览器环境下的话，会受到网络环境的影响，无法保证模块能及时加载好，所以不太适合<code>在浏览器端使用</code><br>对<code>AMD</code>和<code>CMD</code>来说，是偏向浏览器端的，浏览器端要保证效率，需要<code>采用异步加载</code>，这就需要一个预处理，提前将所需要的模块文件并行加载好，而AMD和CMD恰好就是异步的</p>
 <h3 id="CommonJS与AMD的比较"><a href="#CommonJS与AMD的比较" class="headerlink" title="CommonJS与AMD的比较"></a>CommonJS与AMD的比较</h3><ul>
 <li>偏向性不同，CommonJS偏向于服务器端，而AMD偏向于浏览器端</li>
@@ -352,7 +353,7 @@
         <p><span>本文标题:</span><a  href="/2019/08/24/js各种模块化规范的区别/">js各种模块化规范的区别</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 刘晓儒的博客 的个人博客">刘晓儒的博客</a></p>
         <p><span>发布时间:</span>2019年08月24日 - 10时13分</p>
-        <p><span>最后更新:</span>2019年08月24日 - 10时23分</p>
+        <p><span>最后更新:</span>2019年08月24日 - 11时45分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/08/24/js各种模块化规范的区别/" title="js各种模块化规范的区别">http://yoursite.com/2019/08/24/js各种模块化规范的区别/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/08/24/js各种模块化规范的区别/　　作者: 刘晓儒的博客" title=""></span>
