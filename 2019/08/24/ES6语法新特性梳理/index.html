@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="刘晓儒个人博客">
 <meta property="og:description" content="let和constlet 不存在变量提升变必须先声明在使用">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-08-24T06:39:28.444Z">
+<meta property="og:updated_time" content="2019-08-24T06:49:57.139Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6语法新特性梳理">
 <meta name="twitter:description" content="let和constlet 不存在变量提升变必须先声明在使用">
@@ -393,54 +393,75 @@
 <ul>
 <li>属性名的遍历<br>Symbol 作为属性名，该属性不会出现在<code>for...in、for...of</code>循环中，也不会被<code>Object.keys()</code>、<code>Object.getOwnPropertyNames()</code>、<code>JSON.stringify()</code>返回。但是，它也不是私有属性，有一个<code>Object.getOwnPropertySymbols</code>方法，可以获取指定对象的所有 Symbol 属性名。</li>
 </ul>
-<h3 id="类型扩展"><a href="#类型扩展" class="headerlink" title="类型扩展"></a>类型扩展</h3><h4 id="字符串扩展"><a href="#字符串扩展" class="headerlink" title="字符串扩展"></a>字符串扩展</h4><h5 id="增强unicode表示法"><a href="#增强unicode表示法" class="headerlink" title="增强unicode表示法"></a>增强unicode表示法</h5><h5 id="添加遍历器接口-可以用for-of遍历"><a href="#添加遍历器接口-可以用for-of遍历" class="headerlink" title="添加遍历器接口 可以用for of遍历"></a>添加遍历器接口 可以用<code>for of</code>遍历</h5><h5 id="字符串模版"><a href="#字符串模版" class="headerlink" title="**字符串模版"></a>**字符串模版</h5><blockquote>
+<h3 id="类型扩展"><a href="#类型扩展" class="headerlink" title="类型扩展"></a>类型扩展</h3><h4 id="字符串扩展"><a href="#字符串扩展" class="headerlink" title="字符串扩展"></a>字符串扩展</h4><ul>
+<li>增强unicode表示法</li>
+<li>添加遍历器接口 可以用<code>for of</code>遍历</li>
+<li>**字符串模版</li>
+</ul>
+<blockquote>
 <p>模板字符串（template string）是增强版的字符串，用反引号标识。如果在模板字符串中需要使用反引号，则前面要用反斜杠转义。板字符串中嵌入变量，需要将变量名写在${}之中</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`User $&#123;user.name&#125; is not authorized to do $&#123;action&#125;.`</span><br></pre></td></tr></table></figure>
 
-<h5 id="新增实例方法"><a href="#新增实例方法" class="headerlink" title="新增实例方法"></a>新增实例方法</h5><pre><code>- includes()返回布尔值，表示是否找到了参数字符串    
--  startsWith(), endsWith()返回布尔值，表示参数字符串是否在原字符串的头部/尾部
-- repeat() 返回一个新字符串，表示将原字符串重复n次
-- trimStart()，trimEnd()消除字符串头部/尾部的空格
-- padStart()，padEnd() 在头部或尾部补全</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&apos;x&apos;.padStart(5, &apos;ab&apos;) // &apos;ababx&apos;</span><br><span class="line">&apos;x&apos;.padStart(4, &apos;ab&apos;) // &apos;abax&apos;</span><br><span class="line">&apos;x&apos;.padEnd(5, &apos;ab&apos;) // &apos;xabab&apos;</span><br><span class="line">&apos;x&apos;.padEnd(4, &apos;ab&apos;) // &apos;xaba&apos;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>新增实例方法</p>
+<ul>
+<li>includes()返回布尔值，表示是否找到了参数字符串    </li>
+<li>startsWith(), endsWith()返回布尔值，表示参数字符串是否在原字符串的头部/尾部</li>
+<li>repeat() 返回一个新字符串，表示将原字符串重复n次</li>
+<li>trimStart()，trimEnd()消除字符串头部/尾部的空格</li>
+<li>padStart()，padEnd() 在头部或尾部补全<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&apos;x&apos;.padStart(5, &apos;ab&apos;) // &apos;ababx&apos;</span><br><span class="line">&apos;x&apos;.padStart(4, &apos;ab&apos;) // &apos;abax&apos;</span><br><span class="line">&apos;x&apos;.padEnd(5, &apos;ab&apos;) // &apos;xabab&apos;</span><br><span class="line">&apos;x&apos;.padEnd(4, &apos;ab&apos;) // &apos;xaba&apos;</span><br></pre></td></tr></table></figure>
 
-<h4 id="数组扩展"><a href="#数组扩展" class="headerlink" title="数组扩展"></a>数组扩展</h4><h5 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h5><blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="数组扩展"><a href="#数组扩展" class="headerlink" title="数组扩展"></a>数组扩展</h4><ul>
+<li>扩展运算符 <blockquote>
 <p>基本用法</p>
 </blockquote>
+</li>
+</ul>
 <p><code>将一个数组转为用逗号分隔的参数序列</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">onsole.log(...[1, 2, 3])</span><br><span class="line">// 1 2 3</span><br><span class="line"></span><br><span class="line">console.log(1, ...[2, 3, 4], 5)</span><br><span class="line">// 1 2 3 4 5</span><br><span class="line"></span><br><span class="line">[...document.querySelectorAll(&apos;div&apos;)]</span><br><span class="line">// [&lt;div&gt;, &lt;div&gt;, &lt;div&gt;]</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>应用场景</p>
 </blockquote>
-<ul>
+<ol>
 <li>复制数组</li>
-</ul>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">数组是复合的数据类型，直接复制的话，只是复制了指向底层数据结构的指针，而不是克隆一个全新的数组。</span><br><span class="line">const a1 = [1, 2];</span><br><span class="line">const a2 = a1;</span><br><span class="line"></span><br><span class="line">a2[0] = 2;</span><br><span class="line">a1 // [2, 2]</span><br></pre></td></tr></table></figure>
 
-<ul>
+<ol start="2">
 <li>合并数组</li>
-</ul>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const arr1 = [&apos;a&apos;, &apos;b&apos;];</span><br><span class="line">const arr2 = [&apos;c&apos;];</span><br><span class="line">const arr3 = [&apos;d&apos;, &apos;e&apos;];</span><br><span class="line"></span><br><span class="line">// ES5 的合并数组</span><br><span class="line">arr1.concat(arr2, arr3);</span><br><span class="line">// [ &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos; ]</span><br><span class="line"></span><br><span class="line">// ES6 的合并数组</span><br><span class="line">[...arr1, ...arr2, ...arr3]</span><br><span class="line">// [ &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos; ]</span><br></pre></td></tr></table></figure>
 
-<ul>
+<ol start="3">
 <li>与解构赋值结合</li>
-</ul>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">扩展运算符可以与解构赋值结合起来，用于生成数组。</span><br><span class="line"></span><br><span class="line">// ES5</span><br><span class="line">a = list[0], rest = list.slice(1)</span><br><span class="line">// ES6</span><br><span class="line">[a, ...rest] = list</span><br></pre></td></tr></table></figure>
 
-<ul>
+<ol start="4">
 <li>扩展运算符还可以将字符串和类数组转为真正的数组。</li>
-</ul>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[...&apos;hello&apos;]</span><br><span class="line">// [ &quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot; ]</span><br></pre></td></tr></table></figure>
 
-<h5 id="Array-from"><a href="#Array-from" class="headerlink" title="Array.from"></a>Array.from</h5><blockquote>
+<ul>
+<li>Array.from</li>
+</ul>
+<blockquote>
 <p>Array.from方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let arrayLike = &#123;</span><br><span class="line">    &apos;0&apos;: &apos;a&apos;,</span><br><span class="line">    &apos;1&apos;: &apos;b&apos;,</span><br><span class="line">    &apos;2&apos;: &apos;c&apos;,</span><br><span class="line">    length: 3</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// ES5的写法</span><br><span class="line">var arr1 = [].slice.call(arrayLike); // [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span><br><span class="line"></span><br><span class="line">// ES6的写法</span><br><span class="line">let arr2 = Array.from(arrayLike); // [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span><br></pre></td></tr></table></figure>
 
-<h5 id="includes"><a href="#includes" class="headerlink" title="includes"></a>includes</h5><blockquote>
+<ul>
+<li>includes<blockquote>
 <p>Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的includes方法类似</p>
 </blockquote>
+</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 3].includes(2)     // true</span><br><span class="line">[1, 2, 3].includes(4)     // false</span><br><span class="line">[1, 2, NaN].includes(NaN) // true</span><br></pre></td></tr></table></figure>
 
 <h4 id="对象扩展"><a href="#对象扩展" class="headerlink" title="对象扩展"></a>对象扩展</h4><h4 id="函数扩展"><a href="#函数扩展" class="headerlink" title="函数扩展"></a>函数扩展</h4><h4 id="正则扩展"><a href="#正则扩展" class="headerlink" title="正则扩展"></a>正则扩展</h4><h3 id="set和map结构"><a href="#set和map结构" class="headerlink" title="set和map结构"></a>set和map结构</h3><h4 id="set"><a href="#set" class="headerlink" title="set"></a>set</h4><h4 id="map"><a href="#map" class="headerlink" title="map"></a>map</h4><h3 id="异步编程方案"><a href="#异步编程方案" class="headerlink" title="异步编程方案"></a>异步编程方案</h3><h4 id="promise对象"><a href="#promise对象" class="headerlink" title="promise对象"></a>promise对象</h4><h4 id="Generator函数"><a href="#Generator函数" class="headerlink" title="Generator函数"></a>Generator函数</h4><h4 id="async函数"><a href="#async函数" class="headerlink" title="async函数"></a>async函数</h4><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><h3 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h3>
@@ -454,7 +475,7 @@
         <p><span>本文标题:</span><a  href="/2019/08/24/ES6语法新特性梳理/">ES6语法新特性梳理</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 刘晓儒的博客 的个人博客">刘晓儒的博客</a></p>
         <p><span>发布时间:</span>2019年08月24日 - 11时47分</p>
-        <p><span>最后更新:</span>2019年08月24日 - 14时39分</p>
+        <p><span>最后更新:</span>2019年08月24日 - 14时49分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/08/24/ES6语法新特性梳理/" title="ES6语法新特性梳理">http://liuxiaoru.github.io/2019/08/24/ES6语法新特性梳理/</a>
             <span class="copy-path" data-clipboard-text="原文: http://liuxiaoru.github.io/2019/08/24/ES6语法新特性梳理/　　作者: 刘晓儒的博客" title=""></span>
@@ -482,7 +503,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#let和const"><span class="toc-number">1.</span> <span class="toc-text">let和const</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#let"><span class="toc-number">1.1.</span> <span class="toc-text">let</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#const"><span class="toc-number">1.2.</span> <span class="toc-text">const</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量结构赋值"><span class="toc-number">2.</span> <span class="toc-text">变量结构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的结构赋值"><span class="toc-number">2.1.</span> <span class="toc-text">数组的结构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象的解构赋值"><span class="toc-number">2.2.</span> <span class="toc-text">对象的解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串的解构赋值"><span class="toc-number">2.3.</span> <span class="toc-text">字符串的解构赋值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#symbol类型"><span class="toc-number">3.</span> <span class="toc-text">symbol类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类型扩展"><span class="toc-number">4.</span> <span class="toc-text">类型扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串扩展"><span class="toc-number">4.1.</span> <span class="toc-text">字符串扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#增强unicode表示法"><span class="toc-number">4.1.1.</span> <span class="toc-text">增强unicode表示法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#添加遍历器接口-可以用for-of遍历"><span class="toc-number">4.1.2.</span> <span class="toc-text">添加遍历器接口 可以用for of遍历</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#字符串模版"><span class="toc-number">4.1.3.</span> <span class="toc-text">**字符串模版</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#新增实例方法"><span class="toc-number">4.1.4.</span> <span class="toc-text">新增实例方法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组扩展"><span class="toc-number">4.2.</span> <span class="toc-text">数组扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#扩展运算符"><span class="toc-number">4.2.1.</span> <span class="toc-text">扩展运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Array-from"><span class="toc-number">4.2.2.</span> <span class="toc-text">Array.from</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#includes"><span class="toc-number">4.2.3.</span> <span class="toc-text">includes</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象扩展"><span class="toc-number">4.3.</span> <span class="toc-text">对象扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数扩展"><span class="toc-number">4.4.</span> <span class="toc-text">函数扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#正则扩展"><span class="toc-number">4.5.</span> <span class="toc-text">正则扩展</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#set和map结构"><span class="toc-number">5.</span> <span class="toc-text">set和map结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#set"><span class="toc-number">5.1.</span> <span class="toc-text">set</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#map"><span class="toc-number">5.2.</span> <span class="toc-text">map</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异步编程方案"><span class="toc-number">6.</span> <span class="toc-text">异步编程方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#promise对象"><span class="toc-number">6.1.</span> <span class="toc-text">promise对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Generator函数"><span class="toc-number">6.2.</span> <span class="toc-text">Generator函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#async函数"><span class="toc-number">6.3.</span> <span class="toc-text">async函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类"><span class="toc-number">7.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Module"><span class="toc-number">8.</span> <span class="toc-text">Module</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#let和const"><span class="toc-number">1.</span> <span class="toc-text">let和const</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#let"><span class="toc-number">1.1.</span> <span class="toc-text">let</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#const"><span class="toc-number">1.2.</span> <span class="toc-text">const</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量结构赋值"><span class="toc-number">2.</span> <span class="toc-text">变量结构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的结构赋值"><span class="toc-number">2.1.</span> <span class="toc-text">数组的结构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象的解构赋值"><span class="toc-number">2.2.</span> <span class="toc-text">对象的解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串的解构赋值"><span class="toc-number">2.3.</span> <span class="toc-text">字符串的解构赋值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#symbol类型"><span class="toc-number">3.</span> <span class="toc-text">symbol类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类型扩展"><span class="toc-number">4.</span> <span class="toc-text">类型扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串扩展"><span class="toc-number">4.1.</span> <span class="toc-text">字符串扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组扩展"><span class="toc-number">4.2.</span> <span class="toc-text">数组扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象扩展"><span class="toc-number">4.3.</span> <span class="toc-text">对象扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数扩展"><span class="toc-number">4.4.</span> <span class="toc-text">函数扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#正则扩展"><span class="toc-number">4.5.</span> <span class="toc-text">正则扩展</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#set和map结构"><span class="toc-number">5.</span> <span class="toc-text">set和map结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#set"><span class="toc-number">5.1.</span> <span class="toc-text">set</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#map"><span class="toc-number">5.2.</span> <span class="toc-text">map</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异步编程方案"><span class="toc-number">6.</span> <span class="toc-text">异步编程方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#promise对象"><span class="toc-number">6.1.</span> <span class="toc-text">promise对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Generator函数"><span class="toc-number">6.2.</span> <span class="toc-text">Generator函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#async函数"><span class="toc-number">6.3.</span> <span class="toc-text">async函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类"><span class="toc-number">7.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Module"><span class="toc-number">8.</span> <span class="toc-text">Module</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
