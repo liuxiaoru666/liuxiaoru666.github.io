@@ -4,23 +4,20 @@
   <meta charset="utf-8">
   <meta name="baidu-site-verification" content="L6Lm9d5Crl">
   
+   
+    <meta name="keywords" content="js模块化">
   
   
   
-  <title>Event Loop | 刘晓儒个人博客</title>
+  <title>Tag: js模块化 | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
-<meta name="keywords" content="JavaScript">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Event Loop">
-<meta property="og:url" content="http://yoursite.com/2018/08/18/Event Loop/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="刘晓儒个人博客">
+<meta property="og:url" content="http://yoursite.com/tags/js模块化/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
-<meta property="og:description" content="附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-08-22T13:02:25.944Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Event Loop">
-<meta name="twitter:description" content="附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面">
+<meta name="twitter:title" content="刘晓儒个人博客">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -45,9 +42,9 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: true,
+          isPost: false,
           isArchive: false,
-          isTag: false,
+          isTag: true,
           isCategory: false,
           open_in_new: false
       }
@@ -273,227 +270,221 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Event Loop" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a  href="/2018/08/18/Event Loop/" class="article-date">
-      <time datetime="2018-08-18T14:47:30.000Z" itemprop="datePublished">2018-08-18</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a  href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a  href="/2019/08/24/ES-Module/" class="archive-article-date">
+      <time datetime="2019-08-24T03:27:49.000Z" itemprop="datePublished">08-24</time>
 </a>
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Event Loop
+    <h1 itemprop="name">
+      <a  class="archive-article-title" href="/2019/08/24/ES-Module/">ES Module</a>
     </h1>
   
 
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <h3 id="JavaScript的事件分两种，宏任务-macro-task-和微任务-micro-task"><a href="#JavaScript的事件分两种，宏任务-macro-task-和微任务-micro-task" class="headerlink" title="JavaScript的事件分两种，宏任务(macro-task)和微任务(micro-task)"></a>JavaScript的事件分两种，宏任务(macro-task)和微任务(micro-task)</h3><ul>
-<li>宏任务：包括整体代码script，setTimeout，setInterval</li>
-<li>微任务：Promise.then(非new Promise)，process.nextTick(node中)</li>
-</ul>
-<blockquote>
-<p>事件的执行顺序，是先执行宏任务，然后执行微任务，这个是基础，任务可以有同步任务和异步任务，同步的进入主线程，异步的进入Event Table并注册函数，异步事件完成后，会将回调函数放入Event Queue中(宏任务和微任务是不同的Event Queue)，同步任务执行完成后，会从Event Queue中读取事件放入主线程执行，回调函数中可能还会包含不同的任务，因此会循环执行上述操作。<br>``</p>
-</blockquote>
-<a id="more"></a>
 
-<p>setTimeout(() =&gt; {<br>    console.log(‘延时1秒’);<br>},1000)<br>console.log(“开始”)<br>输出：<br>开始<br>延时1秒</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">`上述代码，setTimeout函数是宏任务，且是异步任务，因此会将函数放入Event Table并注册函数，经过指定时间后，把要执行的任务加入到Event Queue中，等待同步任务console.log(&quot;开始&quot;)执行结束后，读取Event Queue中setTimeout的回调函数执行。`</span><br><span class="line"></span><br><span class="line">上述代码不包含微任务，接下来看包含微任务的代码：</span><br></pre></td></tr></table></figure>
-
-<p>setTimeout(function() {<br>    console.log(‘setTimeout’);<br>},1000)</p>
-<p>new Promise(function(resolve) {<br>    console.log(‘promise’);<br>}).then(function() {<br>    console.log(‘then’);<br>})</p>
-<p>console.log(‘console’);</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">`首先setTimeout，放入Event Table中，1秒后将回调函数放入宏任务的Event Queue中</span><br><span class="line">new Promise 同步代码，立即执行console.log(&apos;promise&apos;),然后看到微任务then，因此将其放入微任务的Event Queue中</span><br><span class="line">接下来执行同步代码console.log(&apos;console&apos;)</span><br><span class="line">主线程的宏任务，已经执行完毕，接下来要执行微任务，因此会执行Promise.then，到此，第一轮事件循环执行完毕</span><br><span class="line">第二轮事件循环开始，先执行宏任务，即setTimeout的回调函数，然后查找是否有微任务，没有，时间循环结束`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 到此做个总结，事件循环，先执行宏任务，其中同步任务立即执行，异步任务，加载到对应的的Event Queue中(setTimeout等加入宏任务的Event Queue，Promise.then加入微任务的Event Queue)，所有同步宏任务执行完毕后，如果发现微任务的Event Queue中有未执行的任务，会先执行其中的任务，这样算是完成了一次事件循环。接下来查看宏任务的Event Queue中是否有未执行的任务，有的话，就开始第二轮事件循环，依此类推。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">上述例子只是简单的一层嵌套，接下来看一个稍微复杂了一点点的例子：</span><br></pre></td></tr></table></figure>
-
-<p>console.log(‘1’);<br>setTimeout(function() {<br>    console.log(‘2’);<br>    process.nextTick(function() {<br>        console.log(‘3’);<br>    })<br>    new Promise(function(resolve) {<br>        console.log(‘4’);<br>        resolve();<br>    }).then(function() {<br>        console.log(‘5’)<br>    })<br>})<br>输出：<br>1<br>2<br>4<br>3<br>5</p>
-<pre><code>`宏任务同步代码console.log(&apos;1&apos;),不多说
-setTimeout，加入宏任务Event Queue，没有发现微任务，第一轮事件循环走完
-第二轮事件循环开始，先执行宏任务，从宏任务Event Queue中独取出setTimeout的回调函数
-同步代码console.log(&apos;2&apos;),发现process.nextTick，加入微任务Event Queue
-new Promise，同步执行console.log(&apos;4&apos;),发现then，加入微任务Event Queue
-宏任务执行完毕，接下来执行微任务，先执行process.nextTick，然后执行Promise.then
-微任务执行完毕，第二轮事件循环走完，没有发现宏任务，事件循环结束`
-
-</code></pre>
-      
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js模块化/">js模块化</a></li></ul>
     </div>
-    
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/08/18/Event Loop/">Event Loop</a></p>
-        <p><span>文章作者:</span><a  href="/" title="访问 刘晓儒的博客 的个人博客">刘晓儒的博客</a></p>
-        <p><span>发布时间:</span>2018年08月18日 - 22时47分</p>
-        <p><span>最后更新:</span>2019年08月22日 - 21时02分</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/08/18/Event Loop/" title="Event Loop">http://yoursite.com/2018/08/18/Event Loop/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/18/Event Loop/　　作者: 刘晓儒的博客" title=""></span>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
-
-
-
-<nav id="article-nav">
-  
-    <a  href="/2018/08/19/JS继承的继承方式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          JS继承的继承方式
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
-
-  
 </article>
-
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript的事件分两种，宏任务-macro-task-和微任务-micro-task"><span class="toc-number">1.</span> <span class="toc-text">JavaScript的事件分两种，宏任务(macro-task)和微任务(micro-task)</span></a></li></ol>
-</div>
-<style>
-    .left-col .switch-btn {
-        display: none;
-    }
-    .left-col .switch-area {
-        display: none;
-    }
-</style>
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-<script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-            $(".switch-btn, .switch-area").fadeOut(300);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-            $(".switch-btn, .switch-area").fadeIn(500);
-        }
-    })
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-        $(".switch-btn, .switch-area").show();
-    }
-</script>
-
-
-
-
-<div class="bdsharebuttonbox">
-	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
-	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-</div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
-
-
+  
     
-        <section class="changyan" id="comments">
-  <!--<div id="uyan_frame"></div>-->
-  <div id="SOHUCS"></div>
-  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
-  <script type="text/javascript">
-    window.changyan.api.config({
-      appid: 'xxxx',
-      conf: 'xxxxxxxxx'
-    });
-  </script>
-</section>
     
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a  href="/2019/08/24/CMD/" class="archive-article-date">
+      <time datetime="2019-08-24T03:15:34.000Z" itemprop="datePublished">08-24</time>
+</a>
+
+        </div>
+         
+  
+    <h1 itemprop="name">
+      <a  class="archive-article-title" href="/2019/08/24/CMD/">CMD</a>
+    </h1>
+  
 
 
+        <div class="article-info info-on-archive">
+          
 
-    <div class="scroll" id="post-nav-button">
-        
-            <a  href="/2018/08/19/JS继承的继承方式/" title="上一篇: JS继承的继承方式">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-        
-            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
-        
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js模块化/">js模块化</a></li></ul>
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/ES-Module/">ES Module</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/CMD/">CMD</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/AMD/">AMD</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/CommonJS/">CommonJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/js模块化由来/">js模块化由来</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/js各种模块化规范的区别/">js各种模块化规范的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/computed和watch/">computed和watch</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/Vue组件通信/">Vue组件通信</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/js获取宽高及位置方法集合/">js获取宽高及位置方法集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/this指向问题/">this指向问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/浏览器知识点梳理/">浏览器知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/JS知识点梳理/">JS知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/JS-WEB-API知识点梳理/">JS-WEB-API知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/HTML-CSS知识点梳理/">HTML,CSS知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/原型和原型链/">原型和原型链</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/21/http协议基础下/">http协议基础（下)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/21/浏览器缓存机制/">浏览器缓存机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/options/">options请求是什么鬼</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/reffer/">Referer</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/http协议基础/">http协议基础（上）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/19/前端安全防御/">前端安全防御</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/19/JS继承的继承方式/">JS继承的继承方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/Event Loop/">Event Loop</a></li></ul>
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
     
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a  href="/2019/08/24/AMD/" class="archive-article-date">
+      <time datetime="2019-08-24T02:53:34.000Z" itemprop="datePublished">08-24</time>
+</a>
 
-    <script>
-        $(".post-list").addClass("toc-article");
-        // $(".post-list-item a").attr("target","_blank");
-        $("#post-nav-button > a:nth-child(2)").click(function() {
-            $(".fa-bars, .fa-times").toggle();
-            $(".post-list").toggle(300);
-            if ($(".toc").length > 0) {
-                $("#toc, #tocButton").toggle(200, function() {
-                    if ($(".switch-area").is(":visible")) {
-                        $("#toc, .switch-btn, .switch-area").toggle();
-                        $("#tocButton").attr("value", valueHide);
-                        }
-                    })
-            }
-            else {
-                $(".switch-btn, .switch-area").fadeToggle(300);
-            }
-        })
-    </script>
+        </div>
+         
+  
+    <h1 itemprop="name">
+      <a  class="archive-article-title" href="/2019/08/24/AMD/">AMD</a>
+    </h1>
+  
 
 
+        <div class="article-info info-on-archive">
+          
+
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js模块化/">js模块化</a></li></ul>
+    </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a  href="/2019/08/24/CommonJS/" class="archive-article-date">
+      <time datetime="2019-08-24T02:36:58.000Z" itemprop="datePublished">08-24</time>
+</a>
+
+        </div>
+         
+  
+    <h1 itemprop="name">
+      <a  class="archive-article-title" href="/2019/08/24/CommonJS/">CommonJS</a>
+    </h1>
+  
 
 
-    <script>
-        
-    </script>
+        <div class="article-info info-on-archive">
+          
+
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js模块化/">js模块化</a></li></ul>
+    </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a  href="/2019/08/24/js模块化由来/" class="archive-article-date">
+      <time datetime="2019-08-24T02:25:24.000Z" itemprop="datePublished">08-24</time>
+</a>
+
+        </div>
+         
+  
+    <h1 itemprop="name">
+      <a  class="archive-article-title" href="/2019/08/24/js模块化由来/">js模块化由来</a>
+    </h1>
+  
+
+
+        <div class="article-info info-on-archive">
+          
+
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js模块化/">js模块化</a></li></ul>
+    </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a  href="/2019/08/24/js各种模块化规范的区别/" class="archive-article-date">
+      <time datetime="2019-08-24T02:13:43.000Z" itemprop="datePublished">08-24</time>
+</a>
+
+        </div>
+         
+  
+    <h1 itemprop="name">
+      <a  class="archive-article-title" href="/2019/08/24/js各种模块化规范的区别/">js各种模块化规范的区别</a>
+    </h1>
+  
+
+
+        <div class="article-info info-on-archive">
+          
+
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js模块化/">js模块化</a></li></ul>
+    </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
+
+    
+
 
 </div>
       <footer id="footer">
@@ -585,6 +576,18 @@ ga('send', 'pageview');
         };
     })
 </script>
+
+    <button class="hide-labels">TAG 开关</button>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(".article-info").toggle(200);
+            });
+        });
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>

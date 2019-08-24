@@ -7,20 +7,20 @@
   
   
   
-  <title>Vue组件通信 | 刘晓儒个人博客</title>
+  <title>js模块化由来 | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="父–&amp;gt;子父向子传递数据通过props 123456789101112131415161718//父组件代码&amp;lt;template&amp;gt;    &amp;lt;header-box :title-txt=&amp;quot;showTitleTxt&amp;quot;&amp;gt;&amp;lt;/header-box&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;    import Header fr">
-<meta name="keywords" content="Vue">
+  <meta name="description" content="无模块概念JavaScript模块化的历史漫长，一开始，正如在我们初学JavaScript的时候，写的代码不多，我们都是将代码写在一个文件里，因为代码量不多，所以没有感到什么不适， 123456function foo()&amp;#123;    // ...&amp;#125;function bar()&amp;#123;    // ...&amp;#125;  但是当代码开始变多的时候，我们开始感到不适，我们很难找到自">
+<meta name="keywords" content="js模块化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue组件通信">
-<meta property="og:url" content="http://yoursite.com/2019/08/22/Vue组件通信/index.html">
+<meta property="og:title" content="js模块化由来">
+<meta property="og:url" content="http://yoursite.com/2019/08/24/js模块化由来/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
-<meta property="og:description" content="父–&amp;gt;子父向子传递数据通过props 123456789101112131415161718//父组件代码&amp;lt;template&amp;gt;    &amp;lt;header-box :title-txt=&amp;quot;showTitleTxt&amp;quot;&amp;gt;&amp;lt;/header-box&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;    import Header fr">
+<meta property="og:description" content="无模块概念JavaScript模块化的历史漫长，一开始，正如在我们初学JavaScript的时候，写的代码不多，我们都是将代码写在一个文件里，因为代码量不多，所以没有感到什么不适， 123456function foo()&amp;#123;    // ...&amp;#125;function bar()&amp;#123;    // ...&amp;#125;  但是当代码开始变多的时候，我们开始感到不适，我们很难找到自">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-08-22T15:46:50.568Z">
+<meta property="og:updated_time" content="2019-08-24T02:35:56.421Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue组件通信">
-<meta name="twitter:description" content="父–&amp;gt;子父向子传递数据通过props 123456789101112131415161718//父组件代码&amp;lt;template&amp;gt;    &amp;lt;header-box :title-txt=&amp;quot;showTitleTxt&amp;quot;&amp;gt;&amp;lt;/header-box&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;    import Header fr">
+<meta name="twitter:title" content="js模块化由来">
+<meta name="twitter:description" content="无模块概念JavaScript模块化的历史漫长，一开始，正如在我们初学JavaScript的时候，写的代码不多，我们都是将代码写在一个文件里，因为代码量不多，所以没有感到什么不适， 123456function foo()&amp;#123;    // ...&amp;#125;function bar()&amp;#123;    // ...&amp;#125;  但是当代码开始变多的时候，我们开始感到不适，我们很难找到自">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -273,11 +273,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Vue组件通信" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-js模块化由来" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/08/22/Vue组件通信/" class="article-date">
-      <time datetime="2019-08-22T15:43:45.000Z" itemprop="datePublished">2019-08-22</time>
+      <a  href="/2019/08/24/js模块化由来/" class="article-date">
+      <time datetime="2019-08-24T02:25:24.000Z" itemprop="datePublished">2019-08-24</time>
 </a>
 
     </div>
@@ -291,7 +291,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Vue组件通信
+      js模块化由来
     </h1>
   
 
@@ -303,7 +303,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/">Vue</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js模块化/">js模块化</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -313,24 +313,31 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h6 id="父–-gt-子"><a href="#父–-gt-子" class="headerlink" title="父–&gt;子"></a>父–&gt;子</h6><p>父向子传递数据通过props</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//父组件代码</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;header-box :title-txt=&quot;showTitleTxt&quot;&gt;&lt;/header-box&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    import Header from &apos;./header&apos;</span><br><span class="line">    export default &#123;</span><br><span class="line">        name: &apos;index&apos;,</span><br><span class="line">        components: &#123;</span><br><span class="line">            &apos;header-box&apos;: Header</span><br><span class="line">        &#125;,</span><br><span class="line">        data () &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                showTitleTxt: &apos;首页&apos;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+        <h3 id="无模块概念"><a href="#无模块概念" class="headerlink" title="无模块概念"></a>无模块概念</h3><p>JavaScript模块化的历史漫长，一开始，正如在我们初学JavaScript的时候，写的代码不多，我们都是将代码写在一个文件里，因为代码量不多，所以没有感到什么不适，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function foo()&#123;</span><br><span class="line">    // ...</span><br><span class="line">&#125;</span><br><span class="line">function bar()&#123;</span><br><span class="line">    // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//子组件代码</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &#123;&#123;thisTitleTxt&#125;&#125;</span><br><span class="line">    &lt;/header&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        name: &apos;header-box&apos;,</span><br><span class="line">        props: &#123;</span><br><span class="line">            titleTxt: String</span><br><span class="line">        &#125;,</span><br><span class="line">        data () &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                thisTitleTxt: this.titleTxt</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>但是当代码开始变多的时候，我们开始感到不适，我们很难找到自己写过的函数，往往会出现命名重复覆盖的现象，挤在一起来的的问题就是</p>
+<ol>
+<li>容易污染全局</li>
+<li>不便于维护</li>
+</ol>
+<h3 id="以命名空间作为模块"><a href="#以命名空间作为模块" class="headerlink" title="以命名空间作为模块"></a>以命名空间作为模块</h3><p>后来，为了减少对环境的污染，采用了<code>Namespace模式</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var MYFUN=&#123;</span><br><span class="line">    foo:function()&#123;&#125;,</span><br><span class="line">    bar:function()&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h6 id="子–-gt-父"><a href="#子–-gt-父" class="headerlink" title="子–&gt;父"></a>子–&gt;父</h6><p><em>通过$on,$emit</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">**父组件代码**</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div id=&quot;counter-event-example&quot;&gt;</span><br><span class="line">      &lt;p&gt;&#123;&#123; total &#125;&#125;&lt;/p&gt;</span><br><span class="line">      &lt;button-counter v-on:increment=&quot;incrementTotal&quot;&gt;&lt;/button-counter&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    import ButtonCounter from &apos;./buttonCounter&apos;</span><br><span class="line">    export default &#123;</span><br><span class="line">        name: &apos;index&apos;,</span><br><span class="line">        components: &#123;</span><br><span class="line">            &apos;button-conuter&apos;: ButtonCounter</span><br><span class="line">        &#125;,</span><br><span class="line">        data () &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                total: 0</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        methods: &#123;</span><br><span class="line">            incrementTotal (e) &#123;</span><br><span class="line">                this.total++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>通过这样来减少了全局上的变量数目，而且我们可以将方法写在这些命名空间里，只要命名空间命名语义化，我们不难找到自己的方法<br>但是该命名空间本质上是对象，很容易被修改，不安全，我们可以随意在命名空间外查看命名空间内的变量，方法，即命名空间对象的属性，而且也能随意修改其中的内容</p>
+<h3 id="以匿名函数作为封闭模块"><a href="#以匿名函数作为封闭模块" class="headerlink" title="以匿名函数作为封闭模块"></a>以匿名函数作为封闭模块</h3><p>为了解决安全问题，使用了匿名函数<code>IIFE</code>模式，封闭了“模块”内部的变量，方法，只将需要被调用的内容以return的方式暴露出去，这样在全局看不到匿名函数里面的逻辑，相对安全</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var MODULE = (function()&#123;</span><br><span class="line">    var _private = 1;</span><br><span class="line">    var foo = function()&#123;</span><br><span class="line">        console.log(&apos;_private: &apos;, _private);</span><br><span class="line">    &#125;</span><br><span class="line">    return &#123;</span><br><span class="line">        foo:foo</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">// 调用方法</span><br><span class="line">Module.foo()</span><br><span class="line">// 无法获取其中的私有变量</span><br><span class="line">Module._private // undefined</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;button @click=&quot;incrementCounter&quot;&gt;&#123;&#123;counter&#125;&#125;&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        name: &apos;button-counter&apos;,</span><br><span class="line">        data () &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                counter: 0</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        metheds: &#123;</span><br><span class="line">            incrementCounter () &#123;</span><br><span class="line">                this.$emit(&apos;increment&apos;，params)</span><br><span class="line">                this.counter++</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>然而，这样还存在一定的问题，我们还需要能将其他模块引入当前模块</p>
+<h3 id="引入依赖-模块模式"><a href="#引入依赖-模块模式" class="headerlink" title="引入依赖 模块模式"></a>引入依赖 模块模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var Module = (function($)&#123;</span><br><span class="line">    var _$body_ = $(&quot;body&quot;); // 通过这样我们可以在匿名函数中使用其他模块的内容，这里使用了jQuery</span><br><span class="line">    var foo = function()&#123;</span><br><span class="line">        console.log(&apos;_private: &apos;, _private);</span><br><span class="line">    &#125;</span><br><span class="line">    return &#123;</span><br><span class="line">        foo:foo</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)(jQuery)</span><br></pre></td></tr></table></figure>
 
-<h6 id="非父子"><a href="#非父子" class="headerlink" title="非父子"></a>非父子</h6><p>简单情况下我们可以通过使用一个空的Vue实例作为中央事件总线</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**main.js**</span><br><span class="line">Vue.prototype.bus =  new Vue()</span><br></pre></td></tr></table></figure>
+<p>这是现在的模块实现的基础，在上面代码中，将jQuery模块导入了匿名函数中，使得在匿名函数中也可以使用jQuery</p>
+<p><code>jquery最外层代码</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">( function( global, factory ) &#123;</span><br><span class="line">	// ...</span><br><span class="line">&#125; )( typeof window !== &quot;undefined&quot; ? window : this, function( window, noGlobal ) &#123;</span><br><span class="line">	// ...</span><br><span class="line">	return jQuery;</span><br><span class="line">&#125; )</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">**header组件**</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;header @click=&quot;changeTitle&quot;&gt;&#123;&#123;title&#125;&#125;&lt;/header&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">    name: &apos;header&apos;,</span><br><span class="line">    data () &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            title: &apos;头部&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        changeTitle () &#123;</span><br><span class="line">            this.bus.$emit(&apos;toChangeTitle&apos;,&apos;首页&apos;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">**footer组件**</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;footer&gt;&#123;&#123;txt&#125;&#125;&lt;/footer&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">    name: &apos;footer&apos;,</span><br><span class="line">    mounted () &#123;</span><br><span class="line">        this.bus.$on(&apos;toChangeTitle&apos;, function (title) &#123;</span><br><span class="line">            console.log(title)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    data () &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            txt: &apos;尾部&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p>现在jQuery源码的最外层就是立即执行函数，在调用时传入了window对象，利用window对象暴露接口，所以我们在导入了jQuery后可以直接使用，实际上是使用了window. ，实际上是使用了window.，实际上是使用了window.，通过依赖注入将window对象注入了jQuery，所以看起来我们像是在全局使用了$</p>
+<h3 id="为什么要模块化"><a href="#为什么要模块化" class="headerlink" title="为什么要模块化"></a>为什么要模块化</h3><p>正如上面提及的，模块化是为了降低代码的复杂性和耦合性，在代码量很少的时候，我们没有必要使用模块化，但在代码量多的时候，如果不进行模块化，我们的代码会难以阅读，而且也很难去维护</p>
+<h3 id="模块化带来的问题"><a href="#模块化带来的问题" class="headerlink" title="模块化带来的问题"></a>模块化带来的问题</h3><p>1.发起的请求变多<br>因为将一个JavaScript文件拆分成多个模块，所以我们要发起多次的javascript请求，<br>2.模块加载顺序错误会带来错误<br>需要注意模块加载的顺序，在需要对应的模块前要加载好该模块，如果在加载某个模块前调用了该模块的方法，自然是会报错的<br>3.依赖模糊<br>如果模块的命名不够语义化，可能会难以看出所要使用的方法来自哪个模块</p>
 
       
     </div>
@@ -339,13 +346,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2019/08/22/Vue组件通信/">Vue组件通信</a></p>
+        <p><span>本文标题:</span><a  href="/2019/08/24/js模块化由来/">js模块化由来</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 刘晓儒的博客 的个人博客">刘晓儒的博客</a></p>
-        <p><span>发布时间:</span>2019年08月22日 - 23时43分</p>
-        <p><span>最后更新:</span>2019年08月22日 - 23时46分</p>
+        <p><span>发布时间:</span>2019年08月24日 - 10时25分</p>
+        <p><span>最后更新:</span>2019年08月24日 - 10时35分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/08/22/Vue组件通信/" title="Vue组件通信">http://yoursite.com/2019/08/22/Vue组件通信/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/08/22/Vue组件通信/　　作者: 刘晓儒的博客" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/24/js模块化由来/" title="js模块化由来">http://yoursite.com/2019/08/24/js模块化由来/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/08/24/js模块化由来/　　作者: 刘晓儒的博客" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -356,18 +363,18 @@
 
 <nav id="article-nav">
   
-    <a  href="/2019/08/22/computed和watch/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a  href="/2019/08/24/CommonJS/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          computed和watch
+          CommonJS
         
       </div>
     </a>
   
   
-    <a  href="/2019/08/22/js获取宽高及位置方法集合/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js获取宽高及位置方法集合</div>
+    <a  href="/2019/08/24/js各种模块化规范的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js各种模块化规范的区别</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -379,7 +386,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#父–-gt-子"><span class="toc-number">1.</span> <span class="toc-text">父–&gt;子</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#子–-gt-父"><span class="toc-number">2.</span> <span class="toc-text">子–&gt;父</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#非父子"><span class="toc-number">3.</span> <span class="toc-text">非父子</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#无模块概念"><span class="toc-number">1.</span> <span class="toc-text">无模块概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#以命名空间作为模块"><span class="toc-number">2.</span> <span class="toc-text">以命名空间作为模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#以匿名函数作为封闭模块"><span class="toc-number">3.</span> <span class="toc-text">以匿名函数作为封闭模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引入依赖-模块模式"><span class="toc-number">4.</span> <span class="toc-text">引入依赖 模块模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要模块化"><span class="toc-number">5.</span> <span class="toc-text">为什么要模块化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模块化带来的问题"><span class="toc-number">6.</span> <span class="toc-text">模块化带来的问题</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -452,13 +459,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2019/08/22/computed和watch/" title="上一篇: computed和watch">
+            <a  href="/2019/08/24/CommonJS/" title="上一篇: CommonJS">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2019/08/22/js获取宽高及位置方法集合/" title="下一篇: js获取宽高及位置方法集合">
+            <a  href="/2019/08/24/js各种模块化规范的区别/" title="下一篇: js各种模块化规范的区别">
                 <i class="fa fa-angle-right"></i>
             </a>
         
