@@ -9,18 +9,18 @@
   
   <title>ES6语法新特性梳理(下) | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="对象扩展函数扩展正则扩展set和map结构setmap异步编程方案promise对象Generator函数async函数类Module">
+  <meta name="description" content="类型扩展字符串扩展">
 <meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6语法新特性梳理(下)">
 <meta property="og:url" content="http://liuxiaoru.github.io/2019/08/24/Es6two/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
-<meta property="og:description" content="对象扩展函数扩展正则扩展set和map结构setmap异步编程方案promise对象Generator函数async函数类Module">
+<meta property="og:description" content="类型扩展字符串扩展">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-08-24T06:55:04.621Z">
+<meta property="og:updated_time" content="2019-08-24T06:57:27.191Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6语法新特性梳理(下)">
-<meta name="twitter:description" content="对象扩展函数扩展正则扩展set和map结构setmap异步编程方案promise对象Generator函数async函数类Module">
+<meta name="twitter:description" content="类型扩展字符串扩展">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -138,7 +138,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 12px;">ES6</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 18px;">JavaScript</a> <a href="/tags/Vue/" style="font-size: 12px;">Vue</a> <a href="/tags/http/" style="font-size: 14px;">http</a> <a href="/tags/http协议/" style="font-size: 10px;">http协议</a> <a href="/tags/js模块化/" style="font-size: 20px;">js模块化</a> <a href="/tags/前端安全防御/" style="font-size: 10px;">前端安全防御</a> <a href="/tags/浏览器/" style="font-size: 12px;">浏览器</a> <a href="/tags/知识点梳理/" style="font-size: 16px;">知识点梳理</a>
+                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 12px;">ES6</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 18px;">JavaScript</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/Vue/" style="font-size: 12px;">Vue</a> <a href="/tags/http/" style="font-size: 14px;">http</a> <a href="/tags/http协议/" style="font-size: 10px;">http协议</a> <a href="/tags/js模块化/" style="font-size: 20px;">js模块化</a> <a href="/tags/前端安全防御/" style="font-size: 10px;">前端安全防御</a> <a href="/tags/浏览器/" style="font-size: 12px;">浏览器</a> <a href="/tags/知识点梳理/" style="font-size: 16px;">知识点梳理</a>
                     </div>
                 </section>
                 
@@ -247,7 +247,80 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h4 id="对象扩展"><a href="#对象扩展" class="headerlink" title="对象扩展"></a>对象扩展</h4><h4 id="函数扩展"><a href="#函数扩展" class="headerlink" title="函数扩展"></a>函数扩展</h4><h4 id="正则扩展"><a href="#正则扩展" class="headerlink" title="正则扩展"></a>正则扩展</h4><h3 id="set和map结构"><a href="#set和map结构" class="headerlink" title="set和map结构"></a>set和map结构</h3><h4 id="set"><a href="#set" class="headerlink" title="set"></a>set</h4><h4 id="map"><a href="#map" class="headerlink" title="map"></a>map</h4><h3 id="异步编程方案"><a href="#异步编程方案" class="headerlink" title="异步编程方案"></a>异步编程方案</h3><h4 id="promise对象"><a href="#promise对象" class="headerlink" title="promise对象"></a>promise对象</h4><h4 id="Generator函数"><a href="#Generator函数" class="headerlink" title="Generator函数"></a>Generator函数</h4><h4 id="async函数"><a href="#async函数" class="headerlink" title="async函数"></a>async函数</h4><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><h3 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h3>
+        <h3 id="类型扩展"><a href="#类型扩展" class="headerlink" title="类型扩展"></a>类型扩展</h3><h4 id="字符串扩展"><a href="#字符串扩展" class="headerlink" title="字符串扩展"></a>字符串扩展</h4><a id="more"></a>
+
+<ul>
+<li>增强unicode表示法</li>
+<li>添加遍历器接口 可以用<code>for of</code>遍历</li>
+<li>**字符串模版</li>
+</ul>
+<blockquote>
+<p>模板字符串（template string）是增强版的字符串，用反引号标识。如果在模板字符串中需要使用反引号，则前面要用反斜杠转义。板字符串中嵌入变量，需要将变量名写在${}之中</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`User $&#123;user.name&#125; is not authorized to do $&#123;action&#125;.`</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>新增实例方法</p>
+<ul>
+<li>includes()返回布尔值，表示是否找到了参数字符串    </li>
+<li>startsWith(), endsWith()返回布尔值，表示参数字符串是否在原字符串的头部/尾部</li>
+<li>repeat() 返回一个新字符串，表示将原字符串重复n次</li>
+<li>trimStart()，trimEnd()消除字符串头部/尾部的空格</li>
+<li>padStart()，padEnd() 在头部或尾部补全<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&apos;x&apos;.padStart(5, &apos;ab&apos;) // &apos;ababx&apos;</span><br><span class="line">&apos;x&apos;.padStart(4, &apos;ab&apos;) // &apos;abax&apos;</span><br><span class="line">&apos;x&apos;.padEnd(5, &apos;ab&apos;) // &apos;xabab&apos;</span><br><span class="line">&apos;x&apos;.padEnd(4, &apos;ab&apos;) // &apos;xaba&apos;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="数组扩展"><a href="#数组扩展" class="headerlink" title="数组扩展"></a>数组扩展</h4><ul>
+<li>扩展运算符 <blockquote>
+<p>基本用法</p>
+</blockquote>
+</li>
+</ul>
+<p><code>将一个数组转为用逗号分隔的参数序列</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">onsole.log(...[1, 2, 3])</span><br><span class="line">// 1 2 3</span><br><span class="line"></span><br><span class="line">console.log(1, ...[2, 3, 4], 5)</span><br><span class="line">// 1 2 3 4 5</span><br><span class="line"></span><br><span class="line">[...document.querySelectorAll(&apos;div&apos;)]</span><br><span class="line">// [&lt;div&gt;, &lt;div&gt;, &lt;div&gt;]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>应用场景</p>
+</blockquote>
+<ol>
+<li>复制数组</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">数组是复合的数据类型，直接复制的话，只是复制了指向底层数据结构的指针，而不是克隆一个全新的数组。</span><br><span class="line">const a1 = [1, 2];</span><br><span class="line">const a2 = a1;</span><br><span class="line"></span><br><span class="line">a2[0] = 2;</span><br><span class="line">a1 // [2, 2]</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>合并数组</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const arr1 = [&apos;a&apos;, &apos;b&apos;];</span><br><span class="line">const arr2 = [&apos;c&apos;];</span><br><span class="line">const arr3 = [&apos;d&apos;, &apos;e&apos;];</span><br><span class="line"></span><br><span class="line">// ES5 的合并数组</span><br><span class="line">arr1.concat(arr2, arr3);</span><br><span class="line">// [ &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos; ]</span><br><span class="line"></span><br><span class="line">// ES6 的合并数组</span><br><span class="line">[...arr1, ...arr2, ...arr3]</span><br><span class="line">// [ &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos; ]</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>与解构赋值结合</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">扩展运算符可以与解构赋值结合起来，用于生成数组。</span><br><span class="line"></span><br><span class="line">// ES5</span><br><span class="line">a = list[0], rest = list.slice(1)</span><br><span class="line">// ES6</span><br><span class="line">[a, ...rest] = list</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>扩展运算符还可以将字符串和类数组转为真正的数组。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[...&apos;hello&apos;]</span><br><span class="line">// [ &quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot; ]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Array.from</li>
+</ul>
+<blockquote>
+<p>Array.from方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let arrayLike = &#123;</span><br><span class="line">    &apos;0&apos;: &apos;a&apos;,</span><br><span class="line">    &apos;1&apos;: &apos;b&apos;,</span><br><span class="line">    &apos;2&apos;: &apos;c&apos;,</span><br><span class="line">    length: 3</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// ES5的写法</span><br><span class="line">var arr1 = [].slice.call(arrayLike); // [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span><br><span class="line"></span><br><span class="line">// ES6的写法</span><br><span class="line">let arr2 = Array.from(arrayLike); // [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>includes<blockquote>
+<p>Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的includes方法类似</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 3].includes(2)     // true</span><br><span class="line">[1, 2, 3].includes(4)     // false</span><br><span class="line">[1, 2, NaN].includes(NaN) // true</span><br></pre></td></tr></table></figure>
+
+<h4 id="对象扩展"><a href="#对象扩展" class="headerlink" title="对象扩展"></a>对象扩展</h4><h4 id="函数扩展"><a href="#函数扩展" class="headerlink" title="函数扩展"></a>函数扩展</h4><h4 id="正则扩展"><a href="#正则扩展" class="headerlink" title="正则扩展"></a>正则扩展</h4><h3 id="set和map结构"><a href="#set和map结构" class="headerlink" title="set和map结构"></a>set和map结构</h3><h4 id="set"><a href="#set" class="headerlink" title="set"></a>set</h4><h4 id="map"><a href="#map" class="headerlink" title="map"></a>map</h4><h3 id="异步编程方案"><a href="#异步编程方案" class="headerlink" title="异步编程方案"></a>异步编程方案</h3><h4 id="promise对象"><a href="#promise对象" class="headerlink" title="promise对象"></a>promise对象</h4><h4 id="Generator函数"><a href="#Generator函数" class="headerlink" title="Generator函数"></a>Generator函数</h4><h4 id="async函数"><a href="#async函数" class="headerlink" title="async函数"></a>async函数</h4><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><h3 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h3>
       
     </div>
     
@@ -258,7 +331,7 @@
         <p><span>本文标题:</span><a  href="/2019/08/24/Es6two/">ES6语法新特性梳理(下)</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 刘晓儒的博客 的个人博客">刘晓儒的博客</a></p>
         <p><span>发布时间:</span>2019年08月24日 - 14时54分</p>
-        <p><span>最后更新:</span>2019年08月24日 - 14时55分</p>
+        <p><span>最后更新:</span>2019年08月24日 - 14时57分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/08/24/Es6two/" title="ES6语法新特性梳理(下)">http://liuxiaoru.github.io/2019/08/24/Es6two/</a>
             <span class="copy-path" data-clipboard-text="原文: http://liuxiaoru.github.io/2019/08/24/Es6two/　　作者: 刘晓儒的博客" title=""></span>
@@ -271,6 +344,15 @@
 
 
 <nav id="article-nav">
+  
+    <a  href="/2019/08/24/TS/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          TS语法学习笔记
+        
+      </div>
+    </a>
   
   
     <a  href="/2019/08/24/ES6Top/" id="article-nav-older" class="article-nav-link-wrap">
@@ -286,7 +368,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#对象扩展"><span class="toc-number">1.</span> <span class="toc-text">对象扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数扩展"><span class="toc-number">2.</span> <span class="toc-text">函数扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#正则扩展"><span class="toc-number">3.</span> <span class="toc-text">正则扩展</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#set和map结构"><span class="toc-number"></span> <span class="toc-text">set和map结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#set"><span class="toc-number">1.</span> <span class="toc-text">set</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#map"><span class="toc-number">2.</span> <span class="toc-text">map</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异步编程方案"><span class="toc-number"></span> <span class="toc-text">异步编程方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#promise对象"><span class="toc-number">1.</span> <span class="toc-text">promise对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Generator函数"><span class="toc-number">2.</span> <span class="toc-text">Generator函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#async函数"><span class="toc-number">3.</span> <span class="toc-text">async函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类"><span class="toc-number"></span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Module"><span class="toc-number"></span> <span class="toc-text">Module</span></a>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#类型扩展"><span class="toc-number">1.</span> <span class="toc-text">类型扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串扩展"><span class="toc-number">1.1.</span> <span class="toc-text">字符串扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组扩展"><span class="toc-number">1.2.</span> <span class="toc-text">数组扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象扩展"><span class="toc-number">1.3.</span> <span class="toc-text">对象扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数扩展"><span class="toc-number">1.4.</span> <span class="toc-text">函数扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#正则扩展"><span class="toc-number">1.5.</span> <span class="toc-text">正则扩展</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#set和map结构"><span class="toc-number">2.</span> <span class="toc-text">set和map结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#set"><span class="toc-number">2.1.</span> <span class="toc-text">set</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#map"><span class="toc-number">2.2.</span> <span class="toc-text">map</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异步编程方案"><span class="toc-number">3.</span> <span class="toc-text">异步编程方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#promise对象"><span class="toc-number">3.1.</span> <span class="toc-text">promise对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Generator函数"><span class="toc-number">3.2.</span> <span class="toc-text">Generator函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#async函数"><span class="toc-number">3.3.</span> <span class="toc-text">async函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类"><span class="toc-number">4.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Module"><span class="toc-number">5.</span> <span class="toc-text">Module</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -359,7 +441,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a  href="/2019/08/24/TS/" title="上一篇: TS语法学习笔记">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
@@ -368,7 +452,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/Es6two/">ES6语法新特性梳理(下)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/ES6Top/">ES6语法新特性梳理(上)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/ES-Module/">ES Module</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/CMD/">CMD</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/AMD/">AMD</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/CommonJS/">CommonJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/js模块化由来/">js模块化由来</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/js各种模块化规范的区别/">js各种模块化规范的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/computed和watch/">computed和watch</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/Vue组件通信/">Vue组件通信</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/js获取宽高及位置方法集合/">js获取宽高及位置方法集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/this指向问题/">this指向问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/浏览器知识点梳理/">浏览器知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/JS知识点梳理/">JS知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/JS-WEB-API知识点梳理/">JS-WEB-API知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/HTML-CSS知识点梳理/">HTML,CSS知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/原型和原型链/">原型和原型链</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/21/http协议基础下/">http协议基础（下)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/21/浏览器缓存机制/">浏览器缓存机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/options/">options请求是什么鬼</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/reffer/">Referer</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/http协议基础/">http协议基础（上）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/19/前端安全防御/">前端安全防御</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/19/JS继承的继承方式/">JS继承的继承方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/Event Loop/">Event Loop</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/TS/">TS语法学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/Es6two/">ES6语法新特性梳理(下)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/ES6Top/">ES6语法新特性梳理(上)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/ES-Module/">ES Module</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/CMD/">CMD</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/AMD/">AMD</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/CommonJS/">CommonJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/js模块化由来/">js模块化由来</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/js各种模块化规范的区别/">js各种模块化规范的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/computed和watch/">computed和watch</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/Vue组件通信/">Vue组件通信</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/js获取宽高及位置方法集合/">js获取宽高及位置方法集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/this指向问题/">this指向问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/浏览器知识点梳理/">浏览器知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/JS知识点梳理/">JS知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/JS-WEB-API知识点梳理/">JS-WEB-API知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/HTML-CSS知识点梳理/">HTML,CSS知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/原型和原型链/">原型和原型链</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/21/http协议基础下/">http协议基础（下)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/21/浏览器缓存机制/">浏览器缓存机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/options/">options请求是什么鬼</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/reffer/">Referer</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/http协议基础/">http协议基础（上）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/19/前端安全防御/">前端安全防御</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/19/JS继承的继承方式/">JS继承的继承方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/Event Loop/">Event Loop</a></li></ul>
     
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
