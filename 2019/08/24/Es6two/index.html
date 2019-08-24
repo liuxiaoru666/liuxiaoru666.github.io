@@ -7,20 +7,20 @@
   
   
   
-  <title>http协议基础（上） | 刘晓儒个人博客</title>
+  <title>ES6语法新特性梳理(下) | 刘晓儒个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是Http协议  超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。">
-<meta name="keywords" content="http协议">
+  <meta name="description" content="对象扩展函数扩展正则扩展set和map结构setmap异步编程方案promise对象Generator函数async函数类Module">
+<meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="http协议基础（上）">
-<meta property="og:url" content="http://liuxiaoru.github.io/2018/08/20/http协议基础/index.html">
+<meta property="og:title" content="ES6语法新特性梳理(下)">
+<meta property="og:url" content="http://liuxiaoru.github.io/2019/08/24/Es6two/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
-<meta property="og:description" content="什么是Http协议  超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。">
+<meta property="og:description" content="对象扩展函数扩展正则扩展set和map结构setmap异步编程方案promise对象Generator函数async函数类Module">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-08-22T13:02:09.828Z">
+<meta property="og:updated_time" content="2019-08-24T06:55:04.621Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="http协议基础（上）">
-<meta name="twitter:description" content="什么是Http协议  超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。">
+<meta name="twitter:title" content="ES6语法新特性梳理(下)">
+<meta name="twitter:description" content="对象扩展函数扩展正则扩展set和map结构setmap异步编程方案promise对象Generator函数async函数类Module">
   
     <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
   
@@ -207,11 +207,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-http协议基础" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Es6two" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/08/20/http协议基础/" class="article-date">
-      <time datetime="2018-08-20T13:50:49.000Z" itemprop="datePublished">2018-08-20</time>
+      <a  href="/2019/08/24/Es6two/" class="article-date">
+      <time datetime="2019-08-24T06:54:27.000Z" itemprop="datePublished">2019-08-24</time>
 </a>
 
     </div>
@@ -225,7 +225,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      http协议基础（上）
+      ES6语法新特性梳理(下)
     </h1>
   
 
@@ -237,7 +237,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http协议/">http协议</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -247,62 +247,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><strong>什么是Http协议</strong></p>
-<blockquote>
-<p>超文本传输协议，是一个应用层协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。</p>
-</blockquote>
-<a id="more"></a>
-
-<p><strong>http协议结构组成</strong></p>
-<blockquote>
-<p>请求行（包括url，请求方式，状态码，http协议版本）<br>请求头<br>请求体</p>
-</blockquote>
-<p><strong>http协议中有哪些请求方式</strong></p>
-<blockquote>
-<p>GET:用于请求访问已经被URI(统一资源标识符)识别的资源,可以通过URL传参给服务器<br>POST:用于传输信息给服务器,主要功能与GET方法类似,但一般推荐使用POST方式<br>PUT:传输文件,报文主体中包含文件内容,保存到对应URI位置<br>HEAD:获得报文首部,与GET方法类似,只是不返回报文主体,一般用于验证URI是否有效<br>DELETE:删除文件,与PUT方法相反,删除对应URI位置的文件<br>OPTIONS:查询响应URI支持的HTTP方法</p>
-</blockquote>
-<p><strong>GET和POST的区别</strong></p>
-<blockquote>
-<ul>
-<li>get重点在从服务器上获取资源,post重点在想服务器发送数据;</li>
-<li>get传输数据是通过URL请求,以filed(字段)=value的形式,置于URL后,并用”?”连接,多个请求数据之间用<br>“&amp;”连接,这个过程用户是可见的,post是放在请求体内</li>
-<li>get传输量小,因为受URL长度限制,但效率较低/post可以传输大量数据,所以上传文件时只能用post方式</li>
-<li>get是不安全的,因为URL是可见的,可能会泄露私密信息,如密码等</li>
-</ul>
-</blockquote>
-<p><strong>HTTP和https区别</strong></p>
-<blockquote>
-<ul>
-<li>https协议需要到ca申请证书，一般免费证书很少，需要交费。</li>
-<li>http是超文本传输协议，信息是明文传输，https 则是具有安全性的<code>ssl</code>加密传输协议。</li>
-<li>http和https使用的是完全不同的连接方式用的端口也不一样，前者是80，后者是443。</li>
-<li>http的连接很简单，是无状态的。HTTPS协议是由<code>SSL+HTTP</code>协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。</li>
-</ul>
-</blockquote>
-<p><strong>http1.0和http1.1区别</strong></p>
-<blockquote>
-<ul>
-<li>建立连接方面: HTTP/1.0 每次请求都需要建立新的TCP连接，连接不能复用。HTTP/1.1 新的请求可以在上次请求建立的TCP连接之上发送，连接可以复用。优点是减少重复进行TCP三次握手的开销，提高效率。</li>
-<li>HTTP1.1增加了<code>OPTIONS</code>, <code>PUT</code>, <code>DELETE,</code> <code>TRACE</code>, <code>CONNECT</code>这些Request方法</li>
-</ul>
-</blockquote>
-<p> <strong>无状态</strong></p>
-<blockquote>
-<p>由于http是一种无状态的协议，因此无论是客户端还是服务器都不记录http的相关信息。这样设计一方面减轻了服务器端的负载，另一方面减小了http请求的开销。<br><code>cookie</code>和<code>session</code>用于解决http无状态的问题</p>
-</blockquote>
-<p><strong>持久化</strong></p>
-<blockquote>
-<p>正常在发送http时，都需要建立<code>TCP</code>的连接，再发送报文,　如果每次想要发送http报文都需要经过这个过程，那么时间大部分都会消耗在建立和断开连接的过程中。因此http中使用了<code>connection</code>属性，用于指定连接的方式。当设置成<code>keep-alive</code>，就会建立一条持久化的连接。不需要每次都建立连接，再中断。</p>
-</blockquote>
-<p><strong>管道化</strong></p>
-<blockquote>
-<p>http可以一次发送多个http请求，然后等待响应连接。不需要排队等候，这样就加快了http的响应时间。</p>
-</blockquote>
-<p><strong>内容编码</strong></p>
-<blockquote>
-<p>由于某些报文的内容过大，因此在传输时，为了减少传输的时间，会采取一些压缩的措施。例如<code>accept-Encoding</code>定义了内容编码的格式：<code>gzip</code></p>
-</blockquote>
-
+        <h4 id="对象扩展"><a href="#对象扩展" class="headerlink" title="对象扩展"></a>对象扩展</h4><h4 id="函数扩展"><a href="#函数扩展" class="headerlink" title="函数扩展"></a>函数扩展</h4><h4 id="正则扩展"><a href="#正则扩展" class="headerlink" title="正则扩展"></a>正则扩展</h4><h3 id="set和map结构"><a href="#set和map结构" class="headerlink" title="set和map结构"></a>set和map结构</h3><h4 id="set"><a href="#set" class="headerlink" title="set"></a>set</h4><h4 id="map"><a href="#map" class="headerlink" title="map"></a>map</h4><h3 id="异步编程方案"><a href="#异步编程方案" class="headerlink" title="异步编程方案"></a>异步编程方案</h3><h4 id="promise对象"><a href="#promise对象" class="headerlink" title="promise对象"></a>promise对象</h4><h4 id="Generator函数"><a href="#Generator函数" class="headerlink" title="Generator函数"></a>Generator函数</h4><h4 id="async函数"><a href="#async函数" class="headerlink" title="async函数"></a>async函数</h4><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><h3 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h3>
       
     </div>
     
@@ -310,13 +255,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/08/20/http协议基础/">http协议基础（上）</a></p>
+        <p><span>本文标题:</span><a  href="/2019/08/24/Es6two/">ES6语法新特性梳理(下)</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 刘晓儒的博客 的个人博客">刘晓儒的博客</a></p>
-        <p><span>发布时间:</span>2018年08月20日 - 21时50分</p>
-        <p><span>最后更新:</span>2019年08月22日 - 21时02分</p>
+        <p><span>发布时间:</span>2019年08月24日 - 14时54分</p>
+        <p><span>最后更新:</span>2019年08月24日 - 14时55分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/08/20/http协议基础/" title="http协议基础（上）">http://liuxiaoru.github.io/2018/08/20/http协议基础/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://liuxiaoru.github.io/2018/08/20/http协议基础/　　作者: 刘晓儒的博客" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/24/Es6two/" title="ES6语法新特性梳理(下)">http://liuxiaoru.github.io/2019/08/24/Es6two/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://liuxiaoru.github.io/2019/08/24/Es6two/　　作者: 刘晓儒的博客" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -327,18 +272,9 @@
 
 <nav id="article-nav">
   
-    <a  href="/2018/08/20/reffer/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Referer
-        
-      </div>
-    </a>
   
-  
-    <a  href="/2018/08/19/前端安全防御/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">前端安全防御</div>
+    <a  href="/2019/08/24/ES6Top/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6语法新特性梳理(上)</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -350,7 +286,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#对象扩展"><span class="toc-number">1.</span> <span class="toc-text">对象扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数扩展"><span class="toc-number">2.</span> <span class="toc-text">函数扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#正则扩展"><span class="toc-number">3.</span> <span class="toc-text">正则扩展</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#set和map结构"><span class="toc-number"></span> <span class="toc-text">set和map结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#set"><span class="toc-number">1.</span> <span class="toc-text">set</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#map"><span class="toc-number">2.</span> <span class="toc-text">map</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异步编程方案"><span class="toc-number"></span> <span class="toc-text">异步编程方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#promise对象"><span class="toc-number">1.</span> <span class="toc-text">promise对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Generator函数"><span class="toc-number">2.</span> <span class="toc-text">Generator函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#async函数"><span class="toc-number">3.</span> <span class="toc-text">async函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类"><span class="toc-number"></span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Module"><span class="toc-number"></span> <span class="toc-text">Module</span></a>
 </div>
 <style>
     .left-col .switch-btn {
@@ -423,13 +359,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2018/08/20/reffer/" title="上一篇: Referer">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2018/08/19/前端安全防御/" title="下一篇: 前端安全防御">
+            <a  href="/2019/08/24/ES6Top/" title="下一篇: ES6语法新特性梳理(上)">
                 <i class="fa fa-angle-right"></i>
             </a>
         

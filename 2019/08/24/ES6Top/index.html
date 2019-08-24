@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl">
+  
+  
+  
+  
+  <title>ES6语法新特性梳理(上) | 刘晓儒个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="let和constlet 不存在变量提升变必须先声明在使用">
+<meta name="keywords" content="ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6语法新特性梳理(上)">
+<meta property="og:url" content="http://liuxiaoru.github.io/2019/08/24/ES6Top/index.html">
+<meta property="og:site_name" content="刘晓儒个人博客">
+<meta property="og:description" content="let和constlet 不存在变量提升变必须先声明在使用">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-08-24T06:55:11.325Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6语法新特性梳理(上)">
+<meta name="twitter:description" content="let和constlet 不存在变量提升变必须先声明在使用">
+  
+    <link rel="alternative" href="/atom.xml" title="刘晓儒个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet">
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">刘晓儒的博客</a></h1>
+        </hgroup>
+        
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 12px;">ES6</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 18px;">JavaScript</a> <a href="/tags/Vue/" style="font-size: 12px;">Vue</a> <a href="/tags/http/" style="font-size: 14px;">http</a> <a href="/tags/http协议/" style="font-size: 10px;">http协议</a> <a href="/tags/js模块化/" style="font-size: 20px;">js模块化</a> <a href="/tags/前端安全防御/" style="font-size: 10px;">前端安全防御</a> <a href="/tags/浏览器/" style="font-size: 12px;">浏览器</a> <a href="/tags/知识点梳理/" style="font-size: 16px;">知识点梳理</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">刘晓儒的博客</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">刘晓儒的博客</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-ES6Top" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/08/24/ES6Top/" class="article-date">
+      <time datetime="2019-08-24T03:47:23.000Z" itemprop="datePublished">2019-08-24</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ES6语法新特性梳理(上)
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h3><h4 id="let"><a href="#let" class="headerlink" title="let"></a>let</h4><ul>
+<li>不存在变量提升<code>变必须先声明在使用</code><a id="more"></a>
+
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// var 的情况</span><br><span class="line">console.log(foo); // 输出undefined</span><br><span class="line">var foo = 2;</span><br><span class="line"></span><br><span class="line">// let 的情况</span><br><span class="line">console.log(bar); // 报错ReferenceError</span><br><span class="line">let bar = 2;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>暂时性死区<code>在代码块内，使用let命令声明变量之前，该变量都是不可用的</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var tmp = 123;</span><br><span class="line"></span><br><span class="line">if (true) &#123;</span><br><span class="line">  tmp = &apos;abc&apos;; // ReferenceError</span><br><span class="line">  let tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>不允许重复声明 <code>let不允许在相同作用域内，重复声明同一个变量</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 报错</span><br><span class="line">function func() &#123;</span><br><span class="line">  let a = 10;</span><br><span class="line">  let a = 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>块级作用域<br>ES5 只有全局作用域和函数作用域，没有块级作用域，这带来很多不合理的场景。<blockquote>
+<p>第一种场景，内层变量可能会覆盖外层变量。</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var tmp = new Date();</span><br><span class="line">function f() &#123;</span><br><span class="line">console.log(tmp);</span><br><span class="line">if (false) &#123;</span><br><span class="line">    var tmp = &apos;hello world&apos;;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(); // undefined</span><br></pre></td></tr></table></figure>
+
+<p>上面代码的原意是，if代码块的外部使用外层的tmp变量，内部使用内层的tmp变量。但是，函数f执行后，输出结果为undefined，原因在于变量提升，导致内层的tmp变量覆盖了外层的tmp变量。</p>
+<blockquote>
+<p>第二种场景，用来计数的循环变量泄露为全局变量。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var s = &apos;hello&apos;;</span><br><span class="line">for (var i = 0; i &lt; s.length; i++) &#123;</span><br><span class="line">console.log(s[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(i); // 5</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，变量i只用来控制循环，但是循环结束后，它并没有消失，泄露成了全局变量</p>
+<ul>
+<li>ES6的块级作用域<code>let实际上为 JavaScript 新增了块级作用域。</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function f1() &#123;</span><br><span class="line">  let n = 5;</span><br><span class="line">  if (true) &#123;</span><br><span class="line">    let n = 10;</span><br><span class="line">  &#125;</span><br><span class="line">  console.log(n); // 5</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上面的函数有两个代码块，都声明了变量n，运行后输出 5。这表示外层代码块不受内层代码块的影响</p>
+</blockquote>
+<h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><blockquote>
+<p>const声明一个只读的常量。一旦声明，常量的值就不能改变。其他特性同Let</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const PI = 3.1415;</span><br><span class="line">PI // 3.1415</span><br><span class="line"></span><br><span class="line">PI = 3;</span><br><span class="line">// TypeError: Assignment to constant variable.</span><br></pre></td></tr></table></figure>
+
+<h3 id="变量结构赋值"><a href="#变量结构赋值" class="headerlink" title="变量结构赋值"></a>变量结构赋值</h3><h4 id="数组的结构赋值"><a href="#数组的结构赋值" class="headerlink" title="数组的结构赋值"></a>数组的结构赋值</h4><blockquote>
+<p>只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">let [foo, [[bar], baz]] = [1, [[2], 3]];</span><br><span class="line">foo // 1</span><br><span class="line">bar // 2</span><br><span class="line">baz // 3</span><br><span class="line"></span><br><span class="line">let [ , , third] = [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;];</span><br><span class="line">third // &quot;baz&quot;</span><br><span class="line"></span><br><span class="line">let [x, , y] = [1, 2, 3];</span><br><span class="line">x // 1</span><br><span class="line">y // 3</span><br><span class="line"></span><br><span class="line">let [head, ...tail] = [1, 2, 3, 4];</span><br><span class="line">head // 1</span><br><span class="line">tail // [2, 3, 4]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果解构不成功，变量的值就等于undefined</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let [x, y, ...z] = [&apos;a&apos;];</span><br><span class="line">x // &quot;a&quot;</span><br><span class="line">y // undefined </span><br><span class="line">z // []</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>不完全解构</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let [x, y] = [1, 2, 3];</span><br><span class="line">x // 1</span><br><span class="line">y // 2</span><br><span class="line"></span><br><span class="line">let [a, [b], d] = [1, [2, 3], 4];</span><br><span class="line">a // 1</span><br><span class="line">b // 2</span><br><span class="line">d // 4</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果等号的右边不是数组（或者严格地说，不是可遍历的结构，参见《Iterator》一章），那么将会报错。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 报错</span><br><span class="line">let [foo] = 1;</span><br><span class="line">let [foo] = false;</span><br><span class="line">let [foo] = NaN;</span><br><span class="line">let [foo] = undefined;</span><br><span class="line">let [foo] = null;</span><br><span class="line">let [foo] = &#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>解构赋值允许指定默认值</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let [foo = true] = [];</span><br><span class="line">foo // true</span><br><span class="line"></span><br><span class="line">let [x, y = &apos;b&apos;] = [&apos;a&apos;]; // x=&apos;a&apos;, y=&apos;b&apos;</span><br><span class="line">let [x, y = &apos;b&apos;] = [&apos;a&apos;, undefined]; // x=&apos;a&apos;, y=&apos;b&apos;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>只有当一个数组成员严格等于undefined，默认值才会生效。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let [x = 1] = [undefined];</span><br><span class="line">x // 1</span><br><span class="line"></span><br><span class="line">let [x = 1] = [null];</span><br><span class="line">x // null</span><br></pre></td></tr></table></figure>
+
+<h4 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h4><blockquote>
+<p>变量必须与属性同名，才能取到正确的值</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let &#123; bar, foo &#125; = &#123; foo: &apos;aaa&apos;, bar: &apos;bbb&apos; &#125;;</span><br><span class="line">foo // &quot;aaa&quot;</span><br><span class="line">bar // &quot;bbb&quot;</span><br><span class="line"></span><br><span class="line">let &#123; baz &#125; = &#123; foo: &apos;aaa&apos;, bar: &apos;bbb&apos; &#125;;</span><br><span class="line">baz // undefined</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果解构失败，变量的值等于undefined。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let &#123;foo&#125; = &#123;bar: &apos;baz&apos;&#125;;</span><br><span class="line">foo // undefined</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果变量名与属性名不一致，必须写成下面这样。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let &#123; foo: baz &#125; = &#123; foo: &apos;aaa&apos;, bar: &apos;bbb&apos; &#125;;</span><br><span class="line">baz // &quot;aaa&quot;</span><br><span class="line"></span><br><span class="line">let obj = &#123; first: &apos;hello&apos;, last: &apos;world&apos; &#125;;</span><br><span class="line">let &#123; first: f, last: l &#125; = obj;</span><br><span class="line">f // &apos;hello&apos;</span><br><span class="line">l // &apos;world&apos;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>解构也可以用于嵌套结构的对象</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const node = &#123;</span><br><span class="line">  loc: &#123;</span><br><span class="line">    start: &#123;</span><br><span class="line">      line: 1,</span><br><span class="line">      column: 5</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">let &#123; loc, loc: &#123; start &#125;, loc: &#123; start: &#123; line &#125;&#125; &#125; = node;</span><br><span class="line">line // 1</span><br><span class="line">loc  // Object &#123;start: Object&#125;</span><br><span class="line">start // Object &#123;line: 1, column: 5&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>对象的解构也可以指定默认值。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var &#123;x = 3&#125; = &#123;&#125;;</span><br><span class="line">x // 3</span><br><span class="line"></span><br><span class="line">var &#123;x, y = 5&#125; = &#123;x: 1&#125;;</span><br><span class="line">x // 1</span><br><span class="line">y // 5</span><br><span class="line"></span><br><span class="line">var &#123;x: y = 3&#125; = &#123;&#125;;</span><br><span class="line">y // 3</span><br><span class="line"></span><br><span class="line">var &#123;x: y = 3&#125; = &#123;x: 5&#125;;</span><br><span class="line">y // 5</span><br><span class="line"></span><br><span class="line">var &#123; message: msg = &apos;Something went wrong&apos; &#125; = &#123;&#125;;</span><br><span class="line">msg // &quot;Something went wrong&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="字符串的解构赋值"><a href="#字符串的解构赋值" class="headerlink" title="字符串的解构赋值"></a>字符串的解构赋值</h4><blockquote>
+<p>字符串也可以解构赋值。这是因为此时，字符串被转换成了一个类似数组的对象。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const [a, b, c, d, e] = &apos;hello&apos;;</span><br><span class="line">a // &quot;h&quot;</span><br><span class="line">b // &quot;e&quot;</span><br><span class="line">c // &quot;l&quot;</span><br><span class="line">d // &quot;l&quot;</span><br><span class="line">e // &quot;o&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>类似数组的对象都有一个length属性，因此还可以对这个属性解构赋值。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let &#123;length : len&#125; = &apos;hello&apos;;</span><br><span class="line">len // 5</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>数值，不布尔值还有函数函数都可以解构赋值，不常用</p>
+</blockquote>
+<h3 id="symbol类型"><a href="#symbol类型" class="headerlink" title="symbol类型"></a>symbol类型</h3><p>ES6 引入了一种新的原始数据类型Symbol，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，前六种是：undefined、null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。</p>
+<blockquote>
+<p>Symbol 值通过Symbol函数生成。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let s = Symbol();</span><br><span class="line"></span><br><span class="line">typeof s</span><br><span class="line">// &quot;symbol&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这就是说，对象的属性名现在可以有两种类型，一种是原来就有的字符串，另一种就是新增的 Symbol 类型。凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。</p>
+<blockquote>
+<p>Symbol函数可以接受一个字符串作为参数，表示对 Symbol 实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let s1 = Symbol(&apos;foo&apos;);</span><br><span class="line">let s2 = Symbol(&apos;bar&apos;);</span><br><span class="line"></span><br><span class="line">s1 // Symbol(foo)</span><br><span class="line">s2 // Symbol(bar)</span><br><span class="line"></span><br><span class="line">s1.toString() // &quot;Symbol(foo)&quot;</span><br><span class="line">s2.toString() // &quot;Symbol(bar)&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Symbol函数的参数只是表示对当前 Symbol 值的描述，因此相同参数的Symbol函数的返回值是不相等的。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let s1 = Symbol();</span><br><span class="line">let s2 = Symbol();</span><br><span class="line"></span><br><span class="line">s1 === s2 // false</span><br><span class="line"></span><br><span class="line">// 有参数的情况</span><br><span class="line">let s1 = Symbol(&apos;foo&apos;);</span><br><span class="line">let s2 = Symbol(&apos;foo&apos;);</span><br><span class="line"></span><br><span class="line">s1 === s2 // false</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>作为属性名的 Symbol</p>
+</blockquote>
+<ul>
+<li>Symbol 值作为对象属性名时，不能用点运算符。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const mySymbol = Symbol();</span><br><span class="line">const a = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">a.mySymbol = &apos;Hello!&apos;;</span><br><span class="line">a[mySymbol] // undefined</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在对象的内部，使用 Symbol 值定义属性时，Symbol 值必须放在方括号之中。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let s = Symbol();</span><br><span class="line"></span><br><span class="line">let obj = &#123;</span><br><span class="line">  [s]: function (arg) &#123; ... &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj[s](123);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>属性名的遍历<br>Symbol 作为属性名，该属性不会出现在<code>for...in、for...of</code>循环中，也不会被<code>Object.keys()</code>、<code>Object.getOwnPropertyNames()</code>、<code>JSON.stringify()</code>返回。但是，它也不是私有属性，有一个<code>Object.getOwnPropertySymbols</code>方法，可以获取指定对象的所有 Symbol 属性名。</li>
+</ul>
+<h3 id="类型扩展"><a href="#类型扩展" class="headerlink" title="类型扩展"></a>类型扩展</h3><h4 id="字符串扩展"><a href="#字符串扩展" class="headerlink" title="字符串扩展"></a>字符串扩展</h4><ul>
+<li>增强unicode表示法</li>
+<li>添加遍历器接口 可以用<code>for of</code>遍历</li>
+<li>**字符串模版</li>
+</ul>
+<blockquote>
+<p>模板字符串（template string）是增强版的字符串，用反引号标识。如果在模板字符串中需要使用反引号，则前面要用反斜杠转义。板字符串中嵌入变量，需要将变量名写在${}之中</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`User $&#123;user.name&#125; is not authorized to do $&#123;action&#125;.`</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>新增实例方法</p>
+<ul>
+<li>includes()返回布尔值，表示是否找到了参数字符串    </li>
+<li>startsWith(), endsWith()返回布尔值，表示参数字符串是否在原字符串的头部/尾部</li>
+<li>repeat() 返回一个新字符串，表示将原字符串重复n次</li>
+<li>trimStart()，trimEnd()消除字符串头部/尾部的空格</li>
+<li>padStart()，padEnd() 在头部或尾部补全<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&apos;x&apos;.padStart(5, &apos;ab&apos;) // &apos;ababx&apos;</span><br><span class="line">&apos;x&apos;.padStart(4, &apos;ab&apos;) // &apos;abax&apos;</span><br><span class="line">&apos;x&apos;.padEnd(5, &apos;ab&apos;) // &apos;xabab&apos;</span><br><span class="line">&apos;x&apos;.padEnd(4, &apos;ab&apos;) // &apos;xaba&apos;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="数组扩展"><a href="#数组扩展" class="headerlink" title="数组扩展"></a>数组扩展</h4><ul>
+<li>扩展运算符 <blockquote>
+<p>基本用法</p>
+</blockquote>
+</li>
+</ul>
+<p><code>将一个数组转为用逗号分隔的参数序列</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">onsole.log(...[1, 2, 3])</span><br><span class="line">// 1 2 3</span><br><span class="line"></span><br><span class="line">console.log(1, ...[2, 3, 4], 5)</span><br><span class="line">// 1 2 3 4 5</span><br><span class="line"></span><br><span class="line">[...document.querySelectorAll(&apos;div&apos;)]</span><br><span class="line">// [&lt;div&gt;, &lt;div&gt;, &lt;div&gt;]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>应用场景</p>
+</blockquote>
+<ol>
+<li>复制数组</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">数组是复合的数据类型，直接复制的话，只是复制了指向底层数据结构的指针，而不是克隆一个全新的数组。</span><br><span class="line">const a1 = [1, 2];</span><br><span class="line">const a2 = a1;</span><br><span class="line"></span><br><span class="line">a2[0] = 2;</span><br><span class="line">a1 // [2, 2]</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>合并数组</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const arr1 = [&apos;a&apos;, &apos;b&apos;];</span><br><span class="line">const arr2 = [&apos;c&apos;];</span><br><span class="line">const arr3 = [&apos;d&apos;, &apos;e&apos;];</span><br><span class="line"></span><br><span class="line">// ES5 的合并数组</span><br><span class="line">arr1.concat(arr2, arr3);</span><br><span class="line">// [ &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos; ]</span><br><span class="line"></span><br><span class="line">// ES6 的合并数组</span><br><span class="line">[...arr1, ...arr2, ...arr3]</span><br><span class="line">// [ &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos; ]</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>与解构赋值结合</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">扩展运算符可以与解构赋值结合起来，用于生成数组。</span><br><span class="line"></span><br><span class="line">// ES5</span><br><span class="line">a = list[0], rest = list.slice(1)</span><br><span class="line">// ES6</span><br><span class="line">[a, ...rest] = list</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>扩展运算符还可以将字符串和类数组转为真正的数组。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[...&apos;hello&apos;]</span><br><span class="line">// [ &quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot; ]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Array.from</li>
+</ul>
+<blockquote>
+<p>Array.from方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let arrayLike = &#123;</span><br><span class="line">    &apos;0&apos;: &apos;a&apos;,</span><br><span class="line">    &apos;1&apos;: &apos;b&apos;,</span><br><span class="line">    &apos;2&apos;: &apos;c&apos;,</span><br><span class="line">    length: 3</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// ES5的写法</span><br><span class="line">var arr1 = [].slice.call(arrayLike); // [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span><br><span class="line"></span><br><span class="line">// ES6的写法</span><br><span class="line">let arr2 = Array.from(arrayLike); // [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>includes<blockquote>
+<p>Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的includes方法类似</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 3].includes(2)     // true</span><br><span class="line">[1, 2, 3].includes(4)     // false</span><br><span class="line">[1, 2, NaN].includes(NaN) // true</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2019/08/24/ES6Top/">ES6语法新特性梳理(上)</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 刘晓儒的博客 的个人博客">刘晓儒的博客</a></p>
+        <p><span>发布时间:</span>2019年08月24日 - 11时47分</p>
+        <p><span>最后更新:</span>2019年08月24日 - 14时55分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/24/ES6Top/" title="ES6语法新特性梳理(上)">http://liuxiaoru.github.io/2019/08/24/ES6Top/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://liuxiaoru.github.io/2019/08/24/ES6Top/　　作者: 刘晓儒的博客" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a  href="/2019/08/24/Es6two/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          ES6语法新特性梳理(下)
+        
+      </div>
+    </a>
+  
+  
+    <a  href="/2019/08/24/ES-Module/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES Module</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#let和const"><span class="toc-number">1.</span> <span class="toc-text">let和const</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#let"><span class="toc-number">1.1.</span> <span class="toc-text">let</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#const"><span class="toc-number">1.2.</span> <span class="toc-text">const</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量结构赋值"><span class="toc-number">2.</span> <span class="toc-text">变量结构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的结构赋值"><span class="toc-number">2.1.</span> <span class="toc-text">数组的结构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象的解构赋值"><span class="toc-number">2.2.</span> <span class="toc-text">对象的解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串的解构赋值"><span class="toc-number">2.3.</span> <span class="toc-text">字符串的解构赋值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#symbol类型"><span class="toc-number">3.</span> <span class="toc-text">symbol类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类型扩展"><span class="toc-number">4.</span> <span class="toc-text">类型扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串扩展"><span class="toc-number">4.1.</span> <span class="toc-text">字符串扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组扩展"><span class="toc-number">4.2.</span> <span class="toc-text">数组扩展</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/2019/08/24/Es6two/" title="上一篇: ES6语法新特性梳理(下)">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2019/08/24/ES-Module/" title="下一篇: ES Module">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/Es6two/">ES6语法新特性梳理(下)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/ES6Top/">ES6语法新特性梳理(上)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/ES-Module/">ES Module</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/CMD/">CMD</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/AMD/">AMD</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/CommonJS/">CommonJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/js模块化由来/">js模块化由来</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/24/js各种模块化规范的区别/">js各种模块化规范的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/computed和watch/">computed和watch</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/Vue组件通信/">Vue组件通信</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/js获取宽高及位置方法集合/">js获取宽高及位置方法集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/this指向问题/">this指向问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/浏览器知识点梳理/">浏览器知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/JS知识点梳理/">JS知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/JS-WEB-API知识点梳理/">JS-WEB-API知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/HTML-CSS知识点梳理/">HTML,CSS知识点梳理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/22/原型和原型链/">原型和原型链</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/21/http协议基础下/">http协议基础（下)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/21/浏览器缓存机制/">浏览器缓存机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/options/">options请求是什么鬼</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/reffer/">Referer</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/http协议基础/">http协议基础（上）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/19/前端安全防御/">前端安全防御</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/19/JS继承的继承方式/">JS继承的继承方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/Event Loop/">Event Loop</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 刘晓儒的博客
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
