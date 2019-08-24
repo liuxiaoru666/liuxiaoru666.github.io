@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="刘晓儒个人博客">
-<meta property="og:url" content="http://yoursite.com/tags/js模块化/index.html">
+<meta property="og:url" content="http://liuxiaoru.github.io/tags/js模块化/index.html">
 <meta property="og:site_name" content="刘晓儒个人博客">
 <meta property="og:locale" content="zh">
 <meta name="twitter:card" content="summary">
@@ -69,56 +69,6 @@
         </hgroup>
         
         
-            <form>
-                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
-            </form>
-            <div id="local-search-result"></div>
-        
-        
-            <script type="text/javascript">
-                (function() {
-                    'use strict';
-                    function getMatchData(keyword, data) {
-                        var matchData = [];
-                        for(var i =0;i<data.length;i++){
-                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
-                                matchData.push(data[i])
-                        }
-                        return matchData;
-                    }
-                    var $input = $('#local-search-input');
-                    var $resultContent = $('#local-search-result');
-                    $input.keyup(function(){
-                        $.ajax({
-                            url: '/search.json',
-                            dataType: "json",
-                            success: function( json ) {
-                                var str='<ul class=\"search-result-list\">';                
-                                var keyword = $input.val().trim().toLowerCase();
-                                $resultContent.innerHTML = "";
-                                if ($input.val().trim().length <= 0) {
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                }
-                                var results = getMatchData(keyword, json);
-                                if(results.length === 0){
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                } 
-                                for(var i =0; i<results.length; i++){
-                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
-                                }
-                                str += "</ul>";
-                                $resultContent.empty();
-                                $resultContent.append(str);
-                                $('#switch-area').hide();
-                            }
-                        });
-                    });
-                })();
-            </script>
         
         
             <div id="switch-btn" class="switch-btn">
@@ -168,12 +118,6 @@
                         
                             <li><a  href="/archives/">所有文章</a></li>
                         
-                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
-                        
-                            <li><a  href="/categories/digital">玩转数码</a></li>
-                        
-                            <li><a  href="/categories/algorithm">算法学习</a></li>
-                        
                             <li><a  href="/about/">关于我</a></li>
                         
                         </ul>
@@ -185,15 +129,13 @@
                             
                                 <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
                             
-                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
-                            
                         </ul>
                     </nav>
                 </section>
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 18px;">JavaScript</a> <a href="/tags/Vue/" style="font-size: 12px;">Vue</a> <a href="/tags/http/" style="font-size: 14px;">http</a> <a href="/tags/http协议/" style="font-size: 10px;">http协议</a> <a href="/tags/js模块化/" style="font-size: 20px;">js模块化</a> <a href="/tags/前端安全防御/" style="font-size: 10px;">前端安全防御</a> <a href="/tags/浏览器/" style="font-size: 12px;">浏览器</a> <a href="/tags/知识点梳理/" style="font-size: 16px;">知识点梳理</a>
+                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 18px;">JavaScript</a> <a href="/tags/Vue/" style="font-size: 12px;">Vue</a> <a href="/tags/http/" style="font-size: 14px;">http</a> <a href="/tags/http协议/" style="font-size: 10px;">http协议</a> <a href="/tags/js模块化/" style="font-size: 20px;">js模块化</a> <a href="/tags/前端安全防御/" style="font-size: 10px;">前端安全防御</a> <a href="/tags/浏览器/" style="font-size: 12px;">浏览器</a> <a href="/tags/知识点梳理/" style="font-size: 16px;">知识点梳理</a>
                     </div>
                 </section>
                 
@@ -245,12 +187,6 @@
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
-                
-                    <li><a href="/categories/digital">玩转数码</a></li>
-                
-                    <li><a href="/categories/algorithm">算法学习</a></li>
-                
                     <li><a href="/about/">关于我</a></li>
                 
                 <div class="clearfix"></div>
@@ -262,8 +198,6 @@
                         <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
                     
                         <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
-                    
-                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
                     
                 </div>
             </nav>
